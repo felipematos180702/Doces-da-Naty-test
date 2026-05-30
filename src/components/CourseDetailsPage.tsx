@@ -146,12 +146,14 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
           <div className="lg:col-span-7 space-y-6">
             
             {/* Displaying Large Active Image */}
-            <div className="relative w-full aspect-square rounded-3xl overflow-hidden shadow-2xl bg-[#FFFDF9] p-2 group select-none flex items-center justify-center">
-              <img
-                src={activeImage}
-                alt={course.title}
-                className="w-full h-full object-cover object-center rounded-2xl transition-all duration-500 hover:scale-[1.01] relative z-10"
-              />
+            <div className="relative w-full aspect-[4/3] md:aspect-square rounded-3xl overflow-hidden shadow-2xl bg-[#FFFDF9] p-2 group select-none">
+              <div className="relative w-full h-full rounded-2xl overflow-hidden bg-brand-cream/35">
+                <img
+                  src={activeImage}
+                  alt={course.title}
+                  className="absolute inset-0 w-full h-full object-cover object-center transition-all duration-500 hover:scale-[1.01] z-10"
+                />
+              </div>
               <div className="absolute top-4 left-4 z-20">
                 <span className="bg-brand-primary text-white px-3 py-1 sm:px-4 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider shadow-md">
                   {course.category}
