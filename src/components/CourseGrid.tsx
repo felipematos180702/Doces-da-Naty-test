@@ -25,32 +25,34 @@ export default function CourseGrid({ onSelectCourse }: CourseGridProps) {
     : COURSES.filter(c => c.category === activeCategory);
 
   return (
-    <section id="cursos" className="py-24 bg-white">
+    <section id="cursos" className="py-12 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-serif text-4xl md:text-5xl font-bold mb-4 text-brand-secondary"
+            className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-brand-secondary"
           >
             Conheça Nossos Cursos
           </motion.h2>
-          <p className="text-gray-500 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-500 max-w-2xl mx-auto text-base sm:text-lg">
             Escolha a especialidade ideal para dar o próximo passo na sua carreira gastronômica.
           </p>
         </div>
 
-        {/* Filters */}
-        <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
-          <Filter className="text-gray-400 mr-2" size={20} />
+        {/* Filters - elegant touch-snapping horizontal strip for mobile, normal view on desktop */}
+        <div className="flex items-center justify-start md:justify-center gap-2.5 overflow-x-auto md:overflow-x-visible pb-4 md:pb-0 mb-8 md:mb-12 scrollbar-none w-auto -mx-4 px-4 md:mx-0 md:px-0 select-none">
+          <div className="flex-shrink-0 items-center text-gray-400 mr-1 hidden sm:flex">
+            <Filter size={18} />
+          </div>
           {CATEGORIES.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-6 py-2 rounded-full text-sm font-semibold transition-all cursor-pointer ${
+              className={`px-4 py-2 sm:px-6 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer whitespace-nowrap flex-shrink-0 ${
                 activeCategory === cat 
-                  ? 'bg-brand-primary text-white shadow-lg shadow-brand-primary/30' 
+                  ? 'bg-brand-primary text-white shadow-md shadow-brand-primary/20' 
                   : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
               }`}
             >
@@ -60,7 +62,7 @@ export default function CourseGrid({ onSelectCourse }: CourseGridProps) {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           <AnimatePresence mode="popLayout">
             {filteredCourses.map((course) => (
               <motion.div
@@ -84,40 +86,40 @@ export default function CourseGrid({ onSelectCourse }: CourseGridProps) {
                   />
                   {/* Subtle overlay hover effect */}
                   <div className="absolute inset-0 bg-brand-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20">
-                    <span className="bg-white/95 text-brand-secondary font-bold px-4 py-2 rounded-full shadow-lg text-sm flex items-center gap-2">
+                    <span className="bg-white/95 text-brand-secondary font-bold px-4 py-2 rounded-full shadow-lg text-xs flex items-center gap-2">
                       <Info size={16} className="text-brand-primary" />
                       Ver Detalhes
                     </span>
                   </div>
                 </div>
                 
-                <div className="p-6 flex-grow flex flex-col">
+                <div className="p-5 sm:p-6 flex-grow flex flex-col">
                   {/* Title clicking triggers details too */}
                   <h3 
                     onClick={() => onSelectCourse(course.id)}
-                    className="font-serif text-xl font-bold mb-2 cursor-pointer group-hover:text-brand-primary transition-colors text-brand-secondary"
+                    className="font-serif text-lg sm:text-xl font-bold mb-2 cursor-pointer group-hover:text-brand-primary transition-colors text-brand-secondary"
                   >
                     {course.title}
                   </h3>
-                  <p className="text-gray-600 text-sm mb-6 line-clamp-2">
+                  <p className="text-gray-600 text-xs sm:text-sm mb-5 sm:mb-6 line-clamp-2 leading-relaxed">
                     {course.description}
                   </p>
                   
-                  <div className="mt-auto flex items-center justify-between gap-4 border-t border-brand-primary/5 pt-4 w-full">
+                  <div className="mt-auto flex items-center justify-between gap-2.5 sm:gap-4 border-t border-brand-primary/5 pt-4 w-full">
                     <button 
                       onClick={() => onSelectCourse(course.id)}
-                      className="text-sm font-bold text-brand-primary hover:text-brand-secondary hover:underline transition-colors cursor-pointer py-2"
+                      className="text-xs sm:text-sm font-bold text-brand-primary hover:text-brand-secondary hover:underline transition-colors cursor-pointer py-2 text-left"
                     >
-                      Ver Detalhes do Curso
+                      Ver Detalhes
                     </button>
                     <a 
                       href={course.linkCheckout}
                       target="_blank"
                       referrerPolicy="no-referrer"
-                      className="bg-brand-primary text-white px-4 py-2.5 rounded-xl hover:bg-brand-secondary transition-all shadow-md active:scale-95 flex items-center gap-2 text-xs font-bold"
+                      className="bg-brand-primary text-white px-3 py-2 sm:px-4 sm:py-2.5 rounded-xl hover:bg-brand-secondary transition-all shadow-md active:scale-95 flex items-center gap-1.5 text-[11px] sm:text-xs font-bold leading-none flex-shrink-0"
                       title="Comprar Curso"
                     >
-                      <ShoppingCart size={16} />
+                      <ShoppingCart size={14} />
                       Inscrever-se
                     </a>
                   </div>
@@ -127,8 +129,8 @@ export default function CourseGrid({ onSelectCourse }: CourseGridProps) {
           </AnimatePresence>
         </div>
 
-        <div className="text-center mt-16">
-          <p className="text-gray-400 text-sm italic">
+        <div className="text-center mt-12 md:mt-16">
+          <p className="text-gray-400 text-xs sm:text-sm italic">
             * Todos os cursos contam com suporte VIP direto com a Naty e sua equipe.
           </p>
         </div>
