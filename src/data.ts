@@ -1,0 +1,544 @@
+import { Course, Testimonial } from './types';
+
+export const COURSES: Course[] = [
+  {
+    id: "course-1",
+    title: "Curso Bolo no Pote",
+    description: "O clássico que nunca perde o topo: fature alto com o doce mais vendido do Brasil!\n\nO bolo no pote é o herói de qualquer confeitaria que quer dinheiro em caixa rápido. Ele tem baixo custo de produção, aceitação imediata e um formato perfeito para vender no delivery, no trabalho ou sob encomenda.\n\nNeste curso prático, você vai aprender a base perfeita de massas molhadinhas, montagens que enchem os olhos e uma variedade de sabores que fidelizam o cliente logo na primeira colherada. É a oportunidade perfeita para você começar a faturar na cozinha de casa com o que já tem.",
+    category: "Cursos Rápidos (Acesso de 6 meses)",
+    price: "R$ 167,00",
+    image: "https://lh3.googleusercontent.com/d/1EGGiVIMK6Ylpcrs7u-5gbz-ld7iT2Ikq",
+    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Curso%20de%20Bolo%20no%20Pote",
+    detalhesLongos: [
+      "Química das Massas Estruturadas Amanteigadas e de Chiffon que absorvem calda sem desmoronar",
+      "Processo de Montagem Rápida em Série que otimiza seu tempo e material",
+      "Segredo das Caldas de Validade Estendida (suas caldas não azedam na refrigeração)",
+      "Cardápio Premium de Sucesso: Ninho com Nutella, Red Velvet, Brigadeiro Belga e Prestígio no ponto correto de colher",
+      "Como calcular custos ocultos, perdas, e fazer a precificação com margem acima de 300% por pote",
+      "Estratégia prática de vendas rápidas via WhatsApp e Parcerias no comércio local"
+    ],
+    galeria: [
+      "https://lh3.googleusercontent.com/d/1EGGiVIMK6Ylpcrs7u-5gbz-ld7iT2Ikq",
+      "https://lh3.googleusercontent.com/d/1IdKkW-7NoroQt2ja9pAbXOurNlZsWFqS",
+      "https://lh3.googleusercontent.com/d/1RWhSdZAou_TwzjMY5QCQ1JvmaVkS7HSt",
+      "https://lh3.googleusercontent.com/d/1LYHMnS_zFARz2xOybQedvxSfTrsJj110",
+      "https://lh3.googleusercontent.com/d/1POQh3ED3lZ53udaE-DNbViQWmLu0krH2",
+      "https://lh3.googleusercontent.com/d/1mQLvZR32tWpdDTNoZbuChuzHkBWwVRsZ",
+      "https://lh3.googleusercontent.com/d/1u2GTPfvF1bc0nzwoc28M8uEFisE5heAU",
+      "https://lh3.googleusercontent.com/d/1A3uunGB5b09Uwnvx_xc9-FaWGyx0krWW",
+      "https://lh3.googleusercontent.com/d/1Ahnm6nWg_MhiJGUwdWGgf5US_U1dbX3b",
+      "https://lh3.googleusercontent.com/d/17Ak1LUlUikvgsOSAma99hJLO41Jh92ze",
+      "https://lh3.googleusercontent.com/d/1_q56IJbhNHMLnx3trF-iDxNXcNDFoyJL",
+      "https://lh3.googleusercontent.com/d/1l1NrgFZLjOzB_VeEv_5PKUthk0txmtB2",
+      "https://lh3.googleusercontent.com/d/1j-ClM3kVd4bNiR-YJcDhiif5Ygu96tQI"
+    ]
+  },
+  {
+    id: "course-2",
+    title: "Bolo Matilda",
+    description: "O fenômeno de vendas: domine a receita do bolo mais chocolatudo e desejado das redes sociais\n\nSe existe um bolo capaz de parar o feed do Instagram e gerar picos de pedidos no seu delivery, é o Bolo Matilda. Inspirado no clássico do cinema, ele é o sinônimo perfeito de exagero na medida certa: muita massa úmida e camadas generosas de um recheio de chocolate inacreditável. Neste aulão direto ao ponto, você vai aprender o passo a passo para reproduzir esse campeão de vendas da Doces da Nat e atrair uma legião de clientes apaixonados por chocolate.",
+    category: "Aulões (acesso de 06 meses)",
+    price: "R$ 297,00",
+    image: "https://lh3.googleusercontent.com/d/1OUr9OSL70nLOpy3PF8SBQ9QL_9gzRf8A",
+    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Curso%20Bolo%20Matilda",
+    detalhesLongos: [
+      "Receita completa da massa super úmida e estruturada de cacau",
+      "O recheio de chocolate cremoso com brilho espelhado inesquecível",
+      "Técnicas de montagem para o efeito de chocolate escorrendo",
+      "Segredos de conservação, validade e embalagem ideal para delivery",
+      "Estratégia de divulgação em fotos e vídeos para viralizar no Instagram"
+    ],
+    galeria: [
+      "https://lh3.googleusercontent.com/d/1OUr9OSL70nLOpy3PF8SBQ9QL_9gzRf8A",
+      "https://lh3.googleusercontent.com/d/1PVowiAyYDWDT3k6u1MGuPZ8XB73UONtJ",
+      "https://lh3.googleusercontent.com/d/1r-uV_uRCgdJg79IcZd6hRuaI9chvc4_x",
+      "https://lh3.googleusercontent.com/d/1EYrhKkiMrxtmlyUAXxw_iT-60cl61C4Z",
+      "https://lh3.googleusercontent.com/d/1y7yaBnJKKRDqpj7k1D8TjlnIRAQyQuKc"
+    ]
+  },
+  {
+    id: "course-3",
+    title: "Aulão Bolo de Cenoura",
+    description: "O clássico afetivo irresistível: a massa perfeita e a calda que todo cliente procura\n\nBolo de cenoura todo mundo faz, mas o bolo de cenoura perfeito, fofinho, que não sola e vem acompanhado daquela calda de chocolate impecável, poucos sabem dominar. Esse é o verdadeiro produto \"combustível diário\" do seu negócio, aquele que o cliente compra para o café da tarde, pro trabalho e repete a semana toda. Aprenda a técnica exata para produzir em escala sem perder a qualidade artesanal.",
+    category: "Aulões (acesso de 06 meses)",
+    price: "R$ 97,00",
+    image: "https://lh3.googleusercontent.com/d/1CcfKj1wYnPcoZJrxuLRnyrNuydZcJ0bu",
+    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Aulao%20Bolo%20de%20Cenoura",
+    detalhesLongos: [
+      "Equilíbrio exato de cenoura e líquidos para garantir o bolo sempre fofinho",
+      "Duas caldas memoráveis: a famosa casquinha de chocolate durinha e a calda fudge cremosa",
+      "Processo otimizado de preparo no liquidificador para máxima escala com qualidade",
+      "Montagens para venda rápida: bolo caseiro inteiro, fatias individuais e potinhos",
+      "Planilha automática de custos de produção e dicas de conservação"
+    ],
+    galeria: [
+      "https://lh3.googleusercontent.com/d/1CcfKj1wYnPcoZJrxuLRnyrNuydZcJ0bu",
+      "https://lh3.googleusercontent.com/d/1HkE9qOPHXbppgFth2TbhA674ue6IfkX3",
+      "https://lh3.googleusercontent.com/d/1LP4jaUVZkwipSPZtmo07z4Ivk5WtHJNm",
+      "https://lh3.googleusercontent.com/d/1KDcy5hIty5Lq64qjdlTtAU1shsZlcn_h",
+      "https://lh3.googleusercontent.com/d/1xzJe9Jxlmh5olVGMYoFAC98qaMltQqJU"
+    ]
+  },
+  {
+    id: "course-4",
+    title: "Aulão Palha Crocantella",
+    description: "Praticidade e alto lucro: o doce que une a cremosidade do brigadeiro ao crocante perfeito\n\nA Palha Crocantella é o produto ideal para quem precisa de um doce com excelente tempo de prateleira, fácil armazenamento e margem de lucro altíssima. Unindo a cremosidade de um brigadeiro premium ao toque crocante que todo mundo ama, ela é perfeita para vendas de balcão, caixas de presente ou como aquele \"adicional\" irresistível no carrinho do seu delivery.",
+    category: "Aulões (acesso de 06 meses)",
+    price: "R$ 197,00",
+    image: "https://lh3.googleusercontent.com/d/1gn-Iaoecm6Jtl2a7yS-53y2xTnniuI8l",
+    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Aulao%20Palha%20Crocantella",
+    detalhesLongos: [
+      "Ponto exato do brigadeiro base cremoso para palha italiana",
+      "Seleção e preparo do biscoito para manter a crocância por mais tempo",
+      "Técnica de corte limpo e padronização de tamanho e peso",
+      "Banho de açúcar, leite em pó e coberturas especiais (Crocantella)",
+      "Sugestões de embalagens e estratégias de venda em caixas ou porções individuais"
+    ],
+    galeria: [
+      "https://lh3.googleusercontent.com/d/1gn-Iaoecm6Jtl2a7yS-53y2xTnniuI8l",
+      "https://lh3.googleusercontent.com/d/1kZkx_uj2lnyEiX7ApUMqqIlQJ93Kkvmd",
+      "https://lh3.googleusercontent.com/d/1zrU2SWbKIacmcZcjDsQKrE5gdgsKa8Sk"
+    ]
+  },
+  {
+    id: "course-5",
+    title: "Aulão Bombom de Morango",
+    description: "Líder absoluto do delivery: o segredo do bombom aberto que vende todos os dias do ano\n\nO morango combinado com chocolate e creme é uma máquina de fazer dinheiro, mas exige técnica para não soltar água e estragar o doce. Neste aulão, você vai aprender a receita exata e as técnicas de montagem do Bombom de Morango que é o líder absoluto de vendas na Doces da Nat. Um produto com apelo visual gigante, sabor equilibrado e feito para você faturar alto todos os dias.",
+    category: "Aulões (acesso de 06 meses)",
+    price: "R$ 247,00",
+    image: "https://lh3.googleusercontent.com/d/1v0nKzHZ4hWK6fkvYd6kyZwSwi5iC_RUN",
+    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Aulao%20Bombom%20de%20Morango",
+    detalhesLongos: [
+      "Técnica de higienização e preparo do morango para prolongar a vida útil sem soltar água",
+      "O famoso creme de leite ninho aveludado perfeito para base",
+      "Ganache de chocolate nobre brilhante que não quebra ao morder",
+      "Montagem estratégica em potes transparentes e embalagens individuais de alto apelo visual",
+      "Marketing visual: como fotografar o morango fresco e atrair compradores no delivery"
+    ],
+    galeria: [
+      "https://lh3.googleusercontent.com/d/1v0nKzHZ4hWK6fkvYd6kyZwSwi5iC_RUN",
+      "https://lh3.googleusercontent.com/d/1zhJwD924djQYi7pH72XtTrTeBoiv3L3K",
+      "https://lh3.googleusercontent.com/d/1glmBEpXZ0i0MEmwNjcdrZw0p2RE5bd9u",
+      "https://lh3.googleusercontent.com/d/1KTPj2kRyBfgiDB0Z4fAIPECNUSAbi7mx",
+      "https://lh3.googleusercontent.com/d/1P-slrE-7TDUDrzgk46cVzsKl6-XxwVGw"
+    ]
+  },
+  {
+    id: "course-6",
+    title: "Curso Slices Cakes de Sucesso",
+    description: "Fatias Supremas: o formato que transformou o bolo tradicional em um produto de luxo irresistível\n\nAs Slice Cakes (ou fatias de bolo) viraram febre porque entregam para o cliente exatamente o que ele quer: a experiência de um bolo de festa generoso, com muito recheio, mas no tamanho perfeito para o consumo individual.\n\nAqui você vai dominar a técnica de corte perfeito, massas estruturadas que não despencam e combinações de recheios que são campeões de vendas. Aprenda a transformar fatias simples em verdadeiros objetos de desejo altamente lucrativos na sua vitrine ou delivery.",
+    category: "Cursos Rápidos (Acesso de 6 meses)",
+    price: "R$ 257,00",
+    image: "https://lh3.googleusercontent.com/d/13-PKnoIu3Iuui_ZbPkMEyAiOOaHWoTuq",
+    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Curso%20Slices%20Cakes%20de%20Sucesso",
+    detalhesLongos: [
+      "Técnica do corte perfeito e simétrico para fatias milimetricamente iguais (corte limpo sem amassar)",
+      "Como estruturar massas amanteigadas e chiffon fofas que sustentam 3 camadas de recheio rico",
+      "Combinações de recheios requintados: Quatro Leites, Brigadeiro Gourmet, Creme de Pistache e Compotas ácidas",
+      "Segredos da selagem química e da embalagem protetora individual que preserva a umidade por mais tempo",
+      "Precificação estratégica de luxo: como cobrar até R$ 18 por fatia com custo de produção baixíssimo",
+      "Estratégia prática de vendas rápidas via Instagram, iFood e parcerias com cafeterias locais"
+    ],
+    galeria: [
+      "https://lh3.googleusercontent.com/d/13-PKnoIu3Iuui_ZbPkMEyAiOOaHWoTuq",
+      "https://lh3.googleusercontent.com/d/1BJ5oM89M_s6VXO_3Ei3VKJ1PbMqZDb3q",
+      "https://lh3.googleusercontent.com/d/1_PsfsEF29ujY9MQ6oC1lFbUk1eWZrm5I",
+      "https://lh3.googleusercontent.com/d/1MS8xZG8JkOFB3wm0fxKVBGwhsVyCebZM",
+      "https://lh3.googleusercontent.com/d/16HyVJkEKAERPAzH6Na2Qo1BuZBbHGFwV"
+    ]
+  },
+  {
+    id: "course-7",
+    title: "Aulão Biscoito Amanteigado",
+    description: "A arte de presentear em formato de doce: produza biscoitos perfeitos para datas comemorativas\n\nBiscoitos amanteigados vão muito além do café da tarde; eles são o produto perfeito para montagem de lembrancinhas, caixas corporativas e presentes em datas especiais (como Dia das Mães, Natal e Páscoa). Aprenda uma massa que derrete na boca, mantém o formato perfeito ao assar e tem uma durabilidade excelente para você produzir com calma e vender muito.",
+    category: "Aulões (acesso de 06 meses)",
+    price: "R$ 137,00",
+    image: "https://lh3.googleusercontent.com/d/1gQCa-UT6TQDM2ujyDMwKcP4K7fH3-_ld",
+    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Aulao%20Biscoito%20Amanteigado",
+    detalhesLongos: [
+      "Massa clássica amanteigada que não deforma ao assar",
+      "Principais técnicas de conservação e embalagem de alta durabilidade para presentes",
+      "Como planejar a produção antecipada para datas sazonais de alto faturamento",
+      "Ideias de montagem de caixas sofisticadas e de altíssimo valor percebido",
+      "Precificação inteligente e controle de desperdício em produção em massa"
+    ],
+    galeria: [
+      "https://lh3.googleusercontent.com/d/1gQCa-UT6TQDM2ujyDMwKcP4K7fH3-_ld",
+      "https://lh3.googleusercontent.com/d/1NrdTfaClGkwg0FN_HXuIaoyX2kj3rkyi",
+      "https://lh3.googleusercontent.com/d/14dNAszQuHysALns4_jwqAOXJSMY_BJfg",
+      "https://lh3.googleusercontent.com/d/1rUYO0cGjp9Ml-GnsnZUNXlAnSuHHh5TF"
+    ]
+  },
+  {
+    id: "course-8",
+    title: "Curso Precificação e Ficha Técnica (Express)",
+    description: "A mesma inteligência financeira da Doces da Nat, desenhada para proteger o seu lucro\n\nVocê trabalha duro na cozinha, mas chega no fim do mês e não vê a cor do dinheiro? O erro não está no seu talento, está na sua tabela. Este não é um curso teórico de matemática; é a ferramenta real de sobrevivência do seu negócio.\n\nPela primeira vez, a equipe financeira da Doces da Nat formatou o método exato e a planilha de fichas técnicas que a Nat usa diariamente para garantir a saúde e o crescimento da sua empresa. Aprenda a cobrar o preço justo, incluir seus custos invisíveis e ter a certeza de que cada doce vendido está, de fato, colocando dinheiro no seu bolso.",
+    category: "Cursos Rápidos (Acesso de 6 meses)",
+    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=600&auto=format&fit=crop",
+    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Curso%20Precificacao%20e%20Ficha%20Tecnica%20Express",
+    detalhesLongos: [
+      "Planilha automatizada inclusa de custos e fichas técnicas",
+      "Como calcular o valor da sua hora trabalhada (PRO-LABORE)",
+      "Método para embutir custos 'invisíveis' (detergente, luz, gás, água)",
+      "Como fazer orçamentos rápidos de bolos personalizados",
+      "Posicionamento de mercado para cobrar o preço justo sem medo"
+    ],
+    galeria: [
+      "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop"
+    ]
+  },
+  {
+    id: "course-9",
+    title: "Pudim Lisinho da Naty",
+    description: "A sobremesa perfeita existe: conquiste seus clientes com o pudim mais impecável do mercado\n\nFazer pudim parece fácil, mas conquistar aquele resultado sem furinhos, extremamente cremoso, com a textura que derrete na boca e a calda na cor de âmbar perfeita é para poucos. A Nat reuniu todos os seus segredos, tempos de forno e técnicas neste aulão para você entregar o pudim dos sonhos dos seus clientes e se destacar da concorrência.",
+    category: "Aulões (acesso de 06 meses)",
+    price: "R$ 397,00",
+    image: "https://lh3.googleusercontent.com/d/1-QfO1MVK73DMRsk8OpLNe6UsTJzhmYeW",
+    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Aulao%20Pudim%20Lisinho%20da%20Naty",
+    detalhesLongos: [
+      "Ponto perfeito da calda de caramelo in tom âmbar sem queimar",
+      "Segredo do cozimento de precisão para um pudim zero furinhos e ultra-cremoso",
+      "Técnica profissional de banho-maria e controle exato de temperatura no forno doméstico",
+      "Como desenformar com segurança máxima sem quebrar ou rachar o pudim",
+      "Cálculo de validade, conservação na embalagem certa e precificação estratégica"
+    ],
+    galeria: [
+      "https://lh3.googleusercontent.com/d/1-QfO1MVK73DMRsk8OpLNe6UsTJzhmYeW",
+      "https://lh3.googleusercontent.com/d/1o-XX1cFs6Vv8V2N-ZoggygJQRkYnGeKn",
+      "https://lh3.googleusercontent.com/d/1_CQmdXxtu1QVHXQrsBpO78g6J0KIjcBR"
+    ]
+  },
+  {
+    id: "course-10",
+    title: "Torta para Delivery",
+    description: "Logística e sabor: monte tortas irresistíveis estruturadas para o transporte perfeito\n\nVender tortas no delivery exige muito mais do que uma boa receita; exige estrutura. O cliente quer abrir a embalagem e encontrar uma torta linda, inteira e perfeita, exatamente como saiu da sua cozinha. Neste aulão, você aprende massas, recheios e técnicas de montagem pensadas estrategicamente para resistirem ao transporte, sem abrir mão do sabor supremo.",
+    category: "Aulões (acesso de 06 meses)",
+    price: "R$ 227,00",
+    image: "https://lh3.googleusercontent.com/d/1lkndeZscDmaUdXA1FCXdp96u-4IHofza",
+    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Aulao%20Torta%20para%20Delivery",
+    detalhesLongos: [
+      "Desenvolvimento de massas estruturadas (sablée e frola) crocantes e seguras contra umidade",
+      "Preparo de recheios firmes de corte perfeito sem perder a cremosidade",
+      "Técnicas de montagem direta na embalagem para evitar deslocamento no delivery",
+      "Como escolher o modelo de embalagem perfeito com maior segurança de transporte",
+      "Garantias de vida útil prolongada e conservação sob refrigeração"
+    ],
+    galeria: [
+      "https://lh3.googleusercontent.com/d/1lkndeZscDmaUdXA1FCXdp96u-4IHofza",
+      "https://lh3.googleusercontent.com/d/15gOnlVRkDsyAmb_ehqVytjjCeDxM7GGt",
+      "https://lh3.googleusercontent.com/d/1LY5B5wIbo8bzJMj7qRJbwQBIhWJJ7LB1",
+      "https://lh3.googleusercontent.com/d/1afn5kt02LtSOJlwSyQ1iZz_OCwYRz856",
+      "https://lh3.googleusercontent.com/d/1aaHNZ9F39iug_PwjhfKGYepY8ySJ8vKx",
+      "https://lh3.googleusercontent.com/d/18HGyVL5BJ1QMuFgNcltyHFp8N20yJyro",
+      "https://lh3.googleusercontent.com/d/1k3mnD-plEMliwthJJdWLw9qCIPPvFcYP",
+      "https://lh3.googleusercontent.com/d/1tcpI2AnefyMby1DVC28xDrA06RGce8U2",
+      "https://lh3.googleusercontent.com/d/1Pr4e0CoZYuuv3kRbWe0862shiQUicsmx"
+    ]
+  },
+  {
+    id: "course-11",
+    title: "Aulão Bolo Gelado de Coco",
+    description: "Nostalgia lucrativa: o bolo gelado super molhadinho que é sucesso de vendas na confeitaria moderna\n\nO bolo gelado de coco resgata aquela memória afetiva deliciosa, e é exatamente por isso que ele vende tanto! Envolto no papel alumínio, super molhado e com coco fresco, ele é o produto de lanche perfeito para o delivery ou vendas de rua. Uma aula rápida para você aprender a massa que mais absorve calda sem desmanchar e começar a faturar imediatamente.",
+    category: "Aulões (acesso de 06 meses)",
+    price: "R$ 277,00",
+    image: "https://lh3.googleusercontent.com/d/1_Ss2pQhBd801an7M8BQtiwhBJKofZKgf",
+    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Aulao%20Bolo%20Gelado%20de%20Coco",
+    detalhesLongos: [
+      "Massa de pão de ló super aerada ideal para absorver calda sem desmanchar",
+      "A famosa calda de coco cremosa com leite condensado e leite de coco fresco",
+      "Técnicas de descanso corretas e corte uniforme de fatias perfeitas",
+      "Como embrulhar no papel alumínio com agilidade e máxima vedação térmica",
+      "Sugestões de apresentação, validade e controle de estoque para pronta entrega"
+    ],
+    galeria: [
+      "https://lh3.googleusercontent.com/d/1_Ss2pQhBd801an7M8BQtiwhBJKofZKgf",
+      "https://lh3.googleusercontent.com/d/1r1ER484d9_iJGQ4yuixAt0DqMsz1fD6f",
+      "https://lh3.googleusercontent.com/d/1rB_RcM1qMX5Qmhdab78_ohMNibB5Mdwj",
+      "https://lh3.googleusercontent.com/d/1OyspoSISEg_02bRiGsgma1jT_M4XNDK8"
+    ]
+  },
+  {
+    id: "course-12",
+    title: "Bolo Gelado de Prestígio da Naty",
+    description: "A combinação irresistível: eleve o nível do bolo gelado com a dupla dinâmica de chocolate e coco\n\nSe o de coco já é um sucesso, a version Prestígio potencializa o faturamento. Combinando uma massa de chocolate intensa e fofinha com um recheio cremoso di coco, esse bolo gelado é o queridinho do público. Aprenda a equilibrar a doçura e a umidade exata para criar um doce viciante, perfeito para o cliente comprar em quantidade.",
+    category: "Aulões (acesso de 06 meses)",
+    price: "R$ 187,00",
+    image: "https://lh3.googleusercontent.com/d/1fwqJj16koXaHZRS1a7VTS5KjjAjqmRtE",
+    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Curso%20Bolo%20Gelado%20de%20Prestigio",
+    detalhesLongos: [
+      "Massa fofinha de cacau black com alto poder de absorção de calda",
+      "O recheio de coco cremoso perfeito com textura de beijinho de colher",
+      "Técnicas de montagem, corte padronizado e selagem no papel alumínio",
+      "Segredos do controle de validade estendido e congelamento seguro",
+      "Combinações inteligentes de vendas da dupla Coco Tradicional e Prestígio"
+    ],
+    galeria: [
+      "https://lh3.googleusercontent.com/d/1fwqJj16koXaHZRS1a7VTS5KjjAjqmRtE",
+      "https://lh3.googleusercontent.com/d/1P64GtYxQGF2MbS30AkCsaZYxkHXa8sXA",
+      "https://lh3.googleusercontent.com/d/19yyi1SSJbSDzyzZ5rkZAPv5P-_DGt0PD"
+    ]
+  },
+  {
+    id: "course-13",
+    title: "Chocolate Quente da Naty",
+    description: "Faturamento em alta no inverno: a receita secreta do chocolate ultra cremoso que aquece as vendas\n\nQuando o frio chega em várias regiões do país, as vendas de doces tradicionais mudam e o chocolate quente vira o protagonista. Mas esqueça aquela bebida rala de achocolatado; aqui você vai aprender o Chocolate Quente da Naty, uma bebida europeia densa, aveludada e extremamente saborosa, perfeita para vender no seu balcão ou enviar pelo delivery de forma impecável.",
+    category: "Aulões (acesso de 06 meses)",
+    price: "R$ 197,00",
+    image: "https://lh3.googleusercontent.com/d/1Bype6idwlJREGoSH0GFmA09Mbf7K15pR",
+    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Curso%20Chocolate%20Quente%20da%20Naty",
+    detalhesLongos: [
+      "A receita secreta europeia de chocolate denso e aveludado",
+      "Como harmonizar cacau e blends de chocolate nobre sem deixar enjoativo",
+      "Técnica profissional de aquecimento e consistência perfeita sem amido sobressalente",
+      "Logística e embalagens térmicas inteligentes para envio seguro no delivery",
+      "Como faturar alto no inverno agregando complementos irresistíveis (marshmallows, chantilly)"
+    ],
+    galeria: [
+      "https://lh3.googleusercontent.com/d/1Bype6idwlJREGoSH0GFmA09Mbf7K15pR",
+      "https://lh3.googleusercontent.com/d/1gp1nAtG21K3Wkop8KLN3MUlErvg67tYU",
+      "https://lh3.googleusercontent.com/d/1cNvIzykeT03ncdAwyvRH1LCPh4foe_bD"
+    ]
+  },
+  {
+    id: "course-14",
+    title: "Pão de Mel da Naty",
+    description: "O doce perfeito para o ano todo: domine a massa de especiarias e o banho de chocolate impecável\n\nO pão de mel é um curinga na confeitaria: tem excelente validade, transporta super bem e aceita os mais variados recheios, do doce de leite tradicional ao brigadeiro gourmet. Neste aulão, a Nat ensina a base de especiarias perfeita, o segredo para ele ficar sempre úmido e as técnicas para um banho de chocolate profissional e brilhante, sem mistérios.",
+    category: "Aulões (acesso de 06 meses)",
+    price: "R$ 157,00",
+    image: "https://lh3.googleusercontent.com/d/1slYg2ANVw9n514ayk7s8EXFkNIykQAjO",
+    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Aulao%20Pao%20de%20Mel%20da%20Naty",
+    detalhesLongos: [
+      "Massa de especiarias super fofinha, equilibrada e aromática",
+      "Segredos do cozimento correto para manter o miolo super úmido",
+      "Preparo de recheio de doce de leite de ponto firme e variações finas",
+      "Técnica profissional para o banho de chocolate simétrico, brilhante e sem rebarbas",
+      "Estratégia completa de embalagem, validade e controle de custos"
+    ],
+    galeria: [
+      "https://lh3.googleusercontent.com/d/1slYg2ANVw9n514ayk7s8EXFkNIykQAjO",
+      "https://lh3.googleusercontent.com/d/1hasw_yj9xEJ8OYt3EnsGJNPiCMdNyxLf",
+      "https://lh3.googleusercontent.com/d/1L7xuryugsNDIGG7Z2cpuY4VEpO6Lwnea"
+    ]
+  },
+  {
+    id: "course-15",
+    title: "Venda Sobremesas",
+    description: "Do almoço de domingo aos grandes eventos: domine a arte das sobremesas na taça e fature alto\n\nSe você quer um produto com ticket médio alto, que as pessoas compram para celebrar com a família e amigos, as sobremesas na taça são o caminho mais lucrativo. Elas unem sofisticação, visual irresistível e alta rentabilidade em um único preparo.\n\nEste é um curso completo de negócios. Você não vai aprender apenas receitas; vai dominar a precificação correta de sobremesas em grande escala, a estrutura das bases de recheio que não desandam na taça, montagens profissionais que encantam o cliente e as melhores estratégias de vendas usando as redes sociais. Transforme simples ingredientes em verdadeiros banquetes de colher.",
+    category: "Cursos Completos",
+    price: "R$ 197,00",
+    image: "https://lh3.googleusercontent.com/d/1fclSW2hcY1GS_EE3GmpOZjypuzb_HfRu",
+    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Curso%20Venda%20Sobremesas",
+    detalhesLongos: [
+      "Bases de cremes estruturados de alto rendimento para montagem em taças",
+      "Combinação de sabores campeões: Ninho, Nutella, Pistache e Geleia rústica de morango",
+      "Metodologia de precificação precisa para embalagens coletivas e familiares de alto ticket",
+      "Design de montagem em camadas visíveis ultra-desejáveis",
+      "Captação de clientes e marketing focado em eventos, jantares e encomendas de fim de semana"
+    ],
+    galeria: [
+      "https://lh3.googleusercontent.com/d/1fclSW2hcY1GS_EE3GmpOZjypuzb_HfRu",
+      "https://lh3.googleusercontent.com/d/1u2MUSy2qdtcCIbVQlmtc2nQCd6gmZ_Ek",
+      "https://lh3.googleusercontent.com/d/13V2pG5LUbMUhTdru8pudjGTd65i9qERc",
+      "https://lh3.googleusercontent.com/d/1HcXDvjRSVVmiQx1Ut6WGJKP02sQPRqNF",
+      "https://lh3.googleusercontent.com/d/1Et3JGOvWsSnXy7-c5bkCtWhQlUvl5i-j",
+      "https://lh3.googleusercontent.com/d/1GJ7VrvV4X_r0quAbNlhPhHc5K8oXLpuM"
+    ]
+  },
+  {
+    id: "course-16",
+    title: "Curso Comece com Brigadeiros",
+    description: "A sua porta de entrada na confeitaria: faça do doce mais amado o seu primeiro grande negócio\n\nSe você quer entrar no mundo dos doces mas não sabe por onde começar, a resposta está no brigadeiro. Ele é o ponto de partida ideal porque exige poucos utensílios e tem saída garantida o ano todo, de festas corporativas a desejos de fim de tarde.\n\nNeste curso, a Nat compartilha a sua própria história e te ensina a base dos brigadeiros que deram origem à Doces da Nat. Você vai aprender o ponto perfeito (sem cristalizar!), técnicas de boleamento e os sabores mais pedidos do mercado para começar a lucrar imediatamente.",
+    category: "Cursos Rápidos (Acesso de 6 meses)",
+    price: "R$ 137,00",
+    image: "https://lh3.googleusercontent.com/d/1YCoC2WuF2pgWzQUa41DwXKnsV0llBIUm",
+    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Curso%20Comece%20com%20Brigadeiros",
+    detalhesLongos: [
+      "Pontos exatos de brigadeiro de panela, colher e recheio",
+      "Como usar glicose e chocolate nobre para evitar a cristalização",
+      "Confeitos de alta qualidade e cobertura uniforme dos docinhos",
+      "Sabores sofisticados: Ninho com Nutella, Limão Siciliano, Belga ao Leite",
+      "Cálculo de rendimento de receitas and armazenamento sob congelamento"
+    ],
+    galeria: [
+      "https://lh3.googleusercontent.com/d/1YCoC2WuF2pgWzQUa41DwXKnsV0llBIUm",
+      "https://lh3.googleusercontent.com/d/1YAQJz-vwcHva53V3wpUl0zNieL6bOja3",
+      "https://lh3.googleusercontent.com/d/1g4YkV66RlNmH77qoAFzTd_EDfKhA8ZzZ",
+      "https://lh3.googleusercontent.com/d/1_RCPvRA9Yd91PlchOUn_Wn7VXxMGYEdg",
+      "https://lh3.googleusercontent.com/d/1mGpDir7X0t1-KakYGnJ3iQN_tf1nLeN6",
+      "https://lh3.googleusercontent.com/d/188hO2XWKHFkV4rjbMfVoiuRmCPpH9TCI",
+      "https://lh3.googleusercontent.com/d/1imyZGzF3-_mDtwcNB5d0MzovaxjOrmuB",
+      "https://lh3.googleusercontent.com/d/1Bs31r43yLANL1rADGTVG4FGD5v2MSFJf"
+    ]
+  },
+  {
+    id: "course-17",
+    title: "Páscoa Lucrativa com a Naty 2.0",
+    description: "O segredo da temperagem perfeita: fature o ano inteiro dominando a base da chocolateria profissional\n\nA Páscoa é a época mais lucrativa do ano para a confeitaria, mas muitos profissionais têm medo de trabalhar com chocolate por causa da famosa temperagem. Neste curso completo, você vai entender que o chocolate perfeito não é sorte, é ciência.\n\nA Nat vai te ensinar a teoria real da temperagem — entendendo o ambiente, a temperatura da geladeira, o uso de termômetros calibrados e o armazenamento correto. E o grande pulo do gato deste curso: ao dominar essa base, você não vai lucrar apenas na Páscoa! Você vai usar o mesmo conhecimento para produzir bombons, pães de mel, cones trufados e faturar de janeiro a janeiro.",
+    category: "Cursos Completos",
+    price: "R$ 147,00",
+    image: "https://lh3.googleusercontent.com/d/1CD6UGcrJueU9FsnfOfDr2GcPFZO_YQon",
+    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Curso%20Pascoa%20Lucrativa%20com%20a%20Naty",
+    detalhesLongos: [
+      "A ciência exata por trás da cristalização e calor do chocolate",
+      "Métodos práticos de temperagem: tablagem, adição e Mycryo",
+      "Como calibrar a temperatura de sua geladeira para o desmolde perfeito",
+      "Criação e recheio de ovos de colher, bombons finos e cones trufados",
+      "Segredos de armazenamento e logística para produzir com alta antecedência e vender o ano todo"
+    ],
+    galeria: [
+      "https://lh3.googleusercontent.com/d/1CD6UGcrJueU9FsnfOfDr2GcPFZO_YQon",
+      "https://lh3.googleusercontent.com/d/1pNTPFG4eqgTnLwDXsKOED62HaQbQjSzH",
+      "https://lh3.googleusercontent.com/d/1qUIf_ZtAUxwSnvYmEID6axYnQbSvFdnE",
+      "https://lh3.googleusercontent.com/d/1pjCnZUOReA4AAeDrarKNwIIaP_05h8Bi",
+      "https://lh3.googleusercontent.com/d/1-SIaLxemnvqbpR_OZ00UeGOuu5PHtyjN",
+      "https://lh3.googleusercontent.com/d/10SUHYINx4SZeb7n-b9G0eIvKhTkn3Fgl",
+      "https://lh3.googleusercontent.com/d/1vTt6toqTwC_Va0Igc9PkJbjE8VauYwqd"
+    ]
+  },
+  {
+    id: "course-18",
+    title: "Fotos e Vídeos com a Naty",
+    description: "O seu produto também é vendido pelos olhos: aprenda a criar cenários e imagens que multiplicam seus pedidos\n\nNo mundo digital, o seu cliente primeiro \"come\" o doce com os olhos através da tela do celular. Se a sua foto for escura ou sem vida, o seu produto perde valor. Este curso completo foi feito para te transformar na melhor vitrine do seu próprio negócio.\n\nVocê vai aprender o passo a passo para montar cenários profissionais na cozinha da sua casa utilizando os equipamentos que você já tem. Descubra como dominar a iluminação natural e artificial, técnicas para fotografar e filmar sozinha (ou com ajuda), e o grande segredo da edição que destaca as cores e texturas do doce. Pare de perder vendas por não saber divulgar o seu talento.",
+    category: "Cursos Completos",
+    price: "R$ 217,00",
+    image: "https://lh3.googleusercontent.com/d/1LoQiTee3y9m4QZ6Y9bg8Shmp2xcp3bUZ",
+    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Curso%20de%20Fotos%20e%20Videos%20com%20a%20Naty",
+    detalhesLongos: [
+      "Criação de cenários encantadores na cozinha da sua casa gastando quase nada",
+      "Como dominar a iluminação natural e usar luz artificial de forma profissional",
+      "Técnicas de angulação e foco para destacar a cremosidade e brilho dos doces",
+      "Edição magnética de fotos e vídeos rápidos para Reels usando apenas o celular",
+      "Estrutura de narrativas visuais que transformam visualizações em vendas diárias"
+    ],
+    galeria: [
+      "https://lh3.googleusercontent.com/d/1LoQiTee3y9m4QZ6Y9bg8Shmp2xcp3bUZ",
+      "https://lh3.googleusercontent.com/d/1uJ2-LaRTFizqdFN2re7dP_SlRESCTqDf",
+      "https://lh3.googleusercontent.com/d/1_7CxhIF5XWlgoYWNqVyce_FRtGgDu648",
+      "https://lh3.googleusercontent.com/d/1wM87mQSyUWA6cnoDdu2TzFfShuGzsI6A",
+      "https://lh3.googleusercontent.com/d/1u9cBWkto50itKbi2E01w713FTxmJA21F"
+    ]
+  },
+  {
+    id: "course-19",
+    title: "Doces de vitrine",
+    description: "Muitas confeiteiras tem o sonho de viver da confeitaria, mas começam da forma errada, o sucesso vai muito além das receitas.\n\nNo Doces de vitrine você entende que para crescer na confeitaria é preciso saber os pilares mais importantes, e não estamos falando apenas dos doces, é preciso aprender sobre vendas, divulgação, precificação, delivery e gestão financeira.\n\nÉ o passo a passo que usei para construir a Doces da Naty do zero, e que você terá acesso para aplicar na sua confeitaria.",
+    category: "Cursos Completos",
+    price: "R$ 197,00",
+    image: "https://lh3.googleusercontent.com/d/1Nqs6XbAUdLWSdf5pGG555B_EyqWB9fND",
+    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Curso%20Doces%20de%20Vitrine",
+    detalhesLongos: [
+      "Desenvolvimento de mentalidade empreendedora e marketing estratégico na confeitaria",
+      "Pilares práticos de controle financeiro, fluxo de caixa e capital de giro",
+      "Como estruturar um delivery lucrativo com raio de entrega expandido",
+      "Estratégias de vendas corporativas e parcerias com estabelecimentos locais",
+      "Divulgação e atração constante de novos clientes através do Instagram"
+    ],
+    galeria: [
+      "https://lh3.googleusercontent.com/d/13ggap4-kukp16g6F5vRciGy2QQV50GrC",
+      "https://lh3.googleusercontent.com/d/1aMnMaw3IXbqRCJrJ5JyF9jHnTrVzkJyi",
+      "https://lh3.googleusercontent.com/d/1gy1IHZt63DbOCRZba2-pOe7G1K6aYABI",
+      "https://lh3.googleusercontent.com/d/1xqUuvECHncnwjHD4y6XuZuDLPn0m5UIY",
+      "https://lh3.googleusercontent.com/d/1OzWjBwc4gCnWrirQsp6irVh07ANnJ9LL",
+      "https://lh3.googleusercontent.com/d/1ll5TxwIjAlCpxsNn4oCO3GTqCprEG3rk",
+      "https://lh3.googleusercontent.com/d/1Nqs6XbAUdLWSdf5pGG555B_EyqWB9fND",
+      "https://lh3.googleusercontent.com/d/1pgBlPeDw4VufLmj3af4Ge6FIWdnuOuZA",
+      "https://lh3.googleusercontent.com/d/1Au7Q36sNrWscmpm_MLpVyxXI4oZuJpwU",
+      "https://lh3.googleusercontent.com/d/1zLR5-qrkz9Ms6JKoM5B6g6mplQOE1K8V",
+      "https://lh3.googleusercontent.com/d/1pU2CUzmxckTjeNkdeg1YRNMP-noV6teK",
+      "https://lh3.googleusercontent.com/d/1g4HOq05GBQKQty0iw0nSjZRP-FttGUnH",
+      "https://lh3.googleusercontent.com/d/1xXZ--Z6dd6MASfXTNUWqHwrsGn1ETRS-",
+      "https://lh3.googleusercontent.com/d/1nFDf9keR6gaiXkldyG5wyURb8fI4tp_T",
+      "https://lh3.googleusercontent.com/d/17LtsfBTRtvTnVn0VtAXXtj3qosDB6Kxb",
+      "https://lh3.googleusercontent.com/d/11OhWJxFoBplsfpvjxeUCICmmSkU5CBIz",
+      "https://lh3.googleusercontent.com/d/1-LHYGZta8H2b11vqRNX4n4FdG2NenB7G",
+      "https://lh3.googleusercontent.com/d/1r5t8ZPJDwGReMjAUa1jTuFBbYQ41Ro6I",
+      "https://lh3.googleusercontent.com/d/1CEZtJ1i1oo7OFxVi3E8ASAky_9wz0Q4l",
+      "https://lh3.googleusercontent.com/d/1xctf9pLnoEGv_iD6rP6lr0npRPwOj-xp",
+      "https://lh3.googleusercontent.com/d/12j7KMipzLqsz_7aSawV2t7hJJfGxTTD8",
+      "https://lh3.googleusercontent.com/d/1pkQFOMJCsCRxX3UAJd5mSuhzl8DBbT_B",
+      "https://lh3.googleusercontent.com/d/1QVd9UdAcCVAb5y3DFqV75W-tkL74DjsK"
+    ]
+  },
+  {
+    id: "course-20",
+    title: "Curso Box Gelados",
+    description: "O segredo do faturamento nos dias quentes: monte caixas irresistíveis de pura refrescância\n\nQuando a temperatura sobe, o comportamento do cliente muda — e o seu cardápio precisa acompanhar. O Box Gelado é a solução perfeita para manter as vendas em alta o ano inteiro, unindo praticidade e uma experiência única de sobremesa.\n\nAprenda a produzir e montar combinações de doces gelados que mantêm a textura perfeita, não perdem o sabor e criam um visual impossível de resistir nas redes sociais. Garanta que o seu negócio seja a primeira opção do cliente quando ele pensar em um doce refrescante.",
+    category: "Cursos Rápidos (Acesso de 6 meses)",
+    price: "R$ 197,00",
+    image: "https://lh3.googleusercontent.com/d/1zM0eM4anE-tkFDm5nvXpet6niexfPqkz",
+    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Curso%20Box%20Gelados",
+    detalhesLongos: [
+      "Técnicas de congelamento e ultra-resfriamento sem perder a cremosidade ou criar cristais de gelo",
+      "Montagem de caixas personalizadas (Boxes) com divisórias térmicas inteligentes para delivery seguro",
+      "Receitas de mousses aveludadas, palha italiana cremosa, fatias trufadas de ninho e bolos gelados embrulhados",
+      "Controle de validade estendida sob baixa temperatura mantendo o visual fresco de recém-feito",
+      "Cálculo exato de custo-benefício de caixas combinadas para maximizar o ticket médio do cliente",
+      "A estratégia secreta de vendas de fim de semana e dias ensolarados que esgota o estoque em poucas horas"
+    ],
+    galeria: [
+      "https://lh3.googleusercontent.com/d/1zM0eM4anE-tkFDm5nvXpet6niexfPqkz",
+      "https://lh3.googleusercontent.com/d/17vfJ-2Ciaz_MEa9nfCDD-QIPJRgLooEh",
+      "https://lh3.googleusercontent.com/d/1SFYNyZQIBqaPE8DxTgcWypLOCnoH7FcC",
+      "https://lh3.googleusercontent.com/d/1MzdWjQC3KljV5lZN2b1ulrGrl9Yvjk-s",
+      "https://lh3.googleusercontent.com/d/1QG3n1ZoZb_5xz-_VXIQiAq_mp3IBornD",
+      "https://lh3.googleusercontent.com/d/15thPBuxS9-ro0UN0D1KflAIO1D2-Ypda"
+    ]
+  },
+  {
+    id: "course-21",
+    title: "Bolos do Zero",
+    description: "Bolo foi o meu maior vilão na confeitaria, e de tanto errar por não saber fazer os processos, eu criei o bolos do zero com o passo a passo para fazer seu bolo ficar perfeito.\n\nPara fazer bolos com segurança você precisa da masa certa, o recheio no ponto, a montagem padronizada, a decoração impecável e o sabor irresistível.\n\nAlém disso, eu te ensino como vender bolos diariamente através das fatias, que são o ponta pé para o cliente conhecer o sabor do seu bolo, é o que eu chamo de degustação paga.",
+    category: "Cursos Completos",
+    price: "R$ 297,00",
+    image: "https://lh3.googleusercontent.com/d/1BdBGJYRCRuBIwROZR5sqy8U5BSVltzly",
+    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Curso%20Bolos%20do%20Zero",
+    detalhesLongos: [
+      "Preparo exato de massas amanteigadas e chiffon estruturadas e fofas",
+      "Ponto de bico e recheios firmes para montagens seguras e sem vazamentos",
+      "Técnica profissional de prensa e estruturação de bolos altos",
+      "Decorações contemporâneas, espatulados perfeitos e finalização magnética",
+      "A estratégia da 'Degustação Paga': como girar estoque e atrair clientes de bolo de festa com fatias diárias"
+    ],
+    galeria: [
+      "https://lh3.googleusercontent.com/d/1BdBGJYRCRuBIwROZR5sqy8U5BSVltzly",
+      "https://lh3.googleusercontent.com/d/1HwqCBR2YsfedYlYPjEUw8MAANwM0bfX6",
+      "https://lh3.googleusercontent.com/d/1-kGDbgNujXFiz0URvhBDHeHNOU6UUTJ6",
+      "https://lh3.googleusercontent.com/d/19EFAQ0tZl5kIMXXI0a0Ifv6hBvcHjkDE",
+      "https://lh3.googleusercontent.com/d/17nscLVGLLo06K-K0oDqoL2MLOJlb_0VZ",
+      "https://lh3.googleusercontent.com/d/1e1LuAyPR3rY2BrHfAq_FkwsYD-a6Y_lZ",
+      "https://lh3.googleusercontent.com/d/1VcH99ltslGgTbvEC_qYnE-xSNf0QCHpu",
+      "https://lh3.googleusercontent.com/d/1fpLeGez-ASw6WkmhK1kgTsX9-dI_y5Oc",
+      "https://lh3.googleusercontent.com/d/1nMiRnSX48D8O4G7rFVVADTw6_K7uUWmQ",
+      "https://lh3.googleusercontent.com/d/1FERoiXUt6tuXZ_Rx0RHwkpYxdL0g8LaZ",
+      "https://lh3.googleusercontent.com/d/1iZoQ-IZVy5Aaae9ljmmNVP0Zkdn5BpSz",
+      "https://lh3.googleusercontent.com/d/1xsQ77b5g8GiD1sLwEHwUm0NYoFW8pThi",
+      "https://lh3.googleusercontent.com/d/105n6WjSI2XHGfKK4W87Ly_2eZ4UrScn4"
+    ]
+  }
+];
+
+export const TESTIMONIALS: Testimonial[] = [
+  {
+    id: 't1',
+    name: 'Ana Silva',
+    role: 'Aluna de Bolos Caseiros',
+    content: 'Os cursos da Naty mudaram minha vida! Hoje vivo da confeitaria e sustento minha família.',
+    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop',
+  },
+  {
+    id: 't2',
+    name: 'Mariana Santos',
+    role: 'Aluna Profissional',
+    content: 'A didática é impecável. Aprendi técnicas que nunca vi em outros cursos.',
+    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&auto=format&fit=crop',
+  },
+  {
+    id: 't3',
+    name: 'Paula Oliveira',
+    role: 'Iniciante na Confeitaria',
+    content: 'Sempre tive medo de errar receitas, mas com a Naty tudo ficou mais fácil.',
+    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop',
+  },
+];

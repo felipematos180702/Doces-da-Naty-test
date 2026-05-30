@@ -1,0 +1,63 @@
+import { motion } from 'motion/react';
+import { ChefHat, Instagram, Send } from 'lucide-react';
+
+interface HeaderProps {
+  onNavigateHome?: () => void;
+}
+
+export default function Header({ onNavigateHome }: HeaderProps) {
+  const handleLogoClick = () => {
+    if (onNavigateHome) {
+      onNavigateHome();
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <motion.header 
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      className="fixed top-0 left-0 right-0 z-50 bg-brand-cream/80 backdrop-blur-md border-b border-brand-primary/10"
+    >
+      <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+        <button 
+          onClick={handleLogoClick}
+          className="flex items-center gap-2 cursor-pointer focus:outline-none select-none text-left"
+          id="header-logo-btn"
+        >
+          <ChefHat className="text-brand-primary w-8 h-8" />
+          <span className="font-serif text-2xl font-bold tracking-tight text-brand-secondary">
+            Doces da <span className="text-brand-primary">Naty</span>
+          </span>
+        </button>
+        
+        <nav className="hidden md:flex items-center gap-8 font-medium">
+          <a href="#cursos" onClick={() => onNavigateHome?.()} className="hover:text-brand-primary transition-colors">Cursos</a>
+          <a href="#sobre" onClick={() => onNavigateHome?.()} className="hover:text-brand-primary transition-colors">Sobre Naty</a>
+          <a href="#depoimentos" onClick={() => onNavigateHome?.()} className="hover:text-brand-primary transition-colors">Depoimentos</a>
+        </nav>
+
+        <div className="flex items-center gap-4">
+          <a 
+            href="https://www.instagram.com/cursosdocesdanaty" 
+            target="_blank" 
+            referrerPolicy="no-referrer"
+            className="p-2 text-brand-secondary hover:text-brand-primary transition-colors"
+          >
+            <Instagram size={24} />
+          </a>
+          <a 
+            href="https://wa.me/553193476920" 
+            target="_blank"
+            referrerPolicy="no-referrer"
+            className="hidden sm:flex items-center gap-2 bg-brand-primary text-white px-5 py-2.5 rounded-full font-semibold hover:bg-brand-primary/90 transition-all shadow-lg shadow-brand-primary/20"
+          >
+            <Send size={18} />
+            Falar no WhatsApp
+          </a>
+        </div>
+      </div>
+    </motion.header>
+  );
+}

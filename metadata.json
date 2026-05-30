@@ -1,0 +1,6 @@
+{
+  "name": "Cursos de Confeitaria da Naty",
+  "description": "Landing page de alta performance para os 21 cursos de confeitaria da Naty.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
