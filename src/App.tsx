@@ -16,9 +16,9 @@ export default function App() {
   const [selectedCourseId, setSelectedCourseId] = useState<string | null>(null);
 
   return (
-    <div className="min-h-screen flex flex-col bg-brand-cream/20">
+    <div className="min-h-screen flex flex-col bg-brand-cream/20 w-full max-w-full overflow-x-hidden">
       <Header onNavigateHome={() => setSelectedCourseId(null)} />
-      <main className="flex-grow">
+      <main className="flex-grow w-full max-w-full overflow-x-hidden">
         {selectedCourseId ? (
           <CourseDetailsPage 
             courseId={selectedCourseId} 

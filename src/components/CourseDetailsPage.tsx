@@ -122,9 +122,9 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
-      className="min-h-screen bg-brand-cream text-brand-secondary pt-20 pb-12 md:pt-28 md:pb-20"
+      className="min-h-screen bg-brand-cream text-brand-secondary pt-20 pb-12 md:pt-28 md:pb-20 w-full max-w-full overflow-x-hidden"
     >
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         
         {/* Navigation Breadcrumb & Back */}
         <div className="mb-6 md:mb-8">
@@ -140,7 +140,7 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
         </div>
 
         {/* Main Product Section Grid */}
-        <div className="grid lg:grid-cols-12 gap-6 lg:gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start w-full max-w-full">
           
           {/* LEFT: Stunning Visuals & Interactive Gallery */}
           <div className="lg:col-span-7 space-y-6">
@@ -446,7 +446,7 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
           </div>
 
           {/* RIGHT SIDEBAR: High-Converting Checkout Card & Fast actions (CRO) */}
-          <div className="lg:col-span-12 xl:col-span-5 lg:sticky lg:top-28 space-y-6">
+          <div className="lg:col-span-5 w-full lg:sticky lg:top-28 space-y-6">
             
             {/* Dynamic Sticky Order Box */}
             <div className="bg-[#FFFDF9] rounded-3xl p-4 sm:p-6 md:p-8 shadow-2xl border-2 border-brand-primary/20 relative overflow-hidden">
