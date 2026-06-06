@@ -43,21 +43,12 @@ export default function Testimonials() {
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center gap-1 bg-brand-primary/10 text-brand-primary px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 shadow-sm"
-          >
-            <Sparkles size={13} className="fill-brand-primary/10 animate-pulse" />
-            Depoimentos & Printscreens Reais
-          </motion.div>
           
           <h2 className="font-serif text-3xl md:text-5xl font-black text-brand-secondary mb-4 tracking-tight leading-tight">
-            Conversas que Valem Ouro: Quem Faz, Vende!
+            O que minhas alunas dizem sobre o que aprende comigo.
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg">
-            Nossas alunas não apenas aprendem receitas, elas conquistam clientes fiéis e faturam alto. Toque em qualquer depoimento abaixo para ver os resultados reais compartilhados.
+            Elas aprendem além das receitas, conquistam clientes fiéis e faturam mais.
           </p>
         </div>
 

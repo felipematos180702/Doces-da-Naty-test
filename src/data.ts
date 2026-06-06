@@ -8,7 +8,7 @@ export const COURSES: Course[] = [
     category: "Cursos Rápidos (Acesso de 6 meses)",
     price: "R$ 167,00",
     image: "https://lh3.googleusercontent.com/d/1EGGiVIMK6Ylpcrs7u-5gbz-ld7iT2Ikq",
-    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Curso%20de%20Bolo%20no%20Pote",
+    linkCheckout: "https://pay.hotmart.com/K104875695L?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779995507042&bid=1779995508534",
     detalhesLongos: [
       "Química das Massas Estruturadas Amanteigadas e de Chiffon que absorvem calda sem desmoronar",
       "Processo de Montagem Rápida em Série que otimiza seu tempo e material",
@@ -40,7 +40,7 @@ export const COURSES: Course[] = [
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 297,00",
     image: "https://lh3.googleusercontent.com/d/1OUr9OSL70nLOpy3PF8SBQ9QL_9gzRf8A",
-    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Curso%20Bolo%20Matilda",
+    linkCheckout: "https://pay.hotmart.com/O101844457I?off=dji5bwha&checkoutMode=10&bid=1757860498606&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779995950712",
     detalhesLongos: [
       "Receita completa da massa super úmida e estruturada de cacau",
       "O recheio de chocolate cremoso com brilho espelhado inesquecível",
@@ -63,7 +63,7 @@ export const COURSES: Course[] = [
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 97,00",
     image: "https://lh3.googleusercontent.com/d/1CcfKj1wYnPcoZJrxuLRnyrNuydZcJ0bu",
-    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Aulao%20Bolo%20de%20Cenoura",
+    linkCheckout: "https://pay.hotmart.com/J105437818E?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779995790840&bid=1779995791796",
     detalhesLongos: [
       "Equilíbrio exato de cenoura e líquidos para garantir o bolo sempre fofinho",
       "Duas caldas memoráveis: a famosa casquinha de chocolate durinha e a calda fudge cremosa",
@@ -86,7 +86,7 @@ export const COURSES: Course[] = [
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 197,00",
     image: "https://lh3.googleusercontent.com/d/1gn-Iaoecm6Jtl2a7yS-53y2xTnniuI8l",
-    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Aulao%20Palha%20Crocantella",
+    linkCheckout: "https://pay.hotmart.com/K105437637H?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779995929797&bid=1779995930774",
     detalhesLongos: [
       "Ponto exato do brigadeiro base cremoso para palha italiana",
       "Seleção e preparo do biscoito para manter a crocância por mais tempo",
@@ -107,7 +107,7 @@ export const COURSES: Course[] = [
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 247,00",
     image: "https://lh3.googleusercontent.com/d/1v0nKzHZ4hWK6fkvYd6kyZwSwi5iC_RUN",
-    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Aulao%20Bombom%20de%20Morango",
+    linkCheckout: "https://pay.hotmart.com/O101153893E?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779995967843&bid=1779995969088",
     detalhesLongos: [
       "Técnica de higienização e preparo do morango para prolongar a vida útil sem soltar água",
       "O famoso creme de leite ninho aveludado perfeito para base",
@@ -130,7 +130,7 @@ export const COURSES: Course[] = [
     category: "Cursos Rápidos (Acesso de 6 meses)",
     price: "R$ 257,00",
     image: "https://lh3.googleusercontent.com/d/13-PKnoIu3Iuui_ZbPkMEyAiOOaHWoTuq",
-    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Curso%20Slices%20Cakes%20de%20Sucesso",
+    linkCheckout: "https://pay.hotmart.com/J98516024K?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779995605057&bid=1779995606299",
     detalhesLongos: [
       "Técnica do corte perfeito e simétrico para fatias milimetricamente iguais (corte limpo sem amassar)",
       "Como estruturar massas amanteigadas e chiffon fofas que sustentam 3 camadas de recheio rico",
@@ -154,7 +154,7 @@ export const COURSES: Course[] = [
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 137,00",
     image: "https://lh3.googleusercontent.com/d/1gQCa-UT6TQDM2ujyDMwKcP4K7fH3-_ld",
-    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Aulao%20Biscoito%20Amanteigado",
+    linkCheckout: "https://pay.hotmart.com/M101845099R?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779996000573&bid=1779996001653",
     detalhesLongos: [
       "Massa clássica amanteigada que não deforma ao assar",
       "Principais técnicas de conservação e embalagem de alta durabilidade para presentes",
@@ -175,7 +175,7 @@ export const COURSES: Course[] = [
     description: "A mesma inteligência financeira da Doces da Nat, desenhada para proteger o seu lucro\n\nVocê trabalha duro na cozinha, mas chega no fim do mês e não vê a cor do dinheiro? O erro não está no seu talento, está na sua tabela. Este não é um curso teórico de matemática; é a ferramenta real de sobrevivência do seu negócio.\n\nPela primeira vez, a equipe financeira da Doces da Nat formatou o método exato e a planilha de fichas técnicas que a Nat usa diariamente para garantir a saúde e o crescimento da sua empresa. Aprenda a cobrar o preço justo, incluir seus custos invisíveis e ter a certeza de que cada doce vendido está, de fato, colocando dinheiro no seu bolso.",
     category: "Cursos Rápidos (Acesso de 6 meses)",
     image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=600&auto=format&fit=crop",
-    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Curso%20Precificacao%20e%20Ficha%20Tecnica%20Express",
+    linkCheckout: "https://pay.hotmart.com/S79801917C?off=6bwv0dtg&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779995718946&bid=1779995720529",
     detalhesLongos: [
       "Planilha automatizada inclusa de custos e fichas técnicas",
       "Como calcular o valor da sua hora trabalhada (PRO-LABORE)",
@@ -196,7 +196,7 @@ export const COURSES: Course[] = [
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 397,00",
     image: "https://lh3.googleusercontent.com/d/1-QfO1MVK73DMRsk8OpLNe6UsTJzhmYeW",
-    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Aulao%20Pudim%20Lisinho%20da%20Naty",
+    linkCheckout: "https://pay.hotmart.com/T99964755S?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779996027061&bid=1779996028973",
     detalhesLongos: [
       "Ponto perfeito da calda de caramelo in tom âmbar sem queimar",
       "Segredo do cozimento de precisão para um pudim zero furinhos e ultra-cremoso",
@@ -217,7 +217,7 @@ export const COURSES: Course[] = [
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 227,00",
     image: "https://lh3.googleusercontent.com/d/1lkndeZscDmaUdXA1FCXdp96u-4IHofza",
-    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Aulao%20Torta%20para%20Delivery",
+    linkCheckout: "https://pay.hotmart.com/U94248725D?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779996054685&bid=1779996065582",
     detalhesLongos: [
       "Desenvolvimento de massas estruturadas (sablée e frola) crocantes e seguras contra umidade",
       "Preparo de recheios firmes de corte perfeito sem perder a cremosidade",
@@ -244,7 +244,7 @@ export const COURSES: Course[] = [
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 277,00",
     image: "https://lh3.googleusercontent.com/d/1_Ss2pQhBd801an7M8BQtiwhBJKofZKgf",
-    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Aulao%20Bolo%20Gelado%20de%20Coco",
+    linkCheckout: "https://pay.hotmart.com/D98540538M?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779996095866&bid=1779996096887",
     detalhesLongos: [
       "Massa de pão de ló super aerada ideal para absorver calda sem desmanchar",
       "A famosa calda de coco cremosa com leite condensado e leite de coco fresco",
@@ -266,7 +266,7 @@ export const COURSES: Course[] = [
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 187,00",
     image: "https://lh3.googleusercontent.com/d/1fwqJj16koXaHZRS1a7VTS5KjjAjqmRtE",
-    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Curso%20Bolo%20Gelado%20de%20Prestigio",
+    linkCheckout: "https://pay.hotmart.com/P94251644Y?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779996117291&bid=1779996118374",
     detalhesLongos: [
       "Massa fofinha de cacau black com alto poder de absorção de calda",
       "O recheio de coco cremoso perfeito com textura de beijinho de colher",
@@ -287,7 +287,7 @@ export const COURSES: Course[] = [
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 197,00",
     image: "https://lh3.googleusercontent.com/d/1Bype6idwlJREGoSH0GFmA09Mbf7K15pR",
-    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Curso%20Chocolate%20Quente%20da%20Naty",
+    linkCheckout: "https://pay.hotmart.com/T61772984D?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779996137571&bid=1779996138699",
     detalhesLongos: [
       "A receita secreta europeia de chocolate denso e aveludado",
       "Como harmonizar cacau e blends de chocolate nobre sem deixar enjoativo",
@@ -308,7 +308,7 @@ export const COURSES: Course[] = [
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 157,00",
     image: "https://lh3.googleusercontent.com/d/1slYg2ANVw9n514ayk7s8EXFkNIykQAjO",
-    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Aulao%20Pao%20de%20Mel%20da%20Naty",
+    linkCheckout: "https://pay.hotmart.com/H99539123J?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779996156815&bid=1779996159626",
     detalhesLongos: [
       "Massa de especiarias super fofinha, equilibrada e aromática",
       "Segredos do cozimento correto para manter o miolo super úmido",
@@ -329,7 +329,7 @@ export const COURSES: Course[] = [
     category: "Cursos Completos",
     price: "R$ 197,00",
     image: "https://lh3.googleusercontent.com/d/1fclSW2hcY1GS_EE3GmpOZjypuzb_HfRu",
-    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Curso%20Venda%20Sobremesas",
+    linkCheckout: "https://pay.hotmart.com/Q82985396Y?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779996418615&bid=1779996419692",
     detalhesLongos: [
       "Bases de cremes estruturados de alto rendimento para montagem em taças",
       "Combinação de sabores campeões: Ninho, Nutella, Pistache e Geleia rústica de morango",
@@ -353,7 +353,7 @@ export const COURSES: Course[] = [
     category: "Cursos Rápidos (Acesso de 6 meses)",
     price: "R$ 137,00",
     image: "https://lh3.googleusercontent.com/d/1YCoC2WuF2pgWzQUa41DwXKnsV0llBIUm",
-    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Curso%20Comece%20com%20Brigadeiros",
+    linkCheckout: "https://pay.hotmart.com/X99964589P?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779995651462&bid=1779995652268",
     detalhesLongos: [
       "Pontos exatos de brigadeiro de panela, colher e recheio",
       "Como usar glicose e chocolate nobre para evitar a cristalização",
@@ -379,7 +379,7 @@ export const COURSES: Course[] = [
     category: "Cursos Completos",
     price: "R$ 147,00",
     image: "https://lh3.googleusercontent.com/d/1CD6UGcrJueU9FsnfOfDr2GcPFZO_YQon",
-    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Curso%20Pascoa%20Lucrativa%20com%20a%20Naty",
+    linkCheckout: "https://pay.hotmart.com/L79353465U?checkoutMode=10&bid=1779996464064",
     detalhesLongos: [
       "A ciência exata por trás da cristalização e calor do chocolate",
       "Métodos práticos de temperagem: tablagem, adição e Mycryo",
@@ -404,7 +404,7 @@ export const COURSES: Course[] = [
     category: "Cursos Completos",
     price: "R$ 217,00",
     image: "https://lh3.googleusercontent.com/d/1LoQiTee3y9m4QZ6Y9bg8Shmp2xcp3bUZ",
-    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Curso%20de%20Fotos%20e%20Videos%20com%20a%20Naty",
+    linkCheckout: "https://pay.hotmart.com/N97492170M?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779996491758&bid=1779996493057",
     detalhesLongos: [
       "Criação de cenários encantadores na cozinha da sua casa gastando quase nada",
       "Como dominar a iluminação natural e usar luz artificial de forma profissional",
@@ -427,7 +427,7 @@ export const COURSES: Course[] = [
     category: "Cursos Completos",
     price: "R$ 197,00",
     image: "https://lh3.googleusercontent.com/d/1Nqs6XbAUdLWSdf5pGG555B_EyqWB9fND",
-    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Curso%20Doces%20de%20Vitrine",
+    linkCheckout: "https://pay.hotmart.com/J56829891U?checkoutMode=10&bid=1765483029875&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779996354693",
     detalhesLongos: [
       "Desenvolvimento de mentalidade empreendedora e marketing estratégico na confeitaria",
       "Pilares práticos de controle financeiro, fluxo de caixa e capital de giro",
@@ -468,7 +468,7 @@ export const COURSES: Course[] = [
     category: "Cursos Rápidos (Acesso de 6 meses)",
     price: "R$ 197,00",
     image: "https://lh3.googleusercontent.com/d/1zM0eM4anE-tkFDm5nvXpet6niexfPqkz",
-    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Curso%20Box%20Gelados",
+    linkCheckout: "https://pay.hotmart.com/D95727612O?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779995687413&bid=1779995689245",
     detalhesLongos: [
       "Técnicas de congelamento e ultra-resfriamento sem perder a cremosidade ou criar cristais de gelo",
       "Montagem de caixas personalizadas (Boxes) com divisórias térmicas inteligentes para delivery seguro",
@@ -493,7 +493,7 @@ export const COURSES: Course[] = [
     category: "Cursos Completos",
     price: "R$ 297,00",
     image: "https://lh3.googleusercontent.com/d/1BdBGJYRCRuBIwROZR5sqy8U5BSVltzly",
-    linkCheckout: "https://wa.me/553193476920?text=Quero%20me%20inscrever%20no%20Curso%20Bolos%20do%20Zero",
+    linkCheckout: "https://pay.hotmart.com/V60728427E?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779996376632&bid=1779996378134",
     detalhesLongos: [
       "Preparo exato de massas amanteigadas e chiffon estruturadas e fofas",
       "Ponto de bico e recheios firmes para montagens seguras e sem vazamentos",

@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Instagram, Send, Mail, MapPin } from 'lucide-react';
+import { Instagram, MessageCircle } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -10,16 +10,12 @@ export default function Footer() {
             <h3 className="font-serif text-3xl font-bold mb-6">
               Doces da <span className="text-brand-primary">Naty</span>
             </h3>
-            <p className="text-brand-cream/60 max-w-md mb-8 leading-relaxed">
-              Transformando vidas através da confeitaria profissional desde 2017. 
-              Nosso compromisso é com o seu sucesso e independência financeira.
-            </p>
             <div className="flex gap-4">
               <a href="https://www.instagram.com/cursosdocesdanaty" className="w-12 h-12 rounded-full border border-brand-cream/20 flex items-center justify-center hover:bg-brand-primary hover:border-brand-primary transition-all">
                 <Instagram size={20} />
               </a>
-              <a href="https://wa.me/553193476920" className="w-12 h-12 rounded-full border border-brand-cream/20 flex items-center justify-center hover:bg-brand-primary hover:border-brand-primary transition-all">
-                <Send size={20} />
+              <a href="https://wa.me/553193476920" className="w-12 h-12 rounded-full border border-brand-cream/20 flex items-center justify-center hover:bg-brand-primary hover:border-brand-primary transition-all" title="WhatsApp">
+                <MessageCircle size={20} />
               </a>
             </div>
           </div>
@@ -37,17 +33,17 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-lg mb-6">Contato</h4>
             <ul className="space-y-4 text-brand-cream/60">
-              <li className="flex items-center gap-3">
-                <Mail size={18} className="text-brand-primary" />
-                <span>contato@docesdanaty.com</span>
+              <li className="flex items-center gap-2.5">
+                <Instagram size={20} className="text-brand-primary shrink-0" />
+                <a href="https://www.instagram.com/cursosdocesdanaty" target="_blank" rel="noopener noreferrer" className="hover:text-brand-primary transition-colors text-base leading-none">
+                  @cursosdocesdanaty
+                </a>
               </li>
-              <li className="flex items-center gap-3">
-                <MapPin size={18} className="text-brand-primary" />
-                <span>Belo Horizonte, MG</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Instagram size={18} className="text-brand-primary" />
-                <span>@cursosdocesdanaty</span>
+              <li className="flex items-center gap-2.5">
+                <Instagram size={20} className="text-brand-primary shrink-0" />
+                <a href="https://www.instagram.com/docesdanaty___" target="_blank" rel="noopener noreferrer" className="hover:text-brand-primary transition-colors text-base leading-none">
+                  @docesdanaty___
+                </a>
               </li>
             </ul>
           </div>
