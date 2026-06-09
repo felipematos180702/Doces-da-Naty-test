@@ -3,7 +3,7 @@ import { Course, Testimonial } from './types';
 export const COURSES: Course[] = [
   {
     id: "course-1",
-    title: "Curso Bolo no Pote",
+    title: "Bolo no Pote",
     description: "O clássico que nunca perde o topo: fature alto com o doce mais vendido do Brasil!\n\nO bolo no pote é o herói de qualquer confeitaria que quer dinheiro em caixa rápido. Ele tem baixo custo de produção, aceitação imediata e um formato perfeito para vender no delivery, no trabalho ou sob encomenda.\n\nNeste curso prático, você vai aprender a base perfeita de massas molhadinhas, montagens que enchem os olhos e uma variedade de sabores que fidelizam o cliente logo na primeira colherada. É a oportunidade perfeita para você começar a faturar na cozinha de casa com o que já tem.",
     category: "Cursos Rápidos (Acesso de 6 meses)",
     price: "R$ 167,00",
@@ -35,7 +35,7 @@ export const COURSES: Course[] = [
   },
   {
     id: "course-2",
-    title: "Bolo Matilda",
+    title: "Aulão Bolo Matilda",
     description: "O fenômeno de vendas: domine a receita do bolo mais chocolatudo e desejado das redes sociais\n\nSe existe um bolo capaz de parar o feed do Instagram e gerar picos de pedidos no seu delivery, é o Bolo Matilda. Inspirado no clássico do cinema, ele é o sinônimo perfeito de exagero na medida certa: muita massa úmida e camadas generosas de um recheio de chocolate inacreditável. Neste aulão direto ao ponto, você vai aprender o passo a passo para reproduzir esse campeão de vendas da Doces da Nat e atrair uma legião de clientes apaixonados por chocolate.",
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 297,00",
@@ -125,7 +125,7 @@ export const COURSES: Course[] = [
   },
   {
     id: "course-6",
-    title: "Curso Slices Cakes de Sucesso",
+    title: "Slices Cakes de Sucesso",
     description: "Fatias Supremas: o formato que transformou o bolo tradicional em um produto de luxo irresistível\n\nAs Slice Cakes (ou fatias de bolo) viraram febre porque entregam para o cliente exatamente o que ele quer: a experiência de um bolo de festa generoso, com muito recheio, mas no tamanho perfeito para o consumo individual.\n\nAqui você vai dominar a técnica de corte perfeito, massas estruturadas que não despencam e combinações de recheios que são campeões de vendas. Aprenda a transformar fatias simples em verdadeiros objetos de desejo altamente lucrativos na sua vitrine ou delivery.",
     category: "Cursos Rápidos (Acesso de 6 meses)",
     price: "R$ 257,00",
@@ -171,7 +171,7 @@ export const COURSES: Course[] = [
   },
   {
     id: "course-8",
-    title: "Curso Precificação e Ficha Técnica (Express)",
+    title: "Precificação e Ficha Técnica (Express)",
     description: "A mesma inteligência financeira da Doces da Nat, desenhada para proteger o seu lucro\n\nVocê trabalha duro na cozinha, mas chega no fim do mês e não vê a cor do dinheiro? O erro não está no seu talento, está na sua tabela. Este não é um curso teórico de matemática; é a ferramenta real de sobrevivência do seu negócio.\n\nPela primeira vez, a equipe financeira da Doces da Nat formatou o método exato e a planilha de fichas técnicas que a Nat usa diariamente para garantir a saúde e o crescimento da sua empresa. Aprenda a cobrar o preço justo, incluir seus custos invisíveis e ter a certeza de que cada doce vendido está, de fato, colocando dinheiro no seu bolso.",
     category: "Cursos Rápidos (Acesso de 6 meses)",
     image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=600&auto=format&fit=crop",
@@ -191,7 +191,7 @@ export const COURSES: Course[] = [
   },
   {
     id: "course-9",
-    title: "Pudim Lisinho da Naty",
+    title: "Aulão Pudim Lisinho da Naty",
     description: "A sobremesa perfeita existe: conquiste seus clientes com o pudim mais impecável do mercado\n\nFazer pudim parece fácil, mas conquistar aquele resultado sem furinhos, extremamente cremoso, com a textura que derrete na boca e a calda na cor de âmbar perfeita é para poucos. A Nat reuniu todos os seus segredos, tempos de forno e técnicas neste aulão para você entregar o pudim dos sonhos dos seus clientes e se destacar da concorrência.",
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 397,00",
@@ -212,7 +212,7 @@ export const COURSES: Course[] = [
   },
   {
     id: "course-10",
-    title: "Torta para Delivery",
+    title: "Aulão Torta para Delivery",
     description: "Logística e sabor: monte tortas irresistíveis estruturadas para o transporte perfeito\n\nVender tortas no delivery exige muito mais do que uma boa receita; exige estrutura. O cliente quer abrir a embalagem e encontrar uma torta linda, inteira e perfeita, exatamente como saiu da sua cozinha. Neste aulão, você aprende massas, recheios e técnicas de montagem pensadas estrategicamente para resistirem ao transporte, sem abrir mão do sabor supremo.",
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 227,00",
@@ -261,7 +261,7 @@ export const COURSES: Course[] = [
   },
   {
     id: "course-12",
-    title: "Bolo Gelado de Prestígio da Naty",
+    title: "Aulão Bolo Gelado de Prestígio da Naty",
     description: "A combinação irresistível: eleve o nível do bolo gelado com a dupla dinâmica de chocolate e coco\n\nSe o de coco já é um sucesso, a version Prestígio potencializa o faturamento. Combinando uma massa de chocolate intensa e fofinha com um recheio cremoso di coco, esse bolo gelado é o queridinho do público. Aprenda a equilibrar a doçura e a umidade exata para criar um doce viciante, perfeito para o cliente comprar em quantidade.",
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 187,00",
@@ -282,7 +282,7 @@ export const COURSES: Course[] = [
   },
   {
     id: "course-13",
-    title: "Chocolate Quente da Naty",
+    title: "Aulão Chocolate Quente da Naty",
     description: "Faturamento em alta no inverno: a receita secreta do chocolate ultra cremoso que aquece as vendas\n\nQuando o frio chega em várias regiões do país, as vendas de doces tradicionais mudam e o chocolate quente vira o protagonista. Mas esqueça aquela bebida rala de achocolatado; aqui você vai aprender o Chocolate Quente da Naty, uma bebida europeia densa, aveludada e extremamente saborosa, perfeita para vender no seu balcão ou enviar pelo delivery de forma impecável.",
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 197,00",
@@ -303,7 +303,7 @@ export const COURSES: Course[] = [
   },
   {
     id: "course-14",
-    title: "Pão de Mel da Naty",
+    title: "Aulão Pão de Mel da Naty",
     description: "O doce perfeito para o ano todo: domine a massa de especiarias e o banho de chocolate impecável\n\nO pão de mel é um curinga na confeitaria: tem excelente validade, transporta super bem e aceita os mais variados recheios, do doce de leite tradicional ao brigadeiro gourmet. Neste aulão, a Nat ensina a base de especiarias perfeita, o segredo para ele ficar sempre úmido e as técnicas para um banho de chocolate profissional e brilhante, sem mistérios.",
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 157,00",
@@ -348,7 +348,7 @@ export const COURSES: Course[] = [
   },
   {
     id: "course-16",
-    title: "Curso Comece com Brigadeiros",
+    title: "Comece com Brigadeiros",
     description: "A sua porta de entrada na confeitaria: faça do doce mais amado o seu primeiro grande negócio\n\nSe você quer entrar no mundo dos doces mas não sabe por onde começar, a resposta está no brigadeiro. Ele é o ponto de partida ideal porque exige poucos utensílios e tem saída garantida o ano todo, de festas corporativas a desejos de fim de tarde.\n\nNeste curso, a Nat compartilha a sua própria história e te ensina a base dos brigadeiros que deram origem à Doces da Nat. Você vai aprender o ponto perfeito (sem cristalizar!), técnicas de boleamento e os sabores mais pedidos do mercado para começar a lucrar imediatamente.",
     category: "Cursos Rápidos (Acesso de 6 meses)",
     price: "R$ 137,00",
@@ -463,7 +463,7 @@ export const COURSES: Course[] = [
   },
   {
     id: "course-20",
-    title: "Curso Box Gelados",
+    title: "Box Gelados",
     description: "O segredo do faturamento nos dias quentes: monte caixas irresistíveis de pura refrescância\n\nQuando a temperatura sobe, o comportamento do cliente muda — e o seu cardápio precisa acompanhar. O Box Gelado é a solução perfeita para manter as vendas em alta o ano inteiro, unindo praticidade e uma experiência única de sobremesa.\n\nAprenda a produzir e montar combinações de doces gelados que mantêm a textura perfeita, não perdem o sabor e criam um visual impossível de resistir nas redes sociais. Garanta que o seu negócio seja a primeira opção do cliente quando ele pensar em um doce refrescante.",
     category: "Cursos Rápidos (Acesso de 6 meses)",
     price: "R$ 197,00",

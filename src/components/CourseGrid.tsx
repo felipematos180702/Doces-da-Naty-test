@@ -37,7 +37,7 @@ export default function CourseGrid({ onSelectCourse }: CourseGridProps) {
             Conheça os meus cursos
           </motion.h2>
           <p className="text-gray-500 max-w-2xl mx-auto text-base sm:text-lg">
-            Escolha o melhor para você dar o próximo passo e fatura mais com a confeitaria.
+            Escolha o melhor para você dar o próximo passo e faturar mais com a confeitaria.
           </p>
         </div>
 
