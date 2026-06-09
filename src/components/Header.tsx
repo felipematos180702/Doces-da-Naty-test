@@ -20,10 +20,10 @@ export default function Header({ onNavigateHome }: HeaderProps) {
       animate={{ y: 0 }}
       className="fixed top-0 left-0 right-0 z-50 bg-brand-cream/80 backdrop-blur-md border-b border-brand-primary/10"
     >
-      <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between relative">
         <button 
           onClick={handleLogoClick}
-          className="flex items-center cursor-pointer focus:outline-none select-none text-left h-full relative overflow-visible"
+          className="flex items-center cursor-pointer focus:outline-none select-none text-left h-full relative overflow-visible z-10"
           id="header-logo-btn"
         >
           <img 
@@ -34,13 +34,13 @@ export default function Header({ onNavigateHome }: HeaderProps) {
           />
         </button>
         
-        <nav className="hidden md:flex items-center gap-8 font-medium">
+        <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-8 font-medium z-0">
           <a href="#cursos" onClick={() => onNavigateHome?.()} className="hover:text-brand-primary transition-colors">Cursos</a>
           <a href="#sobre" onClick={() => onNavigateHome?.()} className="hover:text-brand-primary transition-colors">Sobre Naty</a>
           <a href="#depoimentos" onClick={() => onNavigateHome?.()} className="hover:text-brand-primary transition-colors">Depoimentos</a>
         </nav>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 relative z-10">
           <a 
             href="https://wa.me/553193476920" 
             target="_blank"

@@ -188,16 +188,16 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
             )}
 
             {/* Dynamic Sticky Order Box (Below Gallery) */}
-            <div className="bg-[#FFFDF9] rounded-3xl p-4 sm:p-6 md:p-8 shadow-2xl border-2 border-brand-primary/20 relative overflow-hidden">
+            <div className="hidden lg:block bg-[#FFFDF9] rounded-3xl p-4 sm:p-6 md:p-8 shadow-2xl border-2 border-brand-primary/20 relative overflow-hidden max-w-xs sm:max-w-md mx-auto w-full">
               <div className="absolute top-0 right-0 w-32 h-32 bg-brand-primary/5 rounded-full translate-x-12 -translate-y-12 blur-2xl pointer-events-none" />
               
               {/* Main checkout buttons - super responsive height and text targeting CRO touch area */}
-              <div className="space-y-3">
+              <div className="space-y-2.5">
                 <a
                   href={course.linkCheckout}
                   target="_blank"
                   referrerPolicy="no-referrer"
-                  className="flex items-center justify-center gap-2.5 bg-brand-primary text-white w-full py-4 rounded-xl sm:rounded-2xl font-black text-sm sm:text-base hover:bg-brand-primary/95 hover:scale-[1.01] active:scale-95 transition-all shadow-xl shadow-brand-primary/20 cursor-pointer"
+                  className="flex items-center justify-center gap-2 bg-brand-primary text-white w-full py-2.5 sm:py-3 rounded-xl font-bold text-xs sm:text-sm hover:bg-brand-primary/95 hover:scale-[1.01] active:scale-95 transition-all shadow-md shadow-brand-primary/10 cursor-pointer"
                 >
                   GARANTIR MINHA VAGA AGORA
                 </a>
@@ -206,7 +206,7 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
                   href="https://wa.me/553193476920?text=Tenho%20duvidas%20sobre%20os%20cursos%20de%20confeitaria"
                   target="_blank"
                   referrerPolicy="no-referrer"
-                  className="flex items-center justify-center gap-2 bg-emerald-500 text-white w-full py-3 rounded-xl sm:rounded-2xl font-bold text-xs sm:text-sm hover:bg-emerald-600 transition-colors cursor-pointer"
+                  className="flex items-center justify-center gap-1.5 bg-emerald-500 text-white w-full py-2 rounded-xl font-bold text-[11px] sm:text-xs hover:bg-emerald-600 transition-colors cursor-pointer"
                 >
                   Falar Conosco no WhatsApp
                 </a>
@@ -332,6 +332,32 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
                     </div>
                   );
                 })}
+              </div>
+            </div>
+
+            {/* Mobile-Only Dynamic Sticky Order Box (Below Syllabus Card on mobile) */}
+            <div className="lg:hidden bg-[#FFFDF9] rounded-3xl p-4 sm:p-6 md:p-8 shadow-xl border-2 border-brand-primary/20 relative overflow-hidden max-w-xs sm:max-w-md mx-auto w-full">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-brand-primary/5 rounded-full translate-x-12 -translate-y-12 blur-2xl pointer-events-none" />
+              
+              {/* Main checkout buttons - super responsive height and text targeting CRO touch area */}
+              <div className="space-y-2.5">
+                <a
+                  href={course.linkCheckout}
+                  target="_blank"
+                  referrerPolicy="no-referrer"
+                  className="flex items-center justify-center gap-2 bg-brand-primary text-white w-full py-2.5 sm:py-3 rounded-xl font-bold text-xs sm:text-sm hover:bg-brand-primary/95 hover:scale-[1.01] active:scale-95 transition-all shadow-md shadow-brand-primary/10 cursor-pointer"
+                >
+                  GARANTIR MINHA VAGA AGORA
+                </a>
+
+                <a
+                  href="https://wa.me/553193476920?text=Tenho%20duvidas%20sobre%20os%20cursos%20de%20confeitaria"
+                  target="_blank"
+                  referrerPolicy="no-referrer"
+                  className="flex items-center justify-center gap-1.5 bg-emerald-500 text-white w-full py-2 rounded-xl font-bold text-[11px] sm:text-xs hover:bg-emerald-600 transition-colors cursor-pointer"
+                >
+                  Falar Conosco no WhatsApp
+                </a>
               </div>
             </div>
 
