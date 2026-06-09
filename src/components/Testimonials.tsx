@@ -135,15 +135,6 @@ export default function Testimonials() {
                     referrerPolicy="no-referrer"
                   />
                 </div>
-                <div className="text-center mt-3.5 flex flex-col items-center gap-1">
-                  <p className="font-extrabold text-xs text-brand-primary uppercase tracking-widest flex items-center gap-1">
-                    <Star size={11} className="fill-brand-primary text-brand-primary" />
-                    Resultado Oficial de Aluna • Método Confeitaria da Naty
-                  </p>
-                  <p className="text-xs text-gray-500 max-w-sm">
-                    Printscreen recebido diretamente em nossos canais de relacionamento.
-                  </p>
-                </div>
               </motion.div>
             </motion.div>
           )}

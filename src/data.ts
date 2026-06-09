@@ -36,17 +36,16 @@ export const COURSES: Course[] = [
   {
     id: "course-2",
     title: "Aulão Bolo Matilda",
-    description: "O fenômeno de vendas: domine a receita do bolo mais chocolatudo e desejado das redes sociais\n\nSe existe um bolo capaz de parar o feed do Instagram e gerar picos de pedidos no seu delivery, é o Bolo Matilda. Inspirado no clássico do cinema, ele é o sinônimo perfeito de exagero na medida certa: muita massa úmida e camadas generosas de um recheio de chocolate inacreditável. Neste aulão direto ao ponto, você vai aprender o passo a passo para reproduzir esse campeão de vendas da Doces da Nat e atrair uma legião de clientes apaixonados por chocolate.",
+    description: "O fenômeno de vendas: domine a receita do bolo mais chocolatudo e desejado das redes sociais\n\nSe existe um bolo capaz de parar o feed do Instagram e gerar picos de pedidos no seu delivery, é o Bolo Matilda. Inspirado no clássico do cinema, ele é o sinônimo perfeito de exagero na medida certa: Eu criei a releitura perfeita desse bolo chocolatudo, e te ensino o passo a passo no aulão.",
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 297,00",
-    image: "https://lh3.googleusercontent.com/d/1OUr9OSL70nLOpy3PF8SBQ9QL_9gzRf8A",
+    image: "https://lh3.googleusercontent.com/d/1r-uV_uRCgdJg79IcZd6hRuaI9chvc4_x",
     linkCheckout: "https://pay.hotmart.com/O101844457I?off=dji5bwha&checkoutMode=10&bid=1757860498606&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779995950712",
     detalhesLongos: [
-      "Receita completa da massa super úmida e estruturada de cacau",
-      "O recheio de chocolate cremoso com brilho espelhado inesquecível",
-      "Técnicas de montagem para o efeito de chocolate escorrendo",
-      "Segredos de conservação, validade e embalagem ideal para delivery",
-      "Estratégia de divulgação em fotos e vídeos para viralizar no Instagram"
+      "Massa de chocolate estruturada",
+      "Recheio e cobertura de chocolate super cremoso",
+      "Montagem do bolo Matilda",
+      "Decoração detalhada e fatias"
     ],
     galeria: [
       "https://lh3.googleusercontent.com/d/1OUr9OSL70nLOpy3PF8SBQ9QL_9gzRf8A",

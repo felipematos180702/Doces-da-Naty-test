@@ -42,7 +42,6 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
   }
 
   const [activeImage, setActiveImage] = useState(course.image);
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [selectedTestimonial, setSelectedTestimonial] = useState<string | null>(null);
 
   const isDocesDeVitrine = course.id === 'course-19';
@@ -86,35 +85,12 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
   // Scroll to top on mount
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' as any });
-  }, [courseId]);
+    setActiveImage(course.image);
+  }, [courseId, course.image]);
 
   const imageGallery = Array.from(new Set([course.image, ...(course.galeria || [])]));
 
   const isTwelveMonths = course.category === 'Cursos Completos';
-  const faqItems = [
-    {
-      q: `Qual é o prazo de acesso ao ${course.title}?`,
-      a: isTwelveMonths 
-        ? "Você terá acesso completo a todas as vídeo-aulas gravadas, apostilas de apoio e futuras atualizações por um período de 12 meses (1 ano)."
-        : "Você terá acesso completo a todas as vídeo-aulas gravadas, apostilas de apoio e futuras atualizações por um período de 6 meses."
-    },
-    {
-      q: "Recebo certificado de conclusão?",
-      a: "Com certeza. Assim que finalizar todos os módulos, sua área de aluna gera um lindo certificado profissional personalizado, pronto de forma automática."
-    },
-    {
-      q: "Como funciona o suporte para tirar dúvidas?",
-      a: "Você terá suporte direto VIP com a Natascha e equipe através do WhatsApp exclusivo de alunas e do portal de membros. Nunca estará sozinha."
-    },
-    {
-      q: "Preciso ter batedeira ou forno industrial?",
-      a: "De forma alguma! A Naty ensina você a produzir resultados profissionais maravilhosos utilizando equipamentos simples e domésticos que você já tem na sua cozinha."
-    }
-  ];
-
-  const toggleFaq = (index: number) => {
-    setOpenFaq(openFaq === index ? null : index);
-  };
 
   return (
     <motion.div
@@ -127,7 +103,7 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         
         {/* Navigation Breadcrumb & Back */}
-        <div className="mb-6 md:mb-8">
+        <div className="mb-6 md:mb-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <button
             onClick={onBack}
             className="group inline-flex items-center gap-2 text-brand-primary hover:text-brand-secondary font-bold text-sm sm:text-base transition-colors py-2 cursor-pointer"
@@ -137,6 +113,18 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
             </span>
             Voltar para a vitrine de cursos
           </button>
+        </div>
+
+        {/* Dynamic High-Converting Header */}
+        <div className="mb-8 md:mb-10">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-brand-secondary leading-tight">
+            {course.title}
+          </h1>
+          <div className="flex items-center gap-2 mt-3">
+            <span className="bg-brand-primary/10 text-brand-primary px-3 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider">
+              {course.category}
+            </span>
+          </div>
         </div>
 
         {/* Main Product Section Grid */}
@@ -169,12 +157,12 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
 
             {/* Interactive Thumbnail strip with beautiful horizontal layout */}
             {imageGallery.length > 1 && (
-              <div className="space-y-2 sm:space-y-3">
-                <p className="text-[10px] sm:text-xs font-bold text-brand-primary uppercase tracking-wider flex items-center gap-1.5 px-0.5">
+              <div className="space-y-2 sm:space-y-3 flex flex-col items-center">
+                <p className="text-[10px] sm:text-xs font-bold text-brand-primary uppercase tracking-wider flex items-center justify-center gap-1.5 px-0.5 text-center">
                   <Sparkles size={12} className="fill-brand-primary/20" />
                   Galeria de Inspiração dos Doces (Toque para ver em detalhe)
                 </p>
-                <div className="flex flex-nowrap gap-2 overflow-x-auto pb-2 scrollbar-none snap-x snap-mandatory -mx-4 px-4 sm:mx-0 sm:px-0">
+                <div className="flex flex-nowrap justify-center gap-2 overflow-x-auto pb-2 scrollbar-none snap-x snap-mandatory w-full">
                   {imageGallery.map((imgUrl, idx) => {
                     const isSelected = imgUrl === activeImage;
                     return (
@@ -198,6 +186,37 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
                 </div>
               </div>
             )}
+
+            {/* Dynamic Sticky Order Box (Below Gallery) */}
+            <div className="bg-[#FFFDF9] rounded-3xl p-4 sm:p-6 md:p-8 shadow-2xl border-2 border-brand-primary/20 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-brand-primary/5 rounded-full translate-x-12 -translate-y-12 blur-2xl pointer-events-none" />
+              
+              {/* Main checkout buttons - super responsive height and text targeting CRO touch area */}
+              <div className="space-y-3">
+                <a
+                  href={course.linkCheckout}
+                  target="_blank"
+                  referrerPolicy="no-referrer"
+                  className="flex items-center justify-center gap-2.5 bg-brand-primary text-white w-full py-4 rounded-xl sm:rounded-2xl font-black text-sm sm:text-base hover:bg-brand-primary/95 hover:scale-[1.01] active:scale-95 transition-all shadow-xl shadow-brand-primary/20 cursor-pointer"
+                >
+                  GARANTIR MINHA VAGA AGORA
+                </a>
+
+                <a
+                  href="https://wa.me/553193476920?text=Tenho%20duvidas%20sobre%20os%20cursos%20de%20confeitaria"
+                  target="_blank"
+                  referrerPolicy="no-referrer"
+                  className="flex items-center justify-center gap-2 bg-emerald-500 text-white w-full py-3 rounded-xl sm:rounded-2xl font-bold text-xs sm:text-sm hover:bg-emerald-600 transition-colors cursor-pointer"
+                >
+                  Falar Conosco no WhatsApp
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          {/* RIGHT COLUMN: Sales Copy, Syllabus & Testimonials */}
+          <div className="lg:col-span-5 w-full lg:sticky lg:top-28 space-y-6">
 
             {/* Core Course Manifesto details */}
             <div className="bg-white rounded-3xl p-4 sm:p-6 md:p-8 shadow-xl shadow-brand-secondary/5 border border-brand-primary/5 space-y-5 sm:space-y-6">
@@ -270,26 +289,14 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
               })()}
 
               {/* Bento Trust Indicators */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 pt-3 sm:pt-4">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4 pt-3 sm:pt-4 max-w-md">
                 <div className="bg-brand-cream/60 rounded-xl sm:rounded-2xl p-3 sm:p-4 text-center border border-brand-primary/5">
-                  <Clock size={18} className="mx-auto text-brand-primary mb-1.5 sm:mb-2" />
                   <p className="text-[10px] font-bold uppercase text-gray-400">Aulas Rápidas</p>
                   <p className="text-xs sm:text-sm font-bold text-brand-secondary mt-0.5 leading-tight">Assista quando quiser</p>
                 </div>
                 <div className="bg-brand-cream/60 rounded-xl sm:rounded-2xl p-3 sm:p-4 text-center border border-brand-primary/5">
-                  <Award size={18} className="mx-auto text-brand-primary mb-1.5 sm:mb-2" />
-                  <p className="text-[10px] font-bold uppercase text-gray-400">Nacional</p>
-                  <p className="text-xs sm:text-sm font-bold text-brand-secondary mt-0.5 leading-tight">Certificado Oficial</p>
-                </div>
-                <div className="bg-brand-cream/60 rounded-xl sm:rounded-2xl p-3 sm:p-4 text-center border border-brand-primary/5">
-                  <Users size={18} className="mx-auto text-brand-primary mb-1.5 sm:mb-2" />
                   <p className="text-[10px] font-bold uppercase text-gray-400">Suporte</p>
-                  <p className="text-xs sm:text-sm font-bold text-brand-secondary mt-0.5 leading-tight">Direto no WhatsApp</p>
-                </div>
-                <div className="bg-brand-cream/60 rounded-xl sm:rounded-2xl p-3 sm:p-4 text-center border border-brand-primary/5">
-                  <ShieldCheck size={18} className="mx-auto text-brand-primary mb-1.5 sm:mb-2" />
-                  <p className="text-[10px] font-bold uppercase text-gray-400">Garantia</p>
-                  <p className="text-xs sm:text-sm font-bold text-brand-secondary mt-0.5 leading-tight">7 Dias Garantidos</p>
+                  <p className="text-xs sm:text-sm font-bold text-brand-secondary mt-0.5 leading-tight">Dentro da plataforma de aula</p>
                 </div>
               </div>
             </div>
@@ -298,28 +305,33 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
             <div className="bg-white rounded-3xl p-4 sm:p-6 md:p-8 shadow-xl shadow-brand-secondary/5 border border-brand-primary/5">
               <h3 className="font-serif text-xl sm:text-2xl font-bold text-brand-secondary mb-4 sm:mb-6 flex items-center gap-2">
                 <Sparkles className="text-brand-primary fill-brand-primary/10 animate-pulse" size={22} />
-                Conteúdo Programático Detalhado
+                {course.title.toLowerCase().includes('aulão') || course.category.toLowerCase().includes('aulão') ? "Conteúdo do aulão :" : "Conteúdo Programático Detalhado"}
               </h3>
               
               <div className="space-y-3 sm:space-y-4">
-                {course.detalhesLongos.map((detail, index) => (
-                  <div 
-                    key={index}
-                    className="flex gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl sm:rounded-2xl hover:bg-brand-accent/30 transition-colors border border-transparent hover:border-brand-primary/10"
-                  >
-                    <span className="flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-brand-primary/15 text-brand-primary flex items-center justify-center font-bold text-xs sm:text-sm">
-                      {index + 1}
-                    </span>
-                    <div>
-                      <p className="font-semibold text-brand-secondary text-sm sm:text-base md:text-lg mb-0.5 leading-snug">
-                        Módulo Especial: {detail.split('(')[0].trim()}
-                      </p>
-                      <p className="text-xs sm:text-sm text-gray-500 leading-normal">
-                        {detail.includes('(') ? `Aprofundamento em ${detail.split('(')[1].replace(')', '')}` : "Passo a passo completo em vídeo-aulas práticas de alta absorção."}
-                      </p>
+                {course.detalhesLongos.map((detail, index) => {
+                  const isAulaoCard = course.title.toLowerCase().includes('aulão') || course.category.toLowerCase().includes('aulão');
+                  return (
+                    <div 
+                      key={index}
+                      className="flex gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl sm:rounded-2xl hover:bg-brand-accent/30 transition-colors border border-transparent hover:border-brand-primary/10 items-center"
+                    >
+                      <span className="flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-brand-primary/15 text-brand-primary flex items-center justify-center font-bold text-xs sm:text-sm">
+                        {index + 1}
+                      </span>
+                      <div>
+                        <p className="font-semibold text-brand-secondary text-sm sm:text-base md:text-lg leading-snug">
+                          {isAulaoCard ? detail : `Módulo Especial: ${detail.split('(')[0].trim()}`}
+                        </p>
+                        {!isAulaoCard && (
+                          <p className="text-xs sm:text-sm text-gray-500 leading-normal mt-0.5">
+                            {detail.includes('(') ? `Aprofundamento em ${detail.split('(')[1].replace(')', '')}` : "Passo a passo completo em vídeo-aulas práticas de alta absorção."}
+                          </p>
+                        )}
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
 
@@ -328,7 +340,6 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
               <div className="bg-white rounded-3xl p-4 sm:p-6 md:p-8 shadow-xl shadow-brand-secondary/5 border-2 border-brand-primary/15 space-y-5 sm:space-y-6">
                 <div>
                   <span className="inline-flex items-center gap-1.5 bg-brand-primary/10 text-brand-primary px-3 py-1 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-2 sm:mb-3">
-                    <Sparkles size={11} className="fill-brand-primary/10" />
                     Resultados de Alunas Reais
                   </span>
                   <h3 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-brand-secondary leading-snug">
@@ -368,8 +379,7 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
                       />
                       {/* Interactive Hover Overlay */}
                       <div className="absolute inset-0 bg-brand-secondary/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-2 rounded-lg sm:rounded-xl">
-                        <span className="bg-white/95 text-brand-secondary font-black text-[10px] sm:text-xs py-1.5 px-3 rounded-full shadow-lg scale-90 group-hover:scale-100 transition-transform duration-300 flex items-center gap-1">
-                          <Sparkles size={10} className="text-brand-primary fill-brand-primary/10 animate-pulse" />
+                        <span className="bg-white/95 text-brand-secondary font-black text-[10px] sm:text-xs py-1.5 px-3 rounded-full shadow-lg scale-90 group-hover:scale-100 transition-transform duration-300 flex items-center justify-center">
                           Ampliar Foto
                         </span>
                       </div>
@@ -401,159 +411,12 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
                           referrerPolicy="no-referrer"
                         />
                       </div>
-                      <p className="text-center font-bold text-xs text-brand-primary uppercase tracking-widest mt-3.5 mb-1 flex items-center gap-1">
-                        <Sparkles size={12} className="fill-brand-primary/10" />
+                      <p className="text-center font-bold text-xs text-brand-primary uppercase tracking-widest mt-3.5 mb-1">
                         História Real de Sucesso • {course.title}
                       </p>
                     </div>
                   </div>
                 )}
-              </div>
-            )}
-
-            {/* FAQ Accordion Section */}
-            <div className="bg-white rounded-3xl p-4 sm:p-6 md:p-8 shadow-xl shadow-brand-secondary/5 border border-brand-primary/5">
-              <h3 className="font-serif text-xl sm:text-2xl font-bold text-brand-secondary mb-4 sm:mb-6">
-                Perguntas Frequentes
-              </h3>
-              <div className="space-y-3 font-sans">
-                {faqItems.map((item, index) => {
-                  const isOpen = openFaq === index;
-                  return (
-                    <div 
-                      key={index} 
-                      className="border border-brand-primary/10 rounded-2xl overflow-hidden"
-                    >
-                      <button
-                        onClick={() => toggleFaq(index)}
-                        className="w-full flex items-center justify-between p-4 bg-brand-cream/30 hover:bg-brand-cream transition-colors text-left font-bold text-sm sm:text-base text-brand-secondary select-none cursor-pointer"
-                      >
-                        <span className="pr-4">{item.q}</span>
-                        {isOpen ? <ChevronUp size={18} className="text-brand-primary flex-shrink-0" /> : <ChevronDown size={18} className="text-brand-primary flex-shrink-0" />}
-                      </button>
-                      
-                      {isOpen && (
-                        <div className="p-4 bg-white border-t border-brand-primary/5 text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed">
-                          {item.a}
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-
-          </div>
-
-          {/* RIGHT SIDEBAR: High-Converting Checkout Card & Fast actions (CRO) */}
-          <div className="lg:col-span-5 w-full lg:sticky lg:top-28 space-y-6">
-            
-            {/* Dynamic Sticky Order Box */}
-            <div className="bg-[#FFFDF9] rounded-3xl p-4 sm:p-6 md:p-8 shadow-2xl border-2 border-brand-primary/20 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-brand-primary/5 rounded-full translate-x-12 -translate-y-12 blur-2xl pointer-events-none" />
-              
-              <div className="inline-flex items-center gap-1.5 bg-red-500/10 text-red-600 px-3 py-1 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-4 animate-bounce">
-                <Flame size={12} className="fill-red-600/10 animate-pulse" />
-                <span>ÚLTIMAS VAGAS DISPONÍVEIS</span>
-              </div>
-
-              <span className="block text-xs sm:text-sm text-gray-400 font-semibold mb-1">Você terá acesso imediato ao:</span>
-              <h1 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-brand-secondary leading-snug mb-3">
-                {course.title}
-              </h1>
-
-              <div className="flex items-center gap-2 mb-5 sm:mb-6">
-                <div className="flex text-amber-400">
-                  <Star size={14} className="fill-current" />
-                  <Star size={14} className="fill-current" />
-                  <Star size={14} className="fill-current" />
-                  <Star size={14} className="fill-current" />
-                  <Star size={14} className="fill-current" />
-                </div>
-                <span className="text-[10px] sm:text-xs text-gray-400 font-bold">(4.9/5 estrelas de 340+ alunas)</span>
-              </div>
-
-              {/* Promotional access detail instead of price */}
-              <div className="bg-brand-accent/50 rounded-2xl p-4 sm:p-5 border border-brand-primary/10 mb-5 sm:mb-6">
-                <p className="text-xs sm:text-sm text-brand-secondary font-bold flex items-center gap-2">
-                  <Sparkles size={14} className="text-brand-primary fill-brand-primary/10" />
-                  Inscrições Abertas com Vagas Limitadas
-                </p>
-                <p className="text-[11px] sm:text-xs text-emerald-600 font-bold mt-2 flex items-center gap-1 leading-normal">
-                  <Check size={14} className="stroke-[3] flex-shrink-0" />
-                  {isTwelveMonths 
-                    ? "Acesso completo por 12 meses, Sem Mensalidades!" 
-                    : "Acesso completo por 6 meses, Sem Mensalidades!"}
-                </p>
-              </div>
-
-              {/* Checklist details inside order block */}
-              <div className="space-y-3 mb-6 sm:mb-8 text-xs sm:text-sm text-gray-700">
-                <div className="flex gap-2.5">
-                  <Check size={16} className="text-emerald-500 flex-shrink-0 stroke-[2.5]" />
-                  <span>Apostilas de Apoio Práticas em PDF</span>
-                </div>
-                <div className="flex gap-2.5">
-                  <Check size={16} className="text-emerald-500 flex-shrink-0 stroke-[2.5]" />
-                  <span>Acesso VIP ao WhatsApp de Dúvidas da Naty</span>
-                </div>
-                <div className="flex gap-2.5">
-                  <Check size={16} className="text-emerald-500 flex-shrink-0 stroke-[2.5]" />
-                  <span>Atualizações de recheios e massas incluídas</span>
-                </div>
-              </div>
-
-              {/* Main checkout buttons - super responsive height and text targeting CRO touch area */}
-              <div className="space-y-3">
-                <a
-                  href={course.linkCheckout}
-                  target="_blank"
-                  referrerPolicy="no-referrer"
-                  className="flex items-center justify-center gap-2.5 bg-brand-primary text-white w-full py-4 rounded-xl sm:rounded-2xl font-black text-sm sm:text-base hover:bg-brand-primary/95 hover:scale-[1.01] active:scale-95 transition-all shadow-xl shadow-brand-primary/20 cursor-pointer"
-                >
-                  <ShoppingCart size={18} className="animate-pulse" />
-                  GARANTIR MINHA VAGA AGORA
-                </a>
-
-                <a
-                  href="https://wa.me/553193476920?text=Tenho%20duvidas%20sobre%20os%20cursos%20de%20confeitaria"
-                  target="_blank"
-                  referrerPolicy="no-referrer"
-                  className="flex items-center justify-center gap-2 bg-emerald-500 text-white w-full py-3 rounded-xl sm:rounded-2xl font-bold text-xs sm:text-sm hover:bg-emerald-600 transition-colors cursor-pointer"
-                >
-                  <MessageSquare size={16} />
-                  Falar Conosco no WhatsApp
-                </a>
-              </div>
-
-              {/* Super Protection reassurance block */}
-              <div className="mt-5 pt-5 border-t border-brand-primary/10 flex items-start gap-3 text-left">
-                <ShieldCheck className="text-emerald-500 w-10 h-10 flex-shrink-0" />
-                <div>
-                  <p className="text-[10px] sm:text-xs font-bold uppercase text-brand-secondary leading-tight">SATISFAÇÃO OU SEU DINHEIRO DE VOLTA</p>
-                  <p className="text-[10px] sm:text-xs text-gray-500 mt-1 leading-normal">Se em 7 dias você achar que o método não é para você, devolvemos 100% do seu dinheiro sem perguntas.</p>
-                </div>
-              </div>
-
-            </div>
-
-            {/* Testimonial preview matching this special view */}
-            {course.id !== 'course-19' && course.id !== 'course-21' && course.id !== 'course-17' && (
-              <div className="bg-brand-primary/5 rounded-3xl p-5 border border-brand-primary/10">
-                <div className="flex items-center gap-3 mb-3">
-                  <img 
-                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop" 
-                    alt="Aluna Satisfeita"
-                    className="w-10 h-10 rounded-full object-cover"
-                  />
-                  <div>
-                    <p className="font-bold text-brand-secondary text-xs sm:text-sm">Clara Marinho</p>
-                    <p className="text-[9px] sm:text-[10px] text-brand-primary font-bold uppercase tracking-wider">Aluna Oficial</p>
-                  </div>
-                </div>
-                <p className="text-xs sm:text-sm text-gray-600 italic leading-relaxed">
-                  "O suporte da Naty é espetacular. Eu tinha medo de errar o ponto dos recheios, mas com a ajuda dela e a apostila, agora meus doces esgotam todos os finais de semana!"
-                </p>
               </div>
             )}
 
