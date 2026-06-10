@@ -308,7 +308,7 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
                 {course.title.toLowerCase().includes('aulão') || course.category.toLowerCase().includes('aulão') ? "Conteúdo do aulão :" : "Conteúdo Programático Detalhado"}
               </h3>
               
-              <div className="space-y-3 sm:space-y-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 {course.detalhesLongos.map((detail, index) => {
                   const isAulaoCard = course.title.toLowerCase().includes('aulão') || course.category.toLowerCase().includes('aulão');
                   return (

@@ -58,17 +58,15 @@ export const COURSES: Course[] = [
   {
     id: "course-3",
     title: "Aulão Bolo de Cenoura",
-    description: "O clássico afetivo irresistível: a massa perfeita e a calda que todo cliente procura\n\nBolo de cenoura todo mundo faz, mas o bolo de cenoura perfeito, fofinho, que não sola e vem acompanhado daquela calda de chocolate impecável, poucos sabem dominar. Esse é o verdadeiro produto \"combustível diário\" do seu negócio, aquele que o cliente compra para o café da tarde, pro trabalho e repete a semana toda. Aprenda a técnica exata para produzir em escala sem perder a qualidade artesanal.",
+    description: "O clássico afetivo irresistível: a massa perfeita e a calda que todo cliente procura\n\nBolo de cenoura todo mundo faz, mas o bolo de cenoura fofinho, saboroso, que não fica solado, e que tem uma cobertura de brigadeiro no ponto certo, poucos sabem fazer .\nEu te ensino minha receita que faz sucesso no meu cardápio desde 2018.",
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 97,00",
-    image: "https://lh3.googleusercontent.com/d/1CcfKj1wYnPcoZJrxuLRnyrNuydZcJ0bu",
+    image: "https://lh3.googleusercontent.com/d/1KDcy5hIty5Lq64qjdlTtAU1shsZlcn_h",
     linkCheckout: "https://pay.hotmart.com/J105437818E?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779995790840&bid=1779995791796",
     detalhesLongos: [
-      "Equilíbrio exato de cenoura e líquidos para garantir o bolo sempre fofinho",
-      "Duas caldas memoráveis: a famosa casquinha de chocolate durinha e a calda fudge cremosa",
-      "Processo otimizado de preparo no liquidificador para máxima escala com qualidade",
-      "Montagens para venda rápida: bolo caseiro inteiro, fatias individuais e potinhos",
-      "Planilha automática de custos de produção e dicas de conservação"
+      "Massa do bolo de cenoura super fofinho",
+      "Cobertura de brigadeiro belga cremoso",
+      "Finalização do mini vulcão e do bolo de cenoura na caixinha recheado"
     ],
     galeria: [
       "https://lh3.googleusercontent.com/d/1CcfKj1wYnPcoZJrxuLRnyrNuydZcJ0bu",
