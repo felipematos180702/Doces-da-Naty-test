@@ -184,44 +184,41 @@ export const COURSES: Course[] = [
   {
     id: "course-9",
     title: "Aulão Pudim Lisinho da Naty",
-    description: "A sobremesa perfeita existe: conquiste seus clientes com o pudim mais impecável do mercado\n\nFazer pudim parece fácil, mas conquistar aquele resultado sem furinhos, extremamente cremoso, com a textura que derrete na boca e a calda na cor de âmbar perfeita é para poucos. A Nat reuniu todos os seus segredos, tempos de forno e técnicas neste aulão para você entregar o pudim dos sonhos dos seus clientes e se destacar da concorrência.",
+    description: "Pudim não é tudo igual, precisa ser doce na medida certa, lisinho e cremoso.\n\nNesse aulão eu te explico todas as técnicas para ter um pudim lisinho e perfeito, uma receita simples - nem precisa de liquidificador, mas que surpreende cada cliente que experimenta",
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 397,00",
-    image: "https://lh3.googleusercontent.com/d/1-QfO1MVK73DMRsk8OpLNe6UsTJzhmYeW",
+    image: "https://lh3.googleusercontent.com/d/1o-XX1cFs6Vv8V2N-ZoggygJQRkYnGeKn",
     linkCheckout: "https://pay.hotmart.com/T99964755S?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779996027061&bid=1779996028973",
     detalhesLongos: [
-      "Ponto perfeito da calda de caramelo in tom âmbar sem queimar",
-      "Segredo do cozimento de precisão para um pudim zero furinhos e ultra-cremoso",
-      "Técnica profissional de banho-maria e controle exato de temperatura no forno doméstico",
-      "Como desenformar com segurança máxima sem quebrar ou rachar o pudim",
-      "Cálculo de validade, conservação na embalagem certa e precificação estratégica"
+      "A calda perfeita que não vira bala",
+      "Técnica de cozimento para deixar o pudim lisinho",
+      "Passo a passo do creme que não necessita do uso do liquidificador",
+      "OBS: Não se preocupe, não leva amido de milho."
     ],
     galeria: [
-      "https://lh3.googleusercontent.com/d/1-QfO1MVK73DMRsk8OpLNe6UsTJzhmYeW",
       "https://lh3.googleusercontent.com/d/1o-XX1cFs6Vv8V2N-ZoggygJQRkYnGeKn",
+      "https://lh3.googleusercontent.com/d/1-QfO1MVK73DMRsk8OpLNe6UsTJzhmYeW",
       "https://lh3.googleusercontent.com/d/1_CQmdXxtu1QVHXQrsBpO78g6J0KIjcBR"
     ]
   },
   {
     id: "course-10",
-    title: "Aulão Torta para Delivery",
-    description: "Logística e sabor: monte tortas irresistíveis estruturadas para o transporte perfeito\n\nVender tortas no delivery exige muito mais do que uma boa receita; exige estrutura. O cliente quer abrir a embalagem e encontrar uma torta linda, inteira e perfeita, exatamente como saiu da sua cozinha. Neste aulão, você aprende massas, recheios e técnicas de montagem pensadas estrategicamente para resistirem ao transporte, sem abrir mão do sabor supremo.",
+    title: "Aulão Cheesecake e torta de limão",
+    description: "Uma cheesecake que não é assada, e uma torta de limão super leve e refrescante\n\nVender tortas no delivery exige muito mais do que uma boa receita; exige estrutura. O cliente quer abrir a embalagem e encontrar uma torta linda, inteira e perfeita, exatamente como saiu da sua cozinha. Neste aulão, você aprende massas, recheios e técnicas de montagem pensadas estrategicamente para resistirem ao transporte.",
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 227,00",
-    image: "https://lh3.googleusercontent.com/d/1lkndeZscDmaUdXA1FCXdp96u-4IHofza",
+    image: "https://lh3.googleusercontent.com/d/1afn5kt02LtSOJlwSyQ1iZz_OCwYRz856",
     linkCheckout: "https://pay.hotmart.com/U94248725D?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779996054685&bid=1779996065582",
     detalhesLongos: [
-      "Desenvolvimento de massas estruturadas (sablée e frola) crocantes e seguras contra umidade",
-      "Preparo de recheios firmes de corte perfeito sem perder a cremosidade",
-      "Técnicas de montagem direta na embalagem para evitar deslocamento no delivery",
-      "Como escolher o modelo de embalagem perfeito com maior segurança de transporte",
-      "Garantias de vida útil prolongada e conservação sob refrigeração"
+      "Passo a passo da cheesecake com a base, creme, finalização e fatias",
+      "Passo a passo da torta de limão com a base, mousse, finalização e fatias",
+      "Dicas de produção, armazenamento e entrega via delivery"
     ],
     galeria: [
+      "https://lh3.googleusercontent.com/d/1afn5kt02LtSOJlwSyQ1iZz_OCwYRz856",
       "https://lh3.googleusercontent.com/d/1lkndeZscDmaUdXA1FCXdp96u-4IHofza",
       "https://lh3.googleusercontent.com/d/15gOnlVRkDsyAmb_ehqVytjjCeDxM7GGt",
       "https://lh3.googleusercontent.com/d/1LY5B5wIbo8bzJMj7qRJbwQBIhWJJ7LB1",
-      "https://lh3.googleusercontent.com/d/1afn5kt02LtSOJlwSyQ1iZz_OCwYRz856",
       "https://lh3.googleusercontent.com/d/1aaHNZ9F39iug_PwjhfKGYepY8ySJ8vKx",
       "https://lh3.googleusercontent.com/d/18HGyVL5BJ1QMuFgNcltyHFp8N20yJyro",
       "https://lh3.googleusercontent.com/d/1k3mnD-plEMliwthJJdWLw9qCIPPvFcYP",

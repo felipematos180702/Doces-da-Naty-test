@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion } from 'motion/react';
 import { 
   ArrowLeft, 
@@ -13,7 +13,9 @@ import {
   Star,
   ChevronDown,
   ChevronUp,
-  Flame
+  Flame,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
 import { Course } from '../types';
 import { COURSES } from '../data';
@@ -41,13 +43,8 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
     );
   }
 
-  const [activeImage, setActiveImage] = useState(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem(`course-cover-${courseId}`);
-      if (saved) return saved;
-    }
-    return course.image;
-  });
+  const [activeImage, setActiveImage] = useState(() => course.image);
+  const galleryRef = useRef<HTMLDivElement>(null);
   const [selectedTestimonial, setSelectedTestimonial] = useState<string | null>(null);
 
   const isDocesDeVitrine = course.id === 'course-19';
@@ -91,12 +88,7 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
   // Scroll to top on mount
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' as any });
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem(`course-cover-${courseId}`);
-      setActiveImage(saved || course.image);
-    } else {
-      setActiveImage(course.image);
-    }
+    setActiveImage(course.image);
   }, [courseId, course.image]);
 
   const imageGallery = Array.from(new Set([course.image, ...(course.galeria || [])]));
@@ -168,43 +160,74 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
 
             {/* Interactive Thumbnail strip with beautiful horizontal layout */}
             {imageGallery.length > 1 && (
-              <div className="space-y-2 sm:space-y-3 flex flex-col items-center">
+              <div className="space-y-2 sm:space-y-3 flex flex-col items-center w-full relative">
                 <p className="text-[10px] sm:text-xs font-bold text-brand-primary uppercase tracking-wider flex items-center justify-center gap-1.5 px-0.5 text-center">
                   <Sparkles size={12} className="fill-brand-primary/20" />
                   Galeria de Inspiração dos Doces (Toque para ver em detalhe)
                 </p>
-                <div className="flex flex-nowrap justify-center gap-2 overflow-x-auto pb-2 scrollbar-none snap-x snap-mandatory w-full">
-                  {imageGallery.map((imgUrl, idx) => {
-                    const isSelected = imgUrl === activeImage;
-                    return (
-                      <button
-                        key={idx}
-                        onClick={() => {
-                          setActiveImage(imgUrl);
-                          if (typeof window !== 'undefined') {
-                            localStorage.setItem(`course-cover-${courseId}`, imgUrl);
-                          }
-                        }}
-                        className={`relative w-20 h-15 sm:w-28 sm:h-20 rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer flex-shrink-0 transition-all border-2 sm:border-3 snap-start ${
-                          isSelected 
-                            ? 'border-brand-primary scale-95 shadow-md shadow-brand-primary/20' 
-                            : 'border-transparent opacity-75 hover:opacity-100 hover:scale-102'
-                        }`}
-                      >
-                        <img 
-                          src={imgUrl} 
-                          alt={`Minha foto do curso ${idx + 1}`} 
-                          className="w-full h-full object-cover"
-                        />
-                      </button>
-                    );
-                  })}
+                <div className="relative w-full group flex items-center px-5 sm:px-8">
+                  {/* Left scroll arrow button */}
+                  <button
+                    onClick={() => {
+                      if (galleryRef.current) {
+                        galleryRef.current.scrollBy({ left: -220, behavior: 'smooth' });
+                      }
+                    }}
+                    className="absolute left-0 z-30 p-1.5 rounded-full bg-[#FFFDF9]/95 text-brand-primary border border-brand-primary/15 shadow-md hover:bg-brand-primary hover:text-white transition-all active:scale-95 flex items-center justify-center cursor-pointer"
+                    aria-label="Anterior"
+                  >
+                    <ChevronLeft size={16} />
+                  </button>
+
+                  <div 
+                    ref={galleryRef}
+                    className="flex flex-nowrap gap-2 sm:gap-3 overflow-x-auto pb-1.5 scrollbar-none snap-x snap-mandatory w-full max-w-full justify-start scroll-smooth"
+                    style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                  >
+                    {imageGallery.map((imgUrl, idx) => {
+                      const isSelected = imgUrl === activeImage;
+                      return (
+                        <button
+                          key={idx}
+                          onClick={() => {
+                            setActiveImage(imgUrl);
+                          }}
+                          className={`relative w-[70px] h-[52px] sm:w-[100px] sm:h-[75px] md:w-[110px] md:h-[82px] rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer flex-shrink-0 snap-start transition-all border-2 sm:border-3 ${
+                            isSelected 
+                              ? 'border-brand-primary scale-95 shadow-md shadow-brand-primary/20' 
+                              : 'border-transparent opacity-85 hover:opacity-100 hover:scale-[1.02]'
+                          }`}
+                        >
+                          <img 
+                            src={imgUrl} 
+                            alt={`Minha foto do curso ${idx + 1}`} 
+                            className="w-full h-full object-cover select-none pointer-events-none"
+                            loading="lazy"
+                            referrerPolicy="no-referrer"
+                          />
+                        </button>
+                      );
+                    })}
+                  </div>
+
+                  {/* Right scroll arrow button */}
+                  <button
+                    onClick={() => {
+                      if (galleryRef.current) {
+                        galleryRef.current.scrollBy({ left: 220, behavior: 'smooth' });
+                      }
+                    }}
+                    className="absolute right-0 z-30 p-1.5 rounded-full bg-[#FFFDF9]/95 text-brand-primary border border-brand-primary/15 shadow-md hover:bg-brand-primary hover:text-white transition-all active:scale-95 flex items-center justify-center cursor-pointer"
+                    aria-label="Próximo"
+                  >
+                    <ChevronRight size={16} />
+                  </button>
                 </div>
               </div>
             )}
 
-            {/* Dynamic Sticky Order Box (Below Gallery) */}
-            <div className="bg-[#FFFDF9] rounded-3xl p-4 sm:p-6 md:p-8 shadow-2xl border-2 border-brand-primary/20 relative overflow-hidden max-w-xs sm:max-w-md mx-auto w-full">
+            {/* Dynamic Sticky Order Box (Below Gallery) - MOBILE ONLY */}
+            <div className="lg:hidden bg-[#FFFDF9] rounded-3xl p-4 sm:p-6 md:p-8 shadow-2xl border-2 border-brand-primary/20 relative overflow-hidden max-w-xs sm:max-w-md mx-auto w-full">
               <div className="absolute top-0 right-0 w-32 h-32 bg-brand-primary/5 rounded-full translate-x-12 -translate-y-12 blur-2xl pointer-events-none" />
               
               {/* Main checkout buttons - super responsive height and text targeting CRO touch area */}
@@ -327,16 +350,23 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 {course.detalhesLongos.map((detail, index) => {
                   const isAulaoCard = course.title.toLowerCase().includes('aulão') || course.category.toLowerCase().includes('aulão');
+                  const isObs = detail.trim().toUpperCase().startsWith('OBS:');
                   return (
                     <div 
                       key={index}
-                      className="flex gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl sm:rounded-2xl hover:bg-brand-accent/30 transition-colors border border-transparent hover:border-brand-primary/10 items-center"
+                      className={`flex gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl sm:rounded-2xl hover:bg-brand-accent/30 transition-colors border border-transparent hover:border-brand-primary/10 items-center ${isObs ? 'sm:col-span-2 bg-brand-primary/5 border border-brand-primary/10 py-4' : ''}`}
                     >
-                      <span className="flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-brand-primary/15 text-brand-primary flex items-center justify-center font-bold text-xs sm:text-sm">
-                        {index + 1}
-                      </span>
+                      {isObs ? (
+                        <span className="flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-brand-primary/15 text-brand-primary flex items-center justify-center font-bold text-xs sm:text-base">
+                          💡
+                        </span>
+                      ) : (
+                        <span className="flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-brand-primary/15 text-brand-primary flex items-center justify-center font-bold text-xs sm:text-sm">
+                          {index + 1}
+                        </span>
+                      )}
                       <div>
-                        <p className="font-semibold text-brand-secondary text-sm sm:text-base md:text-lg leading-snug">
+                        <p className={`font-semibold text-brand-secondary text-[17px] leading-snug ${isObs ? 'text-brand-secondary' : ''}`}>
                           {isAulaoCard ? detail : `Módulo Especial: ${detail.split('(')[0].trim()}`}
                         </p>
                         {!isAulaoCard && (
@@ -348,6 +378,32 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
                     </div>
                   );
                 })}
+              </div>
+            </div>
+
+            {/* Dynamic Sticky Order Box (DESKTOP ONLY) */}
+            <div className="hidden lg:block bg-[#FFFDF9] rounded-3xl p-4 sm:p-6 md:p-8 shadow-2xl border-2 border-brand-primary/20 relative overflow-hidden w-full">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-brand-primary/5 rounded-full translate-x-12 -translate-y-12 blur-2xl pointer-events-none" />
+              
+              {/* Main checkout buttons - super responsive height and text targeting CRO touch area */}
+              <div className="space-y-2.5">
+                <a
+                  href={course.linkCheckout}
+                  target="_blank"
+                  referrerPolicy="no-referrer"
+                  className="flex items-center justify-center gap-2 bg-brand-primary text-white w-full py-2.5 sm:py-3 rounded-xl font-bold text-xs sm:text-sm hover:bg-brand-primary/95 hover:scale-[1.01] active:scale-95 transition-all shadow-md shadow-brand-primary/10 cursor-pointer text-center"
+                >
+                  GARANTIR MINHA VAGA AGORA
+                </a>
+
+                <a
+                  href="https://wa.me/553193476920?text=Tenho%20duvidas%20sobre%20os%20cursos%20de%20confeitaria"
+                  target="_blank"
+                  referrerPolicy="no-referrer"
+                  className="flex items-center justify-center gap-1.5 bg-emerald-500 text-white w-full py-2 rounded-xl font-bold text-[11px] sm:text-xs hover:bg-emerald-600 transition-colors cursor-pointer text-center"
+                >
+                  Falar Conosco no WhatsApp
+                </a>
               </div>
             </div>
 

@@ -65,8 +65,7 @@ export default function CourseGrid({ onSelectCourse }: CourseGridProps) {
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 md:gap-8">
           <AnimatePresence mode="popLayout">
             {filteredCourses.map((course) => {
-              const savedImage = typeof window !== 'undefined' ? localStorage.getItem(`course-cover-${course.id}`) : null;
-              const displayImage = savedImage || course.image;
+              const displayImage = course.image;
 
               return (
                 <motion.div
