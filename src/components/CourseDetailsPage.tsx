@@ -41,7 +41,13 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
     );
   }
 
-  const [activeImage, setActiveImage] = useState(course.image);
+  const [activeImage, setActiveImage] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem(`course-cover-${courseId}`);
+      if (saved) return saved;
+    }
+    return course.image;
+  });
   const [selectedTestimonial, setSelectedTestimonial] = useState<string | null>(null);
 
   const isDocesDeVitrine = course.id === 'course-19';
@@ -85,7 +91,12 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
   // Scroll to top on mount
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' as any });
-    setActiveImage(course.image);
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem(`course-cover-${courseId}`);
+      setActiveImage(saved || course.image);
+    } else {
+      setActiveImage(course.image);
+    }
   }, [courseId, course.image]);
 
   const imageGallery = Array.from(new Set([course.image, ...(course.galeria || [])]));
@@ -168,7 +179,12 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
                     return (
                       <button
                         key={idx}
-                        onClick={() => setActiveImage(imgUrl)}
+                        onClick={() => {
+                          setActiveImage(imgUrl);
+                          if (typeof window !== 'undefined') {
+                            localStorage.setItem(`course-cover-${courseId}`, imgUrl);
+                          }
+                        }}
                         className={`relative w-20 h-15 sm:w-28 sm:h-20 rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer flex-shrink-0 transition-all border-2 sm:border-3 snap-start ${
                           isSelected 
                             ? 'border-brand-primary scale-95 shadow-md shadow-brand-primary/20' 

@@ -58,7 +58,7 @@ export const COURSES: Course[] = [
   {
     id: "course-3",
     title: "Aulão Bolo de Cenoura",
-    description: "O clássico afetivo irresistível: a massa perfeita e a calda que todo cliente procura\n\nBolo de cenoura todo mundo faz, mas o bolo de cenoura fofinho, saboroso, que não fica solado, e que tem uma cobertura de brigadeiro no ponto certo, poucos sabem fazer .\nEu te ensino minha receita que faz sucesso no meu cardápio desde 2018.",
+    description: "Você nunca mais vai errar ao fazer um bolo de cenoura, essa é aquela receita para impressionar seu cliente\n\nBolo de cenoura todo mundo faz, mas o bolo de cenoura fofinho, saboroso, que não fica solado, e que tem uma cobertura de brigadeiro no ponto certo, poucos sabem fazer .\nEu te ensino minha receita que faz sucesso no meu cardápio desde 2018.",
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 97,00",
     image: "https://lh3.googleusercontent.com/d/1KDcy5hIty5Lq64qjdlTtAU1shsZlcn_h",
@@ -69,48 +69,45 @@ export const COURSES: Course[] = [
       "Finalização do mini vulcão e do bolo de cenoura na caixinha recheado"
     ],
     galeria: [
-      "https://lh3.googleusercontent.com/d/1CcfKj1wYnPcoZJrxuLRnyrNuydZcJ0bu",
-      "https://lh3.googleusercontent.com/d/1HkE9qOPHXbppgFth2TbhA674ue6IfkX3",
       "https://lh3.googleusercontent.com/d/1LP4jaUVZkwipSPZtmo07z4Ivk5WtHJNm",
       "https://lh3.googleusercontent.com/d/1KDcy5hIty5Lq64qjdlTtAU1shsZlcn_h",
+      "https://lh3.googleusercontent.com/d/1CcfKj1wYnPcoZJrxuLRnyrNuydZcJ0bu",
+      "https://lh3.googleusercontent.com/d/1HkE9qOPHXbppgFth2TbhA674ue6IfkX3",
       "https://lh3.googleusercontent.com/d/1xzJe9Jxlmh5olVGMYoFAC98qaMltQqJU"
     ]
   },
   {
     id: "course-4",
     title: "Aulão Palha Crocantella",
-    description: "Praticidade e alto lucro: o doce que une a cremosidade do brigadeiro ao crocante perfeito\n\nA Palha Crocantella é o produto ideal para quem precisa de um doce com excelente tempo de prateleira, fácil armazenamento e margem de lucro altíssima. Unindo a cremosidade de um brigadeiro premium ao toque crocante que todo mundo ama, ela é perfeita para vendas de balcão, caixas de presente ou como aquele \"adicional\" irresistível no carrinho do seu delivery.",
+    description: "Uma palha italiana diferente de todas que você já provou\n\nMacia por fora, crocante por dentro, e altamente viciante.\nA palha crocantella é uma receita que entra no top 5 de produtos mais vendidos da minha confeitaria, ela faz sucesso desde que foi lançada em 2019, vai ser difícil seu cliente resistir.",
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 197,00",
-    image: "https://lh3.googleusercontent.com/d/1gn-Iaoecm6Jtl2a7yS-53y2xTnniuI8l",
+    image: "https://lh3.googleusercontent.com/d/1zrU2SWbKIacmcZcjDsQKrE5gdgsKa8Sk",
     linkCheckout: "https://pay.hotmart.com/K105437637H?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779995929797&bid=1779995930774",
     detalhesLongos: [
-      "Ponto exato do brigadeiro base cremoso para palha italiana",
-      "Seleção e preparo do biscoito para manter a crocância por mais tempo",
-      "Técnica de corte limpo e padronização de tamanho e peso",
-      "Banho de açúcar, leite em pó e coberturas especiais (Crocantella)",
-      "Sugestões de embalagens e estratégias de venda em caixas ou porções individuais"
+      "Ponto exato do brigadeiro cremoso para a palha crocantella",
+      "Processo de montagem e corte das palhas"
     ],
     galeria: [
+      "https://lh3.googleusercontent.com/d/1zrU2SWbKIacmcZcjDsQKrE5gdgsKa8Sk",
       "https://lh3.googleusercontent.com/d/1gn-Iaoecm6Jtl2a7yS-53y2xTnniuI8l",
-      "https://lh3.googleusercontent.com/d/1kZkx_uj2lnyEiX7ApUMqqIlQJ93Kkvmd",
-      "https://lh3.googleusercontent.com/d/1zrU2SWbKIacmcZcjDsQKrE5gdgsKa8Sk"
+      "https://lh3.googleusercontent.com/d/1kZkx_uj2lnyEiX7ApUMqqIlQJ93Kkvmd"
     ]
   },
   {
     id: "course-5",
     title: "Aulão Bombom de Morango",
-    description: "Líder absoluto do delivery: o segredo do bombom aberto que vende todos os dias do ano\n\nO morango combinado com chocolate e creme é uma máquina de fazer dinheiro, mas exige técnica para não soltar água e estragar o doce. Neste aulão, você vai aprender a receita exata e as técnicas de montagem do Bombom de Morango que é o líder absoluto de vendas na Doces da Nat. Um produto com apelo visual gigante, sabor equilibrado e feito para você faturar alto todos os dias.",
+    description: "8 a cada 10 clientes escolhem bombom de morango, realmente é um doce que nunca sai de moda\n\nSe tem uma coisa que aprendi na confeitaria, é que todo doce que tem morango fica delicioso e vende todos os dias. \nAprenda o passo a passo do bombom de morango perfeito e comece a vender no seu delivery também.",
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 247,00",
     image: "https://lh3.googleusercontent.com/d/1v0nKzHZ4hWK6fkvYd6kyZwSwi5iC_RUN",
     linkCheckout: "https://pay.hotmart.com/O101153893E?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779995967843&bid=1779995969088",
     detalhesLongos: [
-      "Técnica de higienização e preparo do morango para prolongar a vida útil sem soltar água",
-      "O famoso creme de leite ninho aveludado perfeito para base",
-      "Ganache de chocolate nobre brilhante que não quebra ao morder",
-      "Montagem estratégica em potes transparentes e embalagens individuais de alto apelo visual",
-      "Marketing visual: como fotografar o morango fresco e atrair compradores no delivery"
+      "Base do brigadeiro branco no ponto perfeito",
+      "Dicas para durabilidade do bombom",
+      "Temperagem de chocolate",
+      "Como moldar e banhar com chocolate",
+      "E-book recheio de maracujá para o bombom de morango"
     ],
     galeria: [
       "https://lh3.googleusercontent.com/d/1v0nKzHZ4hWK6fkvYd6kyZwSwi5iC_RUN",
@@ -147,23 +144,21 @@ export const COURSES: Course[] = [
   {
     id: "course-7",
     title: "Aulão Biscoito Amanteigado",
-    description: "A arte de presentear em formato de doce: produza biscoitos perfeitos para datas comemorativas\n\nBiscoitos amanteigados vão muito além do café da tarde; eles são o produto perfeito para montagem de lembrancinhas, caixas corporativas e presentes em datas especiais (como Dia das Mães, Natal e Páscoa). Aprenda uma massa que derrete na boca, mantém o formato perfeito ao assar e tem uma durabilidade excelente para você produzir com calma e vender muito.",
+    description: "Um biscoito versátil pela possibilidade de usar diversos tipos de recheios, fácil de fazer e extremamente lucrativo\n\nBiscoitos amanteigados vão muito além do café da tarde; eles são o produto perfeito para montagem de lembrancinhas, caixas corporativas e presentes em datas especiais (como Dia das Mães, Natal e Páscoa). Aprenda uma massa que derrete na boca, mantém o formato perfeito ao assar e tem uma durabilidade excelente para você produzir com calma e vender muito.",
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 137,00",
-    image: "https://lh3.googleusercontent.com/d/1gQCa-UT6TQDM2ujyDMwKcP4K7fH3-_ld",
+    image: "https://lh3.googleusercontent.com/d/1rUYO0cGjp9Ml-GnsnZUNXlAnSuHHh5TF",
     linkCheckout: "https://pay.hotmart.com/M101845099R?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779996000573&bid=1779996001653",
     detalhesLongos: [
-      "Massa clássica amanteigada que não deforma ao assar",
-      "Principais técnicas de conservação e embalagem de alta durabilidade para presentes",
-      "Como planejar a produção antecipada para datas sazonais de alto faturamento",
-      "Ideias de montagem de caixas sofisticadas e de altíssimo valor percebido",
-      "Precificação inteligente e controle de desperdício em produção em massa"
+      "Passo a passo da massa amanteigada",
+      "Recheios que você pode usar na montagem",
+      "Dicas de finalização e apresentação"
     ],
     galeria: [
+      "https://lh3.googleusercontent.com/d/1rUYO0cGjp9Ml-GnsnZUNXlAnSuHHh5TF",
       "https://lh3.googleusercontent.com/d/1gQCa-UT6TQDM2ujyDMwKcP4K7fH3-_ld",
       "https://lh3.googleusercontent.com/d/1NrdTfaClGkwg0FN_HXuIaoyX2kj3rkyi",
-      "https://lh3.googleusercontent.com/d/14dNAszQuHysALns4_jwqAOXJSMY_BJfg",
-      "https://lh3.googleusercontent.com/d/1rUYO0cGjp9Ml-GnsnZUNXlAnSuHHh5TF"
+      "https://lh3.googleusercontent.com/d/14dNAszQuHysALns4_jwqAOXJSMY_BJfg"
     ]
   },
   {

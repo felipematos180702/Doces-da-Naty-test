@@ -64,26 +64,30 @@ export default function CourseGrid({ onSelectCourse }: CourseGridProps) {
         {/* Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 md:gap-8">
           <AnimatePresence mode="popLayout">
-            {filteredCourses.map((course) => (
-              <motion.div
-                key={course.id}
-                layout
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                className="group bg-brand-cream rounded-2xl sm:rounded-3xl overflow-hidden border border-brand-primary/5 hover:border-brand-primary/20 transition-all flex flex-col shadow-sm hover:shadow-xl duration-300"
-              >
-                {/* Clicking on the image opens details */}
-                <div 
-                  onClick={() => onSelectCourse(course.id)}
-                  className="aspect-square overflow-hidden relative cursor-pointer bg-[#FFFDF9] p-1.5 sm:p-2 flex items-center justify-center"
+            {filteredCourses.map((course) => {
+              const savedImage = typeof window !== 'undefined' ? localStorage.getItem(`course-cover-${course.id}`) : null;
+              const displayImage = savedImage || course.image;
+
+              return (
+                <motion.div
+                  key={course.id}
+                  layout
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  className="group bg-brand-cream rounded-2xl sm:rounded-3xl overflow-hidden border border-brand-primary/5 hover:border-brand-primary/20 transition-all flex flex-col shadow-sm hover:shadow-xl duration-300"
                 >
-                  <img 
-                    src={course.image} 
-                    alt={course.title}
-                    className="w-full h-full object-cover object-center rounded-xl sm:rounded-t-[12px] group-hover:scale-105 transition-transform duration-500 relative z-10"
-                    loading="lazy"
-                  />
+                  {/* Clicking on the image opens details */}
+                  <div 
+                    onClick={() => onSelectCourse(course.id)}
+                    className="aspect-square overflow-hidden relative cursor-pointer bg-[#FFFDF9] p-1.5 sm:p-2 flex items-center justify-center"
+                  >
+                    <img 
+                      src={displayImage} 
+                      alt={course.title}
+                      className="w-full h-full object-cover object-center rounded-xl sm:rounded-t-[12px] group-hover:scale-105 transition-transform duration-500 relative z-10"
+                      loading="lazy"
+                    />
                   {/* Subtle overlay hover effect */}
                   <div className="absolute inset-0 bg-brand-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20">
                     <span className="bg-white/95 text-brand-secondary font-bold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-lg text-[10px] sm:text-xs flex items-center gap-1.5 sm:gap-2">
@@ -124,7 +128,8 @@ export default function CourseGrid({ onSelectCourse }: CourseGridProps) {
                   </div>
                 </div>
               </motion.div>
-            ))}
+              );
+            })}
           </AnimatePresence>
         </div>
 
