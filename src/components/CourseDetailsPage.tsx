@@ -280,7 +280,7 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
                   return (
                     <>
                       <h2 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-brand-secondary leading-snug tracking-tight">
-                        {headline}
+                        {headline.trim().endsWith('.') || headline.trim().endsWith('!') || headline.trim().endsWith('?') ? headline : `${headline}.`}
                       </h2>
                       
                       <div className="text-gray-600 space-y-4 sm:space-y-5 text-sm sm:text-base md:text-lg leading-relaxed">

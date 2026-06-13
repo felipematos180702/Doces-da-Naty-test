@@ -184,7 +184,7 @@ export const COURSES: Course[] = [
   {
     id: "course-9",
     title: "Aulão Pudim Lisinho da Naty",
-    description: "Pudim não é tudo igual, precisa ser doce na medida certa, lisinho e cremoso.\n\nNesse aulão eu te explico todas as técnicas para ter um pudim lisinho e perfeito, uma receita simples - nem precisa de liquidificador, mas que surpreende cada cliente que experimenta",
+    description: "Pudim não é tudo igual, precisa ser doce na medida certa, lisinho e cremoso.\n\nNesse aulão eu te explico todas as técnicas para ter um pudim lisinho e perfeito, uma receita simples - nem precisa de liquidificador, mas que surpreende cada cliente que experimenta.",
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 397,00",
     image: "https://lh3.googleusercontent.com/d/1o-XX1cFs6Vv8V2N-ZoggygJQRkYnGeKn",
@@ -203,8 +203,8 @@ export const COURSES: Course[] = [
   },
   {
     id: "course-10",
-    title: "Aulão Cheesecake e torta de limão",
-    description: "Uma cheesecake que não é assada, e uma torta de limão super leve e refrescante\n\nVender tortas no delivery exige muito mais do que uma boa receita; exige estrutura. O cliente quer abrir a embalagem e encontrar uma torta linda, inteira e perfeita, exatamente como saiu da sua cozinha. Neste aulão, você aprende massas, recheios e técnicas de montagem pensadas estrategicamente para resistirem ao transporte.",
+    title: "Cheesecake e torta de limão",
+    description: "Uma cheesecake que não é assada, e uma torta de limão super leve e refrescante\n\nVender tortas no delivery exige muito mais do que uma boa receita; exige estrutura. O cliente quer abrir a embalagem e encontrar uma torta linda, inteira e perfeita, exatamente como saiu da sua cozinha. Neste curso, você aprende massas, recheios e técnicas de montagem pensadas estrategicamente para resistirem ao transporte.",
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 227,00",
     image: "https://lh3.googleusercontent.com/d/1afn5kt02LtSOJlwSyQ1iZz_OCwYRz856",
@@ -228,22 +228,20 @@ export const COURSES: Course[] = [
   },
   {
     id: "course-11",
-    title: "Aulão Bolo Gelado de Coco",
-    description: "Nostalgia lucrativa: o bolo gelado super molhadinho que é sucesso de vendas na confeitaria moderna\n\nO bolo gelado de coco resgata aquela memória afetiva deliciosa, e é exatamente por isso que ele vende tanto! Envolto no papel alumínio, super molhado e com coco fresco, ele é o produto de lanche perfeito para o delivery ou vendas de rua. Uma aula rápida para você aprender a massa que mais absorve calda sem desmanchar e começar a faturar imediatamente.",
+    title: "Bolo Gelado de Coco",
+    description: "Aquele bolo gelado com memória afetiva.\n\nBolo gelado de coco lembra infância, e é exatamente por isso que ele vende tanto. \nQueridinho entre os clientes, e com um baixo custo para produção, ou seja, lucrativo e amado por todos. \nNesse aulão super detalhado, eu te ensino o passo a passo de uma forma prática, e você já começa a vender esse bolo nos próximos dias.",
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 277,00",
-    image: "https://lh3.googleusercontent.com/d/1_Ss2pQhBd801an7M8BQtiwhBJKofZKgf",
+    image: "https://lh3.googleusercontent.com/d/1r1ER484d9_iJGQ4yuixAt0DqMsz1fD6f",
     linkCheckout: "https://pay.hotmart.com/D98540538M?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779996095866&bid=1779996096887",
     detalhesLongos: [
-      "Massa de pão de ló super aerada ideal para absorver calda sem desmanchar",
-      "A famosa calda de coco cremosa com leite condensado e leite de coco fresco",
-      "Técnicas de descanso corretas e corte uniforme de fatias perfeitas",
-      "Como embrulhar no papel alumínio com agilidade e máxima vedação térmica",
-      "Sugestões de apresentação, validade e controle de estoque para pronta entrega"
+      "Massa de baunilha estruturada para absorver calda sem desmanchar",
+      "O recheio de coco cremoso perfeito",
+      "Montagem, técnica de descanso, corte e finalização no papel alumínio"
     ],
     galeria: [
-      "https://lh3.googleusercontent.com/d/1_Ss2pQhBd801an7M8BQtiwhBJKofZKgf",
       "https://lh3.googleusercontent.com/d/1r1ER484d9_iJGQ4yuixAt0DqMsz1fD6f",
+      "https://lh3.googleusercontent.com/d/1_Ss2pQhBd801an7M8BQtiwhBJKofZKgf",
       "https://lh3.googleusercontent.com/d/1rB_RcM1qMX5Qmhdab78_ohMNibB5Mdwj",
       "https://lh3.googleusercontent.com/d/1OyspoSISEg_02bRiGsgma1jT_M4XNDK8"
     ]
