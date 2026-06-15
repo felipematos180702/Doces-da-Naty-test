@@ -344,12 +344,12 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
             <div className="bg-white rounded-3xl p-4 sm:p-6 md:p-8 shadow-xl shadow-brand-secondary/5 border border-brand-primary/5">
               <h3 className="font-serif text-xl sm:text-2xl font-bold text-brand-secondary mb-4 sm:mb-6 flex items-center gap-2">
                 <Sparkles className="text-brand-primary fill-brand-primary/10 animate-pulse" size={22} />
-                {course.title.toLowerCase().includes('aulão') || course.category.toLowerCase().includes('aulão') ? "Conteúdo do aulão :" : "Conteúdo Programático Detalhado"}
+                {course.title.toLowerCase().includes('aulão') || course.category.toLowerCase().includes('aulão') || course.category.toLowerCase().includes('aulõ') ? "Conteúdo do aulão :" : "Conteúdo Programático Detalhado"}
               </h3>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 {course.detalhesLongos.map((detail, index) => {
-                  const isAulaoCard = course.title.toLowerCase().includes('aulão') || course.category.toLowerCase().includes('aulão');
+                  const isAulaoCard = course.title.toLowerCase().includes('aulão') || course.category.toLowerCase().includes('aulão') || course.category.toLowerCase().includes('aulõ');
                   const isObs = detail.trim().toUpperCase().startsWith('OBS:');
                   return (
                     <div 

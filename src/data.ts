@@ -35,7 +35,7 @@ export const COURSES: Course[] = [
   },
   {
     id: "course-2",
-    title: "Aulão Bolo Matilda",
+    title: "Bolo Matilda",
     description: "O fenômeno de vendas: domine a receita do bolo mais chocolatudo e desejado das redes sociais\n\nSe existe um bolo capaz de parar o feed do Instagram e gerar picos de pedidos no seu delivery, é o Bolo Matilda. Inspirado no clássico do cinema, ele é o sinônimo perfeito de exagero na medida certa: Eu criei a releitura perfeita desse bolo chocolatudo, e te ensino o passo a passo no aulão.",
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 297,00",
@@ -57,7 +57,7 @@ export const COURSES: Course[] = [
   },
   {
     id: "course-3",
-    title: "Aulão Bolo de Cenoura",
+    title: "Bolo de Cenoura",
     description: "Você nunca mais vai errar ao fazer um bolo de cenoura, essa é aquela receita para impressionar seu cliente\n\nBolo de cenoura todo mundo faz, mas o bolo de cenoura fofinho, saboroso, que não fica solado, e que tem uma cobertura de brigadeiro no ponto certo, poucos sabem fazer .\nEu te ensino minha receita que faz sucesso no meu cardápio desde 2018.",
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 97,00",
@@ -78,7 +78,7 @@ export const COURSES: Course[] = [
   },
   {
     id: "course-4",
-    title: "Aulão Palha Crocantella",
+    title: "Palha Crocantella",
     description: "Uma palha italiana diferente de todas que você já provou\n\nMacia por fora, crocante por dentro, e altamente viciante.\nA palha crocantella é uma receita que entra no top 5 de produtos mais vendidos da minha confeitaria, ela faz sucesso desde que foi lançada em 2019, vai ser difícil seu cliente resistir.",
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 197,00",
@@ -96,7 +96,7 @@ export const COURSES: Course[] = [
   },
   {
     id: "course-5",
-    title: "Aulão Bombom de Morango",
+    title: "Bombom de Morango",
     description: "8 a cada 10 clientes escolhem bombom de morango, realmente é um doce que nunca sai de moda\n\nSe tem uma coisa que aprendi na confeitaria, é que todo doce que tem morango fica delicioso e vende todos os dias. \nAprenda o passo a passo do bombom de morango perfeito e comece a vender no seu delivery também.",
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 247,00",
@@ -143,7 +143,7 @@ export const COURSES: Course[] = [
   },
   {
     id: "course-7",
-    title: "Aulão Biscoito Amanteigado",
+    title: "Biscoito Amanteigado",
     description: "Um biscoito versátil pela possibilidade de usar diversos tipos de recheios, fácil de fazer e extremamente lucrativo\n\nBiscoitos amanteigados vão muito além do café da tarde; eles são o produto perfeito para montagem de lembrancinhas, caixas corporativas e presentes em datas especiais (como Dia das Mães, Natal e Páscoa). Aprenda uma massa que derrete na boca, mantém o formato perfeito ao assar e tem uma durabilidade excelente para você produzir com calma e vender muito.",
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 137,00",
@@ -183,7 +183,7 @@ export const COURSES: Course[] = [
   },
   {
     id: "course-9",
-    title: "Aulão Pudim Lisinho da Naty",
+    title: "Pudim Lisinho da Naty",
     description: "Pudim não é tudo igual, precisa ser doce na medida certa, lisinho e cremoso.\n\nNesse aulão eu te explico todas as técnicas para ter um pudim lisinho e perfeito, uma receita simples - nem precisa de liquidificador, mas que surpreende cada cliente que experimenta.",
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 397,00",
@@ -248,18 +248,16 @@ export const COURSES: Course[] = [
   },
   {
     id: "course-12",
-    title: "Aulão Bolo Gelado de Prestígio da Naty",
-    description: "A combinação irresistível: eleve o nível do bolo gelado com a dupla dinâmica de chocolate e coco\n\nSe o de coco já é um sucesso, a version Prestígio potencializa o faturamento. Combinando uma massa de chocolate intensa e fofinha com um recheio cremoso di coco, esse bolo gelado é o queridinho do público. Aprenda a equilibrar a doçura e a umidade exata para criar um doce viciante, perfeito para o cliente comprar em quantidade.",
+    title: "Bolo Gelado de Prestígio da Naty",
+    description: "Uma combinação irresistível com chocolate e coco\n\nUm bolo gelado que de simples não tem nada, uma combinação de massa de chocolate molhadinha, recheio de coco cremoso, brigadeiro e finalização com granulado. \nPerfeito para vender como bolo de corte também.",
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 187,00",
     image: "https://lh3.googleusercontent.com/d/1fwqJj16koXaHZRS1a7VTS5KjjAjqmRtE",
     linkCheckout: "https://pay.hotmart.com/P94251644Y?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779996117291&bid=1779996118374",
     detalhesLongos: [
-      "Massa fofinha de cacau black com alto poder de absorção de calda",
-      "O recheio de coco cremoso perfeito com textura de beijinho de colher",
-      "Técnicas de montagem, corte padronizado e selagem no papel alumínio",
-      "Segredos do controle de validade estendido e congelamento seguro",
-      "Combinações inteligentes de vendas da dupla Coco Tradicional e Prestígio"
+      "Massa de chocolate estruturada",
+      "Recheio de coco e brigadeiro cremoso",
+      "Montagem, técnica de descanso, corte e finalização"
     ],
     galeria: [
       "https://lh3.googleusercontent.com/d/1fwqJj16koXaHZRS1a7VTS5KjjAjqmRtE",
@@ -269,18 +267,15 @@ export const COURSES: Course[] = [
   },
   {
     id: "course-13",
-    title: "Aulão Chocolate Quente da Naty",
-    description: "Faturamento em alta no inverno: a receita secreta do chocolate ultra cremoso que aquece as vendas\n\nQuando o frio chega em várias regiões do país, as vendas de doces tradicionais mudam e o chocolate quente vira o protagonista. Mas esqueça aquela bebida rala de achocolatado; aqui você vai aprender o Chocolate Quente da Naty, uma bebida europeia densa, aveludada e extremamente saborosa, perfeita para vender no seu balcão ou enviar pelo delivery de forma impecável.",
+    title: "Chocolate Quente da Naty",
+    description: "Chega daquele chocolate quente com amido de milho que mais parece um mingau\n\nO que mais gosto nesta receita, é que você pode vender o ano todo, além de prática para o seu cliente consumir, ele fica perfeito quente e surpreendente gelado. \nFeito com chocolate de verdade, não tem amido de milho e é sucesso de vendas.",
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 197,00",
     image: "https://lh3.googleusercontent.com/d/1Bype6idwlJREGoSH0GFmA09Mbf7K15pR",
     linkCheckout: "https://pay.hotmart.com/T61772984D?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779996137571&bid=1779996138699",
     detalhesLongos: [
-      "A receita secreta europeia de chocolate denso e aveludado",
-      "Como harmonizar cacau e blends de chocolate nobre sem deixar enjoativo",
-      "Técnica profissional de aquecimento e consistência perfeita sem amido sobressalente",
-      "Logística e embalagens térmicas inteligentes para envio seguro no delivery",
-      "Como faturar alto no inverno agregando complementos irresistíveis (marshmallows, chantilly)"
+      "Passo a passo da receita com aula detalhada",
+      "Indicação de fornecedores"
     ],
     galeria: [
       "https://lh3.googleusercontent.com/d/1Bype6idwlJREGoSH0GFmA09Mbf7K15pR",
@@ -290,18 +285,15 @@ export const COURSES: Course[] = [
   },
   {
     id: "course-14",
-    title: "Aulão Pão de Mel da Naty",
-    description: "O doce perfeito para o ano todo: domine a massa de especiarias e o banho de chocolate impecável\n\nO pão de mel é um curinga na confeitaria: tem excelente validade, transporta super bem e aceita os mais variados recheios, do doce de leite tradicional ao brigadeiro gourmet. Neste aulão, a Nat ensina a base de especiarias perfeita, o segredo para ele ficar sempre úmido e as técnicas para um banho de chocolate profissional e brilhante, sem mistérios.",
+    title: "Pão de Mel da Naty",
+    description: "O doce perfeito para o ano todo: domine a massa de especiarias e o banho de chocolate impecável\n\nO pão de mel é um curinga na confeitaria: tem excelente validade, transporta super bem e aceita os mais variados recheios, do doce de leite tradicional ao brigadeiro gourmet. Neste aulão eu te ensino a massa de especiarias que se mantém úmida, e as técnicas para o banho de chocolate.",
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 157,00",
-    image: "https://lh3.googleusercontent.com/d/1slYg2ANVw9n514ayk7s8EXFkNIykQAjO",
+    image: "https://lh3.googleusercontent.com/d/1L7xuryugsNDIGG7Z2cpuY4VEpO6Lwnea",
     linkCheckout: "https://pay.hotmart.com/H99539123J?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779996156815&bid=1779996159626",
     detalhesLongos: [
-      "Massa de especiarias super fofinha, equilibrada e aromática",
-      "Segredos do cozimento correto para manter o miolo super úmido",
-      "Preparo de recheio de doce de leite de ponto firme e variações finas",
-      "Técnica profissional para o banho de chocolate simétrico, brilhante e sem rebarbas",
-      "Estratégia completa de embalagem, validade e controle de custos"
+      "Massa de especiarias super fofinha",
+      "Passo a passo da temperagem de chocolate para cobertura"
     ],
     galeria: [
       "https://lh3.googleusercontent.com/d/1slYg2ANVw9n514ayk7s8EXFkNIykQAjO",
