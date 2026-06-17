@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { COURSES } from '../data';
 import { Category } from '../types';
@@ -15,10 +15,32 @@ function getCategoryLabel(cat: Category | 'Todos'): string {
 
 interface CourseGridProps {
   onSelectCourse: (courseId: string) => void;
+  activeCategory: Category | 'Todos';
+  setActiveCategory: (category: Category | 'Todos') => void;
+  lastViewedCourseId: string | null;
+  setLastViewedCourseId: (courseId: string | null) => void;
 }
 
-export default function CourseGrid({ onSelectCourse }: CourseGridProps) {
-  const [activeCategory, setActiveCategory] = useState<Category | 'Todos'>('Todos');
+export default function CourseGrid({ 
+  onSelectCourse, 
+  activeCategory, 
+  setActiveCategory, 
+  lastViewedCourseId,
+  setLastViewedCourseId
+}: CourseGridProps) {
+
+  // Smoothly scroll back to the recently viewed course card when showcase mounts
+  useEffect(() => {
+    if (lastViewedCourseId) {
+      const scrollTimer = setTimeout(() => {
+        const cardRef = document.getElementById(`course-card-${lastViewedCourseId}`);
+        if (cardRef) {
+          cardRef.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 350);
+      return () => clearTimeout(scrollTimer);
+    }
+  }, [lastViewedCourseId]);
 
   const filteredCourses = activeCategory === 'Todos' 
     ? COURSES 
@@ -70,6 +92,7 @@ export default function CourseGrid({ onSelectCourse }: CourseGridProps) {
               return (
                 <motion.div
                   key={course.id}
+                  id={`course-card-${course.id}`}
                   layout
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}

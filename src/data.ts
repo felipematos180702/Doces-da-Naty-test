@@ -7,15 +7,14 @@ export const COURSES: Course[] = [
     description: "O clássico que nunca perde o topo: fature alto com o doce mais vendido do Brasil!\n\nO bolo no pote é o herói de qualquer confeitaria que quer dinheiro em caixa rápido. Ele tem baixo custo de produção, aceitação imediata e um formato perfeito para vender no delivery, no trabalho ou sob encomenda.\n\nNeste curso prático, você vai aprender a base perfeita de massas molhadinhas, montagens que enchem os olhos e uma variedade de sabores que fidelizam o cliente logo na primeira colherada. É a oportunidade perfeita para você começar a faturar na cozinha de casa com o que já tem.",
     category: "Cursos Rápidos (Acesso de 6 meses)",
     price: "R$ 167,00",
-    image: "https://lh3.googleusercontent.com/d/1EGGiVIMK6Ylpcrs7u-5gbz-ld7iT2Ikq",
+    image: "https://lh3.googleusercontent.com/d/1POQh3ED3lZ53udaE-DNbViQWmLu0krH2",
     linkCheckout: "https://pay.hotmart.com/K104875695L?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779995507042&bid=1779995508534",
     detalhesLongos: [
-      "Química das Massas Estruturadas Amanteigadas e de Chiffon que absorvem calda sem desmoronar",
-      "Processo de Montagem Rápida em Série que otimiza seu tempo e material",
-      "Segredo das Caldas de Validade Estendida (suas caldas não azedam na refrigeração)",
-      "Cardápio Premium de Sucesso: Ninho com Nutella, Red Velvet, Brigadeiro Belga e Prestígio no ponto correto de colher",
-      "Como calcular custos ocultos, perdas, e fazer a precificação com margem acima de 300% por pote",
-      "Estratégia prática de vendas rápidas via WhatsApp e Parcerias no comércio local"
+      "Massas de chocolate e baunilha",
+      "Recheios base: creme de ninho, creme de coco, creme de pistache, recheio de chocolate, ganache, brigadeiro cremoso, creme de Nutella e compota de abacaxi",
+      "Montagem dos sabores: Ninho com morango, Ninho com Nutella, Ferrero, Kinder, Abacaxi com coco, abacaxi com Ninho, prestígio, brigadeiro e pistache",
+      "Montagem de cada um dos sabores com estratégica de apresentação",
+      "Bônus: Copos Ninho com morango e chocolate e copo kinder"
     ],
     galeria: [
       "https://lh3.googleusercontent.com/d/1EGGiVIMK6Ylpcrs7u-5gbz-ld7iT2Ikq",
@@ -119,19 +118,16 @@ export const COURSES: Course[] = [
   },
   {
     id: "course-6",
-    title: "Slices Cakes de Sucesso",
-    description: "Fatias Supremas: o formato que transformou o bolo tradicional em um produto de luxo irresistível\n\nAs Slice Cakes (ou fatias de bolo) viraram febre porque entregam para o cliente exatamente o que ele quer: a experiência de um bolo de festa generoso, com muito recheio, mas no tamanho perfeito para o consumo individual.\n\nAqui você vai dominar a técnica de corte perfeito, massas estruturadas que não despencam e combinações de recheios que são campeões de vendas. Aprenda a transformar fatias simples em verdadeiros objetos de desejo altamente lucrativos na sua vitrine ou delivery.",
+    title: "Fatias de Sucesso",
+    description: "A fatia é um produto de entrada para que o cliente conheça os sabores dos seus bolos.\n\nAs Slice Cakes (ou fatias de bolo) viraram febre porque entregam para o cliente exatamente o que ele quer: a experiência de um bolo de festa generoso, com muito recheio, mas no tamanho perfeito para o consumo individual.\n\nAqui você vai dominar a técnica de corte perfeita, massas estruturadas que não despencam e combinações de recheios que são campeãs em vendas. Aprenda de uma forma prática como produzir fatias todos os dias para vender no seu delivery, ou até mesmo para fazer seu festival de fatias.",
     category: "Cursos Rápidos (Acesso de 6 meses)",
     price: "R$ 257,00",
     image: "https://lh3.googleusercontent.com/d/13-PKnoIu3Iuui_ZbPkMEyAiOOaHWoTuq",
     linkCheckout: "https://pay.hotmart.com/J98516024K?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779995605057&bid=1779995606299",
     detalhesLongos: [
-      "Técnica do corte perfeito e simétrico para fatias milimetricamente iguais (corte limpo sem amassar)",
-      "Como estruturar massas amanteigadas e chiffon fofas que sustentam 3 camadas de recheio rico",
-      "Combinações de recheios requintados: Quatro Leites, Brigadeiro Gourmet, Creme de Pistache e Compotas ácidas",
-      "Segredos da selagem química e da embalagem protetora individual que preserva a umidade por mais tempo",
-      "Precificação estratégica de luxo: como cobrar até R$ 18 por fatia com custo de produção baixíssimo",
-      "Estratégia prática de vendas rápidas via Instagram, iFood e parcerias com cafeterias locais"
+      "Massas de bolos estruturadas",
+      "Recheios para montar os bolos: Recheio de coco, recheios de chocolate e recheio kinder",
+      "Montagem, corte e finalização das fatias nos sabores: Kinder, Floresta, Abacaxi com coco e Prestígio"
     ],
     galeria: [
       "https://lh3.googleusercontent.com/d/13-PKnoIu3Iuui_ZbPkMEyAiOOaHWoTuq",
@@ -164,16 +160,15 @@ export const COURSES: Course[] = [
   {
     id: "course-8",
     title: "Precificação e Ficha Técnica (Express)",
-    description: "A mesma inteligência financeira da Doces da Nat, desenhada para proteger o seu lucro\n\nVocê trabalha duro na cozinha, mas chega no fim do mês e não vê a cor do dinheiro? O erro não está no seu talento, está na sua tabela. Este não é um curso teórico de matemática; é a ferramenta real de sobrevivência do seu negócio.\n\nPela primeira vez, a equipe financeira da Doces da Nat formatou o método exato e a planilha de fichas técnicas que a Nat usa diariamente para garantir a saúde e o crescimento da sua empresa. Aprenda a cobrar o preço justo, incluir seus custos invisíveis e ter a certeza de que cada doce vendido está, de fato, colocando dinheiro no seu bolso.",
+    description: "Pedi a equipe financeira da Doces da Naty para criar um passo a passo que te ensine a precificar corretamente\n\nVocê trabalha duro na cozinha, mas chega no fim do mês e não vê a cor do dinheiro? O erro não está no seu talento, está na precificação. Este não é um curso teórico de matemática; é a ferramenta real de sobrevivência do seu negócio.\n\nPela primeira vez, a equipe financeira da Doces da Naty formatou o método exato e a planilha de fichas técnicas que a Naty usa diariamente para garantir a saúde e o crescimento da sua empresa. Aprenda a cobrar o preço justo, incluir seus custos invisíveis e ter a certeza de que cada doce vendido está, de fato, colocando dinheiro no seu bolso.",
     category: "Cursos Rápidos (Acesso de 6 meses)",
     image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=600&auto=format&fit=crop",
     linkCheckout: "https://pay.hotmart.com/S79801917C?off=6bwv0dtg&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779995718946&bid=1779995720529",
     detalhesLongos: [
-      "Planilha automatizada inclusa de custos e fichas técnicas",
-      "Como calcular o valor da sua hora trabalhada (PRO-LABORE)",
-      "Método para embutir custos 'invisíveis' (detergente, luz, gás, água)",
-      "Como fazer orçamentos rápidos de bolos personalizados",
-      "Posicionamento de mercado para cobrar o preço justo sem medo"
+      "Construção de ficha técnica, definição do mix de produtos",
+      "Como calcular custo fixo e cmv",
+      "Planilha de ficha técnica",
+      "Bônus Gestão financeira: Definição de pró-labore, separação de contas e reserva de emergência, custos fixos e variáveis, entradas e saídas, planilha fluxo de caixa e MEI"
     ],
     galeria: [
       "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=600&auto=format&fit=crop",

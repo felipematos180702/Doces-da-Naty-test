@@ -344,34 +344,46 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
             <div className="bg-white rounded-3xl p-4 sm:p-6 md:p-8 shadow-xl shadow-brand-secondary/5 border border-brand-primary/5">
               <h3 className="font-serif text-xl sm:text-2xl font-bold text-brand-secondary mb-4 sm:mb-6 flex items-center gap-2">
                 <Sparkles className="text-brand-primary fill-brand-primary/10 animate-pulse" size={22} />
-                {course.title.toLowerCase().includes('aulão') || course.category.toLowerCase().includes('aulão') || course.category.toLowerCase().includes('aulõ') ? "Conteúdo do aulão :" : "Conteúdo Programático Detalhado"}
+                {course.title.toLowerCase().includes('aulão') || course.category.toLowerCase().includes('aulão') || course.category.toLowerCase().includes('aulõ') ? "Conteúdo do aulão :" : "Conteúdo do curso :"}
               </h3>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 {course.detalhesLongos.map((detail, index) => {
-                  const isAulaoCard = course.title.toLowerCase().includes('aulão') || course.category.toLowerCase().includes('aulão') || course.category.toLowerCase().includes('aulõ');
                   const isObs = detail.trim().toUpperCase().startsWith('OBS:');
+                  const hasColon = detail.includes(':') && !isObs;
                   return (
                     <div 
                       key={index}
-                      className={`flex gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl sm:rounded-2xl hover:bg-brand-accent/30 transition-colors border border-transparent hover:border-brand-primary/10 items-center ${isObs ? 'sm:col-span-2 bg-brand-primary/5 border border-brand-primary/10 py-4' : ''}`}
+                      className={`flex gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl sm:rounded-2xl hover:bg-brand-accent/30 transition-colors border border-transparent hover:border-brand-primary/10 items-start ${isObs ? 'sm:col-span-2 bg-brand-primary/5 border border-brand-primary/10 py-4' : ''}`}
                     >
                       {isObs ? (
-                        <span className="flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-brand-primary/15 text-brand-primary flex items-center justify-center font-bold text-xs sm:text-base">
+                        <span className="flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-brand-primary/15 text-brand-primary flex items-center justify-center font-bold text-xs sm:text-base mt-1">
                           💡
                         </span>
                       ) : (
-                        <span className="flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-brand-primary/15 text-brand-primary flex items-center justify-center font-bold text-xs sm:text-sm">
+                        <span className="flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-brand-primary/15 text-brand-primary flex items-center justify-center font-bold text-xs sm:text-sm mt-0.5">
                           {index + 1}
                         </span>
                       )}
                       <div>
-                        <p className={`font-semibold text-brand-secondary text-[17px] leading-snug ${isObs ? 'text-brand-secondary' : ''}`}>
-                          {isAulaoCard ? detail : `Módulo Especial: ${detail.split('(')[0].trim()}`}
-                        </p>
-                        {!isAulaoCard && (
-                          <p className="text-xs sm:text-sm text-gray-500 leading-normal mt-0.5">
-                            {detail.includes('(') ? `Aprofundamento em ${detail.split('(')[1].replace(')', '')}` : "Passo a passo completo em vídeo-aulas práticas de alta absorção."}
+                        {hasColon ? (() => {
+                          const [title, ...rest] = detail.split(':');
+                          const subtitle = rest.join(':').trim();
+                          return (
+                            <>
+                              <p className="font-bold text-brand-secondary text-[17px] leading-snug">
+                                {title.trim()}:
+                              </p>
+                              {subtitle && (
+                                <p className="text-sm text-gray-500 font-medium leading-normal mt-1">
+                                  {subtitle}
+                                </p>
+                              )}
+                            </>
+                          );
+                        })() : (
+                          <p className={`font-semibold text-brand-secondary text-[17px] leading-snug ${isObs ? 'text-brand-secondary' : ''}`}>
+                            {detail}
                           </p>
                         )}
                       </div>
