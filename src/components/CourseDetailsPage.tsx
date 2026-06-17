@@ -142,7 +142,7 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
                 <img
                   src={activeImage}
                   alt={course.title}
-                  className="absolute inset-0 w-full h-full object-cover object-[center_26%] sm:object-[center_20%] transition-all duration-500 hover:scale-[1.01] z-10"
+                  className={`absolute inset-0 w-full h-full object-cover ${course.id === 'course-20' ? 'object-[center_26%] sm:object-[center_20%]' : 'object-center'} transition-all duration-500 hover:scale-[1.01] z-10`}
                 />
               </div>
               <div className="absolute top-4 left-4 z-20">
