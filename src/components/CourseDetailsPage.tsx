@@ -142,11 +142,11 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
                 <img
                   src={activeImage}
                   alt={course.title}
-                  className="absolute inset-0 w-full h-full object-cover object-center transition-all duration-500 hover:scale-[1.01] z-10"
+                  className="absolute inset-0 w-full h-full object-cover object-[center_20%] transition-all duration-500 hover:scale-[1.01] z-10"
                 />
               </div>
               <div className="absolute top-4 left-4 z-20">
-                <span className="bg-brand-primary text-white px-3 py-1 sm:px-4 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider shadow-md">
+                <span className="bg-brand-primary text-white px-2 py-0.5 sm:px-4 sm:py-1.5 rounded-full text-[8px] sm:text-xs font-bold uppercase tracking-wider shadow-md">
                   {course.category}
                 </span>
               </div>
