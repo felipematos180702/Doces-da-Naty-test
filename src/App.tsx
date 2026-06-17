@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { AnimatePresence } from 'motion/react';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -21,19 +21,64 @@ export default function App() {
   const [lastViewedCourseId, setLastViewedCourseId] = useState<string | null>(null);
   const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
 
+  // Synchronize dynamic routing with URL query parameters for browser back/forward buttons
+  useEffect(() => {
+    const handleUrlChange = () => {
+      const params = new URLSearchParams(window.location.search);
+      const cursoId = params.get('curso');
+      
+      if (cursoId) {
+        setSelectedCourseId(cursoId);
+        setLastViewedCourseId(cursoId);
+      } else {
+        setSelectedCourseId((prev) => {
+          if (prev !== null) {
+            setLastViewedCourseId(prev);
+          }
+          return null;
+        });
+      }
+    };
+
+    // Parse URL on initial load
+    handleUrlChange();
+
+    window.addEventListener('popstate', handleUrlChange);
+    return () => {
+      window.removeEventListener('popstate', handleUrlChange);
+    };
+  }, []);
+
   const handleSelectCourse = (id: string) => {
     setLastViewedCourseId(id);
     setSelectedCourseId(id);
+    
+    // Smooth scroll to top of details page when selecting a course
+    window.scrollTo({ top: 0 });
+
+    // Push course query state to browser history
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('curso') !== id) {
+      window.history.pushState({ curso: id }, '', `?curso=${id}`);
+    }
   };
 
   const handleNavigateHome = () => {
     setSelectedCourseId(null);
     setLastViewedCourseId(null);
+    const params = new URLSearchParams(window.location.search);
+    if (params.has('curso')) {
+      window.history.pushState({ curso: null }, '', window.location.pathname);
+    }
   };
 
   const handleNavigateToSection = (sectionId: string) => {
     setSelectedCourseId(null);
     setLastViewedCourseId(null);
+    const params = new URLSearchParams(window.location.search);
+    if (params.has('curso')) {
+      window.history.pushState({ curso: null }, '', window.location.pathname);
+    }
     setTimeout(() => {
       if (sectionId === 'top') {
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -53,7 +98,15 @@ export default function App() {
         {selectedCourseId ? (
           <CourseDetailsPage 
             courseId={selectedCourseId} 
-            onBack={() => setSelectedCourseId(null)} 
+            onBack={() => {
+              const params = new URLSearchParams(window.location.search);
+              if (params.get('curso') === selectedCourseId) {
+                window.history.back();
+              } else {
+                setSelectedCourseId(null);
+                window.history.pushState({ curso: null }, '', window.location.pathname);
+              }
+            }} 
           />
         ) : (
           <>
