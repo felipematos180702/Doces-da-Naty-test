@@ -15,7 +15,9 @@ import {
   ChevronUp,
   Flame,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  X,
+  ZoomIn
 } from 'lucide-react';
 import { Course } from '../types';
 import { COURSES } from '../data';
@@ -46,6 +48,7 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
   const [activeImage, setActiveImage] = useState(() => course.image);
   const galleryRef = useRef<HTMLDivElement>(null);
   const [selectedTestimonial, setSelectedTestimonial] = useState<string | null>(null);
+  const [isImageLightboxOpen, setIsImageLightboxOpen] = useState(false);
 
   const isDocesDeVitrine = course.id === 'course-19';
   const isBolosDoZero = course.id === 'course-21';
@@ -137,13 +140,23 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
           <div className="lg:col-span-7 space-y-6">
             
             {/* Displaying Large Active Image */}
-            <div className="relative w-full aspect-[4/3] md:aspect-square rounded-3xl overflow-hidden shadow-2xl bg-[#FFFDF9] p-2 group select-none">
+            <div 
+              onClick={() => setIsImageLightboxOpen(true)}
+              className="relative w-full aspect-[4/3] md:aspect-square rounded-3xl overflow-hidden shadow-2xl bg-[#FFFDF9] p-2 group select-none cursor-zoom-in active:scale-[0.99] transition-transform duration-200"
+            >
               <div className="relative w-full h-full rounded-2xl overflow-hidden bg-brand-cream/35">
                 <img
                   src={activeImage}
                   alt={course.title}
-                  className={`absolute inset-0 w-full h-full object-cover ${course.id === 'course-20' ? 'object-[center_26%] sm:object-[center_20%]' : 'object-center'} transition-all duration-500 hover:scale-[1.01] z-10`}
+                  className={`absolute inset-0 w-full h-full object-cover ${course.id === 'course-20' ? 'object-[center_26%] sm:object-[center_20%]' : 'object-center'} transition-all duration-500 group-hover:scale-105 z-10`}
                 />
+                {/* Subtle overlay on hover with ZoomIn icon */}
+                <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-15 flex items-center justify-center pointer-events-none">
+                  <div className="bg-white/95 backdrop-blur-sm text-brand-secondary px-4 py-2 rounded-full font-serif font-bold text-sm tracking-tight flex items-center gap-2 shadow-lg scale-90 group-hover:scale-100 transition-all duration-300">
+                    <ZoomIn size={16} className="text-brand-primary" />
+                    Clique para Ampliar
+                  </div>
+                </div>
               </div>
               <div className="absolute top-4 left-4 z-20">
                 <span className="bg-brand-primary text-white px-2 py-0.5 sm:px-4 sm:py-1.5 rounded-full text-[8px] sm:text-xs font-bold uppercase tracking-wider shadow-md">
@@ -507,6 +520,37 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
           </div>
 
         </div>
+
+        {/* Beautiful Image Lightbox Modal */}
+        {isImageLightboxOpen && (
+          <div 
+            className="fixed inset-0 bg-brand-secondary/95 backdrop-blur-md z-50 flex items-center justify-center p-4 sm:p-6"
+            onClick={() => setIsImageLightboxOpen(false)}
+          >
+            {/* Close Button on top right */}
+            <button 
+              onClick={() => setIsImageLightboxOpen(false)}
+              className="absolute top-4 right-4 sm:top-6 sm:right-6 bg-white/10 hover:bg-white/20 hover:scale-105 active:scale-95 text-white w-11 h-11 rounded-full flex items-center justify-center shadow-2xl transition-all duration-200 cursor-pointer z-55 border border-white/10"
+              aria-label="Fechar"
+            >
+              <X size={22} />
+            </button>
+            
+            <div 
+              className="relative max-w-5xl w-full h-full max-h-[85vh] flex items-center justify-center"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <motion.img 
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                src={activeImage} 
+                alt={`${course.title} em tamanho original`} 
+                className="max-w-full max-h-full rounded-2xl md:rounded-3xl object-contain shadow-2xl select-none"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+          </div>
+        )}
 
       </div>
     </motion.div>
