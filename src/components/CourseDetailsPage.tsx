@@ -279,7 +279,7 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
 
                   return (
                     <>
-                      <h2 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-brand-secondary leading-snug tracking-tight">
+                      <h2 className={`font-serif ${(course.id === 'course-16' || course.id === 'course-20') ? 'text-[19px]' : 'text-xl sm:text-2xl md:text-3xl'} font-bold text-brand-secondary leading-snug tracking-tight`}>
                         {headline.trim().endsWith('.') || headline.trim().endsWith('!') || headline.trim().endsWith('?') ? headline : `${headline}.`}
                       </h2>
                       
@@ -347,7 +347,7 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
                 {course.title.toLowerCase().includes('aulão') || course.category.toLowerCase().includes('aulão') || course.category.toLowerCase().includes('aulõ') ? "Conteúdo do aulão :" : "Conteúdo do curso :"}
               </h3>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+              <div className={`grid gap-3 sm:gap-4 ${course.id === "course-16" ? "grid-cols-1" : "grid-cols-1 sm:grid-cols-2"}`}>
                 {course.detalhesLongos.map((detail, index) => {
                   const isObs = detail.trim().toUpperCase().startsWith('OBS:');
                   const hasColon = detail.includes(':') && !isObs;

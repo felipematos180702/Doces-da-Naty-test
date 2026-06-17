@@ -323,17 +323,14 @@ export const COURSES: Course[] = [
   {
     id: "course-16",
     title: "Comece com Brigadeiros",
-    description: "A sua porta de entrada na confeitaria: faça do doce mais amado o seu primeiro grande negócio\n\nSe você quer entrar no mundo dos doces mas não sabe por onde começar, a resposta está no brigadeiro. Ele é o ponto de partida ideal porque exige poucos utensílios e tem saída garantida o ano todo, de festas corporativas a desejos de fim de tarde.\n\nNeste curso, a Nat compartilha a sua própria história e te ensina a base dos brigadeiros que deram origem à Doces da Nat. Você vai aprender o ponto perfeito (sem cristalizar!), técnicas de boleamento e os sabores mais pedidos do mercado para começar a lucrar imediatamente.",
+    description: "Sempre que me perguntam com qual doce começar na confeitaria, minha resposta é sempre a mesma: “Comece com brigadeiros”.\n\nEu comecei com brigadeiros em 2016, naquela época, era só uma renda extra, e foi o ponta pé para eu perceber que iria mudar de profissão e trabalhar com doces definitivamente.\n\nBrigadeiro é fácil de produzir, não necessita de tantos utensílios, apenas uma panela, espátula e uma balança para se tornar uma especialista em brigadeiros.\n\nEu te ensino todos os brigadeiros que vendo na minha confeiteira, receitas validadas pelos meus clientes e que vende todos os dias. Você pode iniciar com brigadeiros para fazer renda extra, vender no delivery, ou para incluir docinhos de festa no seu cardápio.",
     category: "Cursos Rápidos (Acesso de 6 meses)",
     price: "R$ 137,00",
-    image: "https://lh3.googleusercontent.com/d/1YCoC2WuF2pgWzQUa41DwXKnsV0llBIUm",
+    image: "https://lh3.googleusercontent.com/d/1_RCPvRA9Yd91PlchOUn_Wn7VXxMGYEdg",
     linkCheckout: "https://pay.hotmart.com/X99964589P?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779995651462&bid=1779995652268",
     detalhesLongos: [
-      "Pontos exatos de brigadeiro de panela, colher e recheio",
-      "Como usar glicose e chocolate nobre para evitar a cristalização",
-      "Confeitos de alta qualidade e cobertura uniforme dos docinhos",
-      "Sabores sofisticados: Ninho com Nutella, Limão Siciliano, Belga ao Leite",
-      "Cálculo de rendimento de receitas and armazenamento sob congelamento"
+      "1- Passo a passo dos sabores: Brigadeiro belga, brigadeiro de Nescau, brigadeiro de pistache, brigadeiro de doce de leite com coco, brigadeiro de café, olho de sogra, cajuzinho, ele e ela, brigadeiro de Ninho com Nutella, coxinha de morango e palha italiana de Nutella.",
+      "2 - Dicas de divulgação e vendas dos brigadeiros"
     ],
     galeria: [
       "https://lh3.googleusercontent.com/d/1YCoC2WuF2pgWzQUa41DwXKnsV0llBIUm",
@@ -438,18 +435,15 @@ export const COURSES: Course[] = [
   {
     id: "course-20",
     title: "Box Gelados",
-    description: "O segredo do faturamento nos dias quentes: monte caixas irresistíveis de pura refrescância\n\nQuando a temperatura sobe, o comportamento do cliente muda — e o seu cardápio precisa acompanhar. O Box Gelado é a solução perfeita para manter as vendas em alta o ano inteiro, unindo praticidade e uma experiência única de sobremesa.\n\nAprenda a produzir e montar combinações de doces gelados que mantêm a textura perfeita, não perdem o sabor e criam um visual impossível de resistir nas redes sociais. Garanta que o seu negócio seja a primeira opção do cliente quando ele pensar em um doce refrescante.",
+    description: "Aquela sobremesa para salvar seu cliente, box gelado é prático, rápido de produzir e é perfeito para quem procura sobremesas para a família\n\nSabe aquele cliente que sempre procura uma sobremesa para um almoço em família ou para receber amigos em casa? São eles que você vai conseguir atender, além disso, essa sobremesa tem uma execelente saída em datas festivas como: dia das mães, dia dos pais e festas de final de ano, não pode falta no seu cardápio.",
     category: "Cursos Rápidos (Acesso de 6 meses)",
     price: "R$ 197,00",
     image: "https://lh3.googleusercontent.com/d/1zM0eM4anE-tkFDm5nvXpet6niexfPqkz",
     linkCheckout: "https://pay.hotmart.com/D95727612O?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779995687413&bid=1779995689245",
     detalhesLongos: [
-      "Técnicas de congelamento e ultra-resfriamento sem perder a cremosidade ou criar cristais de gelo",
-      "Montagem de caixas personalizadas (Boxes) com divisórias térmicas inteligentes para delivery seguro",
-      "Receitas de mousses aveludadas, palha italiana cremosa, fatias trufadas de ninho e bolos gelados embrulhados",
-      "Controle de validade estendida sob baixa temperatura mantendo o visual fresco de recém-feito",
-      "Cálculo exato de custo-benefício de caixas combinadas para maximizar o ticket médio do cliente",
-      "A estratégia secreta de vendas de fim de semana e dias ensolarados que esgota o estoque em poucas horas"
+      "Massa de bolo e brownie",
+      "Recheios base: recheio de coco, recheio de ninho, Ganache de chocolate, geleia de frutas vermelhas , compota de abacaxi",
+      "Montagem dos sabores : prestígio, abacaxi com coco, ninho com morango, bombom de morango, ninho com frutas vermelhas"
     ],
     galeria: [
       "https://lh3.googleusercontent.com/d/1zM0eM4anE-tkFDm5nvXpet6niexfPqkz",
