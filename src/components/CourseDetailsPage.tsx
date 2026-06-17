@@ -347,7 +347,7 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
                 {course.title.toLowerCase().includes('aulão') || course.category.toLowerCase().includes('aulão') || course.category.toLowerCase().includes('aulõ') ? "Conteúdo do aulão :" : "Conteúdo do curso :"}
               </h3>
               
-              <div className={`grid gap-3 sm:gap-4 ${course.id === "course-16" ? "grid-cols-1" : "grid-cols-1 sm:grid-cols-2"}`}>
+              <div className="grid grid-cols-1 gap-3 sm:gap-4">
                 {course.detalhesLongos.map((detail, index) => {
                   const isObs = detail.trim().toUpperCase().startsWith('OBS:');
                   const hasColon = detail.includes(':') && !isObs;
@@ -382,7 +382,7 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
                             </>
                           );
                         })() : (
-                          <p className={`font-semibold text-brand-secondary text-[17px] leading-snug ${isObs ? 'text-brand-secondary' : ''}`}>
+                          <p className={`${(course.id === 'course-20' && index === 0) ? 'font-bold' : 'font-semibold'} text-brand-secondary text-[17px] leading-snug ${isObs ? 'text-brand-secondary' : ''}`}>
                             {detail}
                           </p>
                         )}

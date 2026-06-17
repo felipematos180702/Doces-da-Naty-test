@@ -329,8 +329,8 @@ export const COURSES: Course[] = [
     image: "https://lh3.googleusercontent.com/d/1_RCPvRA9Yd91PlchOUn_Wn7VXxMGYEdg",
     linkCheckout: "https://pay.hotmart.com/X99964589P?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779995651462&bid=1779995652268",
     detalhesLongos: [
-      "1- Passo a passo dos sabores: Brigadeiro belga, brigadeiro de Nescau, brigadeiro de pistache, brigadeiro de doce de leite com coco, brigadeiro de café, olho de sogra, cajuzinho, ele e ela, brigadeiro de Ninho com Nutella, coxinha de morango e palha italiana de Nutella.",
-      "2 - Dicas de divulgação e vendas dos brigadeiros"
+      "Passo a passo dos sabores: Brigadeiro belga, brigadeiro de Nescau, brigadeiro de pistache, brigadeiro de doce de leite com coco, brigadeiro de café, olho de sogra, cajuzinho, ele e ela, brigadeiro de Ninho com Nutella, coxinha de morango e palha italiana de Nutella.",
+      "Dicas de divulgação e vendas dos brigadeiros"
     ],
     galeria: [
       "https://lh3.googleusercontent.com/d/1YCoC2WuF2pgWzQUa41DwXKnsV0llBIUm",
@@ -435,15 +435,15 @@ export const COURSES: Course[] = [
   {
     id: "course-20",
     title: "Box Gelados",
-    description: "Aquela sobremesa para salvar seu cliente, box gelado é prático, rápido de produzir e é perfeito para quem procura sobremesas para a família\n\nSabe aquele cliente que sempre procura uma sobremesa para um almoço em família ou para receber amigos em casa? São eles que você vai conseguir atender, além disso, essa sobremesa tem uma execelente saída em datas festivas como: dia das mães, dia dos pais e festas de final de ano, não pode falta no seu cardápio.",
+    description: "Aquela sobremesa para salvar seu cliente, box gelado é prático, rápido de produzir e é perfeito para quem procura sobremesas para a família\n\nSabe aquele cliente que sempre procura uma sobremesa para um almoço em família ou para receber amigos em casa? São eles que você vai conseguir atender, além disso, essa sobremesa tem uma excelente saída em datas festivas como: dia das mães, dia dos pais e festas de final de ano, não pode falta no seu cardápio.",
     category: "Cursos Rápidos (Acesso de 6 meses)",
     price: "R$ 197,00",
     image: "https://lh3.googleusercontent.com/d/1zM0eM4anE-tkFDm5nvXpet6niexfPqkz",
     linkCheckout: "https://pay.hotmart.com/D95727612O?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779995687413&bid=1779995689245",
     detalhesLongos: [
       "Massa de bolo e brownie",
-      "Recheios base: recheio de coco, recheio de ninho, Ganache de chocolate, geleia de frutas vermelhas , compota de abacaxi",
-      "Montagem dos sabores : prestígio, abacaxi com coco, ninho com morango, bombom de morango, ninho com frutas vermelhas"
+      "Recheios base: Recheio de coco, recheio de ninho, Ganache de chocolate, geleia de frutas vermelhas , compota de abacaxi",
+      "Montagem dos sabores: Prestígio, abacaxi com coco, ninho com morango, bombom de morango, ninho com frutas vermelhas"
     ],
     galeria: [
       "https://lh3.googleusercontent.com/d/1zM0eM4anE-tkFDm5nvXpet6niexfPqkz",

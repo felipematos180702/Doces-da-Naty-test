@@ -3,11 +3,14 @@ import { MessageCircle } from 'lucide-react';
 
 interface HeaderProps {
   onNavigateHome?: () => void;
+  onNavigateToSection?: (sectionId: string) => void;
 }
 
-export default function Header({ onNavigateHome }: HeaderProps) {
+export default function Header({ onNavigateHome, onNavigateToSection }: HeaderProps) {
   const handleLogoClick = () => {
-    if (onNavigateHome) {
+    if (onNavigateToSection) {
+      onNavigateToSection('top');
+    } else if (onNavigateHome) {
       onNavigateHome();
     } else {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -35,9 +38,57 @@ export default function Header({ onNavigateHome }: HeaderProps) {
         </button>
         
         <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-8 font-medium z-0">
-          <a href="#cursos" onClick={() => onNavigateHome?.()} className="hover:text-brand-primary transition-colors">Cursos</a>
-          <a href="#sobre" onClick={() => onNavigateHome?.()} className="hover:text-brand-primary transition-colors">Sobre Naty</a>
-          <a href="#depoimentos" onClick={() => onNavigateHome?.()} className="hover:text-brand-primary transition-colors">Depoimentos</a>
+          <a 
+            href="#cursos" 
+            onClick={(e) => {
+              e.preventDefault();
+              if (onNavigateToSection) {
+                onNavigateToSection('cursos');
+              } else if (onNavigateHome) {
+                onNavigateHome();
+                setTimeout(() => {
+                  document.getElementById('cursos')?.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+              }
+            }} 
+            className="hover:text-brand-primary transition-colors"
+          >
+            Cursos
+          </a>
+          <a 
+            href="#sobre" 
+            onClick={(e) => {
+              e.preventDefault();
+              if (onNavigateToSection) {
+                onNavigateToSection('sobre');
+              } else if (onNavigateHome) {
+                onNavigateHome();
+                setTimeout(() => {
+                  document.getElementById('sobre')?.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+              }
+            }} 
+            className="hover:text-brand-primary transition-colors"
+          >
+            Sobre Naty
+          </a>
+          <a 
+            href="#depoimentos" 
+            onClick={(e) => {
+              e.preventDefault();
+              if (onNavigateToSection) {
+                onNavigateToSection('depoimentos');
+              } else if (onNavigateHome) {
+                onNavigateHome();
+                setTimeout(() => {
+                  document.getElementById('depoimentos')?.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+              }
+            }} 
+            className="hover:text-brand-primary transition-colors"
+          >
+            Depoimentos
+          </a>
         </nav>
 
         <div className="flex items-center gap-4 relative z-10">
