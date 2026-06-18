@@ -299,24 +299,25 @@ export const COURSES: Course[] = [
   {
     id: "course-15",
     title: "Venda Sobremesas",
-    description: "Do almoço de domingo aos grandes eventos: domine a arte das sobremesas na taça e fature alto\n\nSe você quer um produto com ticket médio alto, que as pessoas compram para celebrar com a família e amigos, as sobremesas na taça são o caminho mais lucrativo. Elas unem sofisticação, visual irresistível e alta rentabilidade em um único preparo.\n\nEste é um curso completo de negócios. Você não vai aprender apenas receitas; vai dominar a precificação correta de sobremesas em grande escala, a estrutura das bases de recheio que não desandam na taça, montagens profissionais que encantam o cliente e as melhores estratégias de vendas usando as redes sociais. Transforme simples ingredientes em verdadeiros banquetes de colher.",
+    description: "Do almoço de domingo aos grandes eventos: encante seu cliente com sobremesas perfeitas para comemorações\n\nSe você quer um produto com ticket médio alto, que as pessoas compram para celebrar com a família e amigos, as sobremesas na taça são o caminho mais lucrativo. Elas unem sofisticação, visual irresistível e alta rentabilidade em um único preparo.\n\nEste é um curso completo de negócios. Você não vai aprender apenas receitas; vai dominar a precificação correta de sobremesas em grande escala, a estrutura das bases de recheio que não desandam na taça, montagens profissionais que encantam o cliente e as melhores estratégias de vendas usando as redes sociais.",
     category: "Cursos Completos",
     price: "R$ 197,00",
-    image: "https://lh3.googleusercontent.com/d/1fclSW2hcY1GS_EE3GmpOZjypuzb_HfRu",
+    image: "https://lh3.googleusercontent.com/d/1Et3JGOvWsSnXy7-c5bkCtWhQlUvl5i-j",
     linkCheckout: "https://pay.hotmart.com/Q82985396Y?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779996418615&bid=1779996419692",
     detalhesLongos: [
-      "Bases de cremes estruturados de alto rendimento para montagem em taças",
-      "Combinação de sabores campeões: Ninho, Nutella, Pistache e Geleia rústica de morango",
-      "Metodologia de precificação precisa para embalagens coletivas e familiares de alto ticket",
-      "Design de montagem em camadas visíveis ultra-desejáveis",
-      "Captação de clientes e marketing focado em eventos, jantares e encomendas de fim de semana"
+      "Brownie e brigadeiro para serem usados nas taças",
+      "Recheios base: creme de ninho, ganache de chocolate, creme de coco, geleia, compota de abacaxi, cremes para o pavê, mousse de Oreo",
+      "Montagem das sobremesas nos sabores: prestígio, abacaxi com coco, brownie com Nutella, frutas vermelhas, Ninho com morango e chocolate, torta trufada de oreo, pavê diferenciado, torta de biscoito chocolícia, bombom na taça, morango com biscoito folhado",
+      "Precificação e ficha técnica",
+      "Módulo bônus 1 : Bolo gelado de coco",
+      "Módulo bônus 2 : Aprenda a vender qualquer produto, neste módulo eu te ensino como divulgar suas sobremesas, como chamar atenção dos seus clientes e a produção de vídeos que geram desejo"
     ],
     galeria: [
+      "https://lh3.googleusercontent.com/d/1Et3JGOvWsSnXy7-c5bkCtWhQlUvl5i-j",
       "https://lh3.googleusercontent.com/d/1fclSW2hcY1GS_EE3GmpOZjypuzb_HfRu",
       "https://lh3.googleusercontent.com/d/1u2MUSy2qdtcCIbVQlmtc2nQCd6gmZ_Ek",
       "https://lh3.googleusercontent.com/d/13V2pG5LUbMUhTdru8pudjGTd65i9qERc",
       "https://lh3.googleusercontent.com/d/1HcXDvjRSVVmiQx1Ut6WGJKP02sQPRqNF",
-      "https://lh3.googleusercontent.com/d/1Et3JGOvWsSnXy7-c5bkCtWhQlUvl5i-j",
       "https://lh3.googleusercontent.com/d/1GJ7VrvV4X_r0quAbNlhPhHc5K8oXLpuM"
     ]
   },
@@ -435,7 +436,7 @@ export const COURSES: Course[] = [
   {
     id: "course-20",
     title: "Box Gelados",
-    description: "Aquela sobremesa para salvar seu cliente, box gelado é prático, rápido de produzir e é perfeito para quem procura sobremesas para a família\n\nSabe aquele cliente que sempre procura uma sobremesa para um almoço em família ou para receber amigos em casa? São eles que você vai conseguir atender, além disso, essa sobremesa tem uma excelente saída em datas festivas como: dia das mães, dia dos pais e festas de final de ano, não pode falta no seu cardápio.",
+    description: "Aquela sobremesa para salvar seu cliente, box gelado é prático, rápido de produzir e é perfeito para quem procura sobremesas para a família\n\nSabe aquele cliente que sempre procura uma sobremesa para um almoço em família ou para receber amigos em casa? São eles que você vai conseguir atender, além disso, essa sobremesa tem uma excelente saída em datas festivas como: dia das mães, dia dos pais e festas de final de ano, não pode faltar no seu cardápio.",
     category: "Cursos Rápidos (Acesso de 6 meses)",
     price: "R$ 197,00",
     image: "https://lh3.googleusercontent.com/d/1zM0eM4anE-tkFDm5nvXpet6niexfPqkz",
@@ -483,6 +484,31 @@ export const COURSES: Course[] = [
       "https://lh3.googleusercontent.com/d/1iZoQ-IZVy5Aaae9ljmmNVP0Zkdn5BpSz",
       "https://lh3.googleusercontent.com/d/1xsQ77b5g8GiD1sLwEHwUm0NYoFW8pThi",
       "https://lh3.googleusercontent.com/d/105n6WjSI2XHGfKK4W87Ly_2eZ4UrScn4"
+    ]
+  },
+  {
+    id: "course-22",
+    title: "Combo Vitalício: Doces de Vitrine + Bolos do Zero",
+    description: "O combo definitivo para dominar tanto a confeitaria artística quanto o modelo de negócio de sucesso com acesso VITALÍCIO!\n\nEsta oferta especial exclusiva reúne os dois maiores e mais completos treinamentos da Naty em uma única inscrição com um super desconto promocional e acesso vitalício garantido para sempre.\n\nCom o **Bolos do Zero**, você aprenderá a dominar massas fofas, recheios estruturados que não vazam, montagens profissionais impecáveis e técnicas de decoração contemporâneas.\n\nCom o **Doces de Vitrine**, você receberá o mapa completo para faturar alto e gerir seu negócio: finanças do zero, delivery estratégico, divulgação atrativa no Instagram e como criar a identidade de sua marca.\n\nGaranta sua independência e monte seu império doce com este combo exclusivo.",
+    category: "Cursos Completos",
+    price: "R$ 397,00",
+    image: "https://lh3.googleusercontent.com/d/1-kGDbgNujXFiz0URvhBDHeHNOU6UUTJ6",
+    linkCheckout: "https://pay.hotmart.com/V60728427E?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779996376632&bid=1779996378134",
+    detalhesLongos: [
+      "Acesso Vitalício completo a todas as aulas de ambos os cursos",
+      "Do Zero ao Profissional: Domine massas, recheios, montagem e decoração com o método da Naty",
+      "Pilares de Gestão: Vendas, precificação exata, controle de caixa e marketing focado no Instagram",
+      "Delivery de Alto Impacto: Estruturação para lucrar diariamente em sua região",
+      "Suporte exclusivo para alunos e atualizações inclusas para sempre"
+    ],
+    galeria: [
+      "https://lh3.googleusercontent.com/d/1-kGDbgNujXFiz0URvhBDHeHNOU6UUTJ6",
+      "https://lh3.googleusercontent.com/d/1BdBGJYRCRuBIwROZR5sqy8U5BSVltzly",
+      "https://lh3.googleusercontent.com/d/1Nqs6XbAUdLWSdf5pGG555B_EyqWB9fND",
+      "https://lh3.googleusercontent.com/d/1HwqCBR2YsfedYlYPjEUw8MAANwM0bfX6",
+      "https://lh3.googleusercontent.com/d/13ggap4-kukp16g6F5vRciGy2QQV50GrC",
+      "https://lh3.googleusercontent.com/d/1aMnMaw3IXbqRCJrJ5JyF9jHnTrVzkJyi",
+      "https://lh3.googleusercontent.com/d/1xqUuvECHncnwjHD4y6XuZuDLPn0m5UIY"
     ]
   }
 ];

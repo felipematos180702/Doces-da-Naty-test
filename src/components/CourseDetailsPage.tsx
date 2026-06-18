@@ -96,7 +96,10 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
 
   const imageGallery = Array.from(new Set([course.image, ...(course.galeria || [])]));
 
-  const isTwelveMonths = course.category === 'Cursos Completos';
+  const isTwelveMonths = course.category === 'Cursos Completos' && course.id !== 'course-22';
+  const displayCategoryText = course.category === 'Cursos Completos'
+    ? (course.id === 'course-22' ? 'Cursos completos (Acesso Vitalício)' : 'Cursos completos (12 meses de acesso)')
+    : course.category;
 
   return (
     <motion.div
@@ -128,7 +131,7 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
           </h1>
           <div className="flex items-center gap-2 mt-3">
             <span className="bg-brand-primary/10 text-brand-primary px-3 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider">
-              {course.category}
+              {displayCategoryText}
             </span>
           </div>
         </div>
@@ -160,7 +163,7 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
               </div>
               <div className="absolute top-4 left-4 z-20">
                 <span className="bg-brand-primary text-white px-2 py-0.5 sm:px-4 sm:py-1.5 rounded-full text-[8px] sm:text-xs font-bold uppercase tracking-wider shadow-md">
-                  {course.category}
+                  {displayCategoryText}
                 </span>
               </div>
               <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/60 to-transparent p-4 sm:p-6 flex items-end justify-between z-25">
