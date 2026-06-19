@@ -347,17 +347,20 @@ export const COURSES: Course[] = [
   {
     id: "course-17",
     title: "Páscoa Lucrativa com a Naty 2.0",
-    description: "O segredo da temperagem perfeita: fature o ano inteiro dominando a base da chocolateria profissional\n\nA Páscoa é a época mais lucrativa do ano para a confeitaria, mas muitos profissionais têm medo de trabalhar com chocolate por causa da famosa temperagem. Neste curso completo, você vai entender que o chocolate perfeito não é sorte, é ciência.\n\nA Nat vai te ensinar a teoria real da temperagem — entendendo o ambiente, a temperatura da geladeira, o uso de termômetros calibrados e o armazenamento correto. E o grande pulo do gato deste curso: ao dominar essa base, você não vai lucrar apenas na Páscoa! Você vai usar o mesmo conhecimento para produzir bombons, pães de mel, cones trufados e faturar de janeiro a janeiro.",
+    description: "Domine a temperagem de chocolate atendendo todas as técnicas mesmo sem ter ar condicionado em casa.\n\nA Páscoa é a época mais lucrativa do ano para a confeitaria, mas muitas confeiteiras têm medo de trabalhar com chocolate por causa da famosa temperagem. Neste curso completo, você vai entender que o chocolate perfeito não é sorte, é técnica.\n\nEu te ensino a teoria e a prática da temperagem de acordo com o ambiente, temperatura da geladeira, termômetro e armazenamento.\nE o grande pulo do gato deste curso: ao dominar essa base, você não vai lucrar apenas na Páscoa! Você vai usar o mesmo conhecimento para produzir bombons, pães de mel, cones trufados e faturar de janeiro a janeiro.",
     category: "Cursos Completos",
     price: "R$ 147,00",
     image: "https://lh3.googleusercontent.com/d/1CD6UGcrJueU9FsnfOfDr2GcPFZO_YQon",
     linkCheckout: "https://pay.hotmart.com/L79353465U?checkoutMode=10&bid=1779996464064",
     detalhesLongos: [
-      "A ciência exata por trás da cristalização e calor do chocolate",
-      "Métodos práticos de temperagem: tablagem, adição e Mycryo",
-      "Como calibrar a temperatura de sua geladeira para o desmolde perfeito",
-      "Criação e recheio de ovos de colher, bombons finos e cones trufados",
-      "Segredos de armazenamento e logística para produzir com alta antecedência e vender o ano todo"
+      "Teoria para entender tudo sobre temperagem, o erros e acertos na técnica",
+      "Opções de chocolates, utensílios e os tipos de temperagem",
+      "Temperagem na prática usando 4 métodos: adição, na pedra, sem desorganizar os cristais de manteiga cacau e técnica com mycryo",
+      "Recheios base: creme de ninho, mousse de ninho, creme de pistache, creme de coco, creme Ferrero, cremes Kinder, brigadeiro cremoso, brigadeiro e palha italiana para usar nas decorações dos ovos",
+      "Montagem dos ovos nos sabores: brigadeiro, oreo, bombom de morango, crocantella, super Ferrero, super Kinder, prestígio, pistache, palha italiana e Ninho com Nutella",
+      "Bônus 1 - módulo páscoa sem aperto: como fazer temperagem e armazenamento das cascas sem ar condicionado, planejamento de produção, organização dos pedidos e definição de metas",
+      "Bônus 2 - módulo divulgação: dicas de cenários, apresentação, divulgação estratégica, produção de fotos, vídeos e edição",
+      "Bônus 3 - precificação"
     ],
     galeria: [
       "https://lh3.googleusercontent.com/d/1CD6UGcrJueU9FsnfOfDr2GcPFZO_YQon",
