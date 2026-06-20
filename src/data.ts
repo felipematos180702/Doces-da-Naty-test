@@ -375,23 +375,22 @@ export const COURSES: Course[] = [
   {
     id: "course-18",
     title: "Fotos e Vídeos com a Naty",
-    description: "O seu produto também é vendido pelos olhos: aprenda a criar cenários e imagens que multiplicam seus pedidos\n\nNo mundo digital, o seu cliente primeiro \"come\" o doce com os olhos através da tela do celular. Se a sua foto for escura ou sem vida, o seu produto perde valor. Este curso completo foi feito para te transformar na melhor vitrine do seu próprio negócio.\n\nVocê vai aprender o passo a passo para montar cenários profissionais na cozinha da sua casa utilizando os equipamentos que você já tem. Descubra como dominar a iluminação natural e artificial, técnicas para fotografar e filmar sozinha (ou com ajuda), e o grande segredo da edição que destaca as cores e texturas do doce. Pare de perder vendas por não saber divulgar o seu talento.",
+    description: "Na internet você tem segundos para prender atenção de alguém, uma imagem ou vídeo bem feitos, são capazes de fazer as pessoas pararem de rolar o feed e olharem para o seu produto\n\nSe você já viu algum conteúdo no Instagram da minha confeitaria e ficou encantada, saiba que foi produzido por mim com ajuda do meu celular, a notícia boa, é que posso te ensinar exatamente como fazer.\n\nVocê vai aprender o passo a passo para montar cenários profissionais na cozinha da sua casa utilizando os equipamentos que você já tem. Descubra como dominar a iluminação natural e artificial, técnicas para fotografar e filmar sozinha (ou com ajuda), e o grande segredo da edição que destaca as cores e texturas do doce. Pare de perder vendas por não saber divulgar o seu talento.",
     category: "Cursos Completos",
     price: "R$ 217,00",
-    image: "https://lh3.googleusercontent.com/d/1LoQiTee3y9m4QZ6Y9bg8Shmp2xcp3bUZ",
+    image: "https://lh3.googleusercontent.com/d/1wM87mQSyUWA6cnoDdu2TzFfShuGzsI6A",
     linkCheckout: "https://pay.hotmart.com/N97492170M?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779996491758&bid=1779996493057",
     detalhesLongos: [
-      "Criação de cenários encantadores na cozinha da sua casa gastando quase nada",
-      "Como dominar a iluminação natural e usar luz artificial de forma profissional",
-      "Técnicas de angulação e foco para destacar a cremosidade e brilho dos doces",
-      "Edição magnética de fotos e vídeos rápidos para Reels usando apenas o celular",
-      "Estrutura de narrativas visuais que transformam visualizações em vendas diárias"
+      "Cenário que vende e valoriza: Tudo sobre como montar cenários no espaço que você tem, e utensílios necessários para valorizar seus produtos",
+      "Produção de fotos e vídeos com o celular: passo a passo para fazer fotos e vídeos sozinha ou com ajudante, edições detalhadas e estratégicas para prender atenção do cliente e gerar desejo",
+      "Instagram de sucesso : O que postar e como postar, produção de conteúdo e constância, e tudo que você precisa saber sobre essa rede que impulsiona as vendas",
+      "Funciona em qualquer nicho: exemplos de produções de conteúdos para pizzaria e hamburgueria"
     ],
     galeria: [
+      "https://lh3.googleusercontent.com/d/1wM87mQSyUWA6cnoDdu2TzFfShuGzsI6A",
       "https://lh3.googleusercontent.com/d/1LoQiTee3y9m4QZ6Y9bg8Shmp2xcp3bUZ",
       "https://lh3.googleusercontent.com/d/1uJ2-LaRTFizqdFN2re7dP_SlRESCTqDf",
       "https://lh3.googleusercontent.com/d/1_7CxhIF5XWlgoYWNqVyce_FRtGgDu648",
-      "https://lh3.googleusercontent.com/d/1wM87mQSyUWA6cnoDdu2TzFfShuGzsI6A",
       "https://lh3.googleusercontent.com/d/1u9cBWkto50itKbi2E01w713FTxmJA21F"
     ]
   },
