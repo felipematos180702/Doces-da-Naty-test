@@ -47,6 +47,7 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
 
   const [activeImage, setActiveImage] = useState(() => course.image);
   const galleryRef = useRef<HTMLDivElement>(null);
+  const testimonialsRef = useRef<HTMLDivElement>(null);
   const [selectedTestimonial, setSelectedTestimonial] = useState<string | null>(null);
   const [isImageLightboxOpen, setIsImageLightboxOpen] = useState(false);
 
@@ -462,29 +463,58 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
                   </p>
                 </div>
 
-                {/* Grid of Testimonials Images */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 sm:gap-4">
-                  {testimonials.map((imgUrl, idx) => (
-                    <div 
-                      key={idx} 
-                      onClick={() => setSelectedTestimonial(imgUrl)}
-                      className="group relative aspect-[3/4] cursor-pointer rounded-xl sm:rounded-2xl overflow-hidden border border-brand-primary/10 bg-brand-cream/20 shadow-sm hover:shadow-md hover:border-brand-primary/35 transition-all duration-300 transform hover:-translate-y-0.5 p-1 select-none flex items-center justify-center animate-pulse-once"
-                    >
-                      <img 
-                        src={imgUrl} 
-                        alt={`Depoimento das alunas de ${course.title} ${idx + 1}`} 
-                        className="w-full h-full object-cover rounded-lg sm:rounded-xl group-hover:scale-102 transition-transform duration-300"
-                        loading="lazy"
-                        referrerPolicy="no-referrer"
-                      />
-                      {/* Interactive Hover Overlay */}
-                      <div className="absolute inset-0 bg-brand-secondary/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-2 rounded-lg sm:rounded-xl">
-                        <span className="bg-white/95 text-brand-secondary font-black text-[10px] sm:text-xs py-1.5 px-3 rounded-full shadow-lg scale-90 group-hover:scale-100 transition-transform duration-300 flex items-center justify-center">
-                          Ampliar Foto
-                        </span>
+                {/* Carousel of Testimonials Images */}
+                <div className="relative w-full mt-4">
+                  {/* Navigation Arrows for Carousel */}
+                  <button 
+                    className="absolute left-[-12px] md:left-[-18px] top-1/2 -translate-y-1/2 z-20 bg-white/90 shadow-md hover:bg-brand-primary hover:text-white border border-brand-primary/10 text-brand-secondary w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center transition-colors cursor-pointer"
+                    onClick={() => {
+                      if (testimonialsRef.current) {
+                        testimonialsRef.current.scrollBy({ left: -260, behavior: 'smooth' });
+                      }
+                    }}
+                  >
+                    <ChevronLeft size={20} />
+                  </button>
+                  
+                  <button 
+                    className="absolute right-[-12px] md:right-[-18px] top-1/2 -translate-y-1/2 z-20 bg-white/90 shadow-md hover:bg-brand-primary hover:text-white border border-brand-primary/10 text-brand-secondary w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center transition-colors cursor-pointer"
+                    onClick={() => {
+                      if (testimonialsRef.current) {
+                        testimonialsRef.current.scrollBy({ left: 260, behavior: 'smooth' });
+                      }
+                    }}
+                  >
+                    <ChevronRight size={20} />
+                  </button>
+
+                  <div 
+                    ref={testimonialsRef}
+                    className="flex overflow-x-auto snap-x snap-mandatory gap-3 sm:gap-4 pb-4 px-1 scrollbar-hide w-full max-w-full"
+                    style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                  >
+                    {testimonials.map((imgUrl, idx) => (
+                      <div 
+                        key={idx} 
+                        onClick={() => setSelectedTestimonial(imgUrl)}
+                        className="snap-center shrink-0 w-[55vw] sm:w-[38vw] md:w-[28vw] lg:w-[14vw] group relative aspect-[3/4] cursor-pointer rounded-xl sm:rounded-2xl overflow-hidden border border-brand-primary/10 bg-brand-cream/20 shadow-sm hover:shadow-md hover:border-brand-primary/35 transition-all duration-300 transform p-1 select-none flex items-center justify-center"
+                      >
+                        <img 
+                          src={imgUrl} 
+                          alt={`Depoimento das alunas de ${course.title} ${idx + 1}`} 
+                          className="w-full h-full object-cover rounded-lg sm:rounded-xl group-hover:scale-102 transition-transform duration-300"
+                          loading="lazy"
+                          referrerPolicy="no-referrer"
+                        />
+                        {/* Interactive Hover Overlay */}
+                        <div className="absolute inset-0 bg-brand-secondary/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-2 rounded-lg sm:rounded-xl">
+                          <span className="bg-white/95 text-brand-secondary font-black text-[10px] sm:text-xs py-1.5 px-3 rounded-full shadow-lg scale-90 group-hover:scale-100 transition-transform duration-300 flex items-center justify-center">
+                            Ampliar Foto
+                          </span>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
 
                 {/* Dynamic Lightbox Modal for Reading Screenshot Contents (Crucial for Conversion/CRO) */}
