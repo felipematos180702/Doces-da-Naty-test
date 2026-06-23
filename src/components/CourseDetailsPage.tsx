@@ -97,9 +97,13 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
 
   const imageGallery = Array.from(new Set([course.image, ...(course.galeria || [])]));
 
-  const isTwelveMonths = course.category === 'Cursos Completos' && course.id !== 'course-22';
+  const isTwelveMonths = course.category === 'Cursos Completos' && course.id !== 'course-22' && course.id !== 'course-18';
   const displayCategoryText = course.category === 'Cursos Completos'
-    ? (course.id === 'course-22' ? 'Cursos completos (Acesso Vitalício)' : 'Cursos completos (12 meses de acesso)')
+    ? (course.id === 'course-22' 
+        ? 'Cursos completos (Acesso Vitalício)' 
+        : course.id === 'course-18'
+          ? 'Cursos completos (24 meses de acesso)'
+          : 'Cursos completos (12 meses de acesso)')
     : course.category;
 
   return (
@@ -365,7 +369,7 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
               </h3>
               
               <div className="grid grid-cols-1 gap-3 sm:gap-4">
-                {course.detalhesLongos.map((detail, index) => {
+                {(course.detalhesLongos || []).map((detail, index) => {
                   const isObs = detail.trim().toUpperCase().startsWith('OBS:');
                   const hasColon = detail.includes(':') && !isObs;
                   return (

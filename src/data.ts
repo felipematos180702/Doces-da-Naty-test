@@ -382,9 +382,9 @@ export const COURSES: Course[] = [
     linkCheckout: "https://pay.hotmart.com/N97492170M?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779996491758&bid=1779996493057",
     detalhesLongos: [
       "Cenário que vende e valoriza: Tudo sobre como montar cenários no espaço que você tem, e utensílios necessários para valorizar seus produtos",
-      "Produção de fotos e vídeos com o celular: passo a passo para fazer fotos e vídeos sozinha ou com ajudante, edições detalhadas e estratégicas para prender atenção do cliente e gerar desejo",
+      "Produção de fotos e vídeos com o celular: Passo a passo para fazer fotos e vídeos sozinha ou com ajudante, edições detalhadas e estratégias para prender atenção do cliente e gerar desejo",
       "Instagram de sucesso : O que postar e como postar, produção de conteúdo e constância, e tudo que você precisa saber sobre essa rede que impulsiona as vendas",
-      "Funciona em qualquer nicho: exemplos de produções de conteúdos para pizzaria e hamburgueria"
+      "Funciona em qualquer nicho: Exemplos de produções de conteúdos para pizzaria e hamburgueria"
     ],
     galeria: [
       "https://lh3.googleusercontent.com/d/1wM87mQSyUWA6cnoDdu2TzFfShuGzsI6A",
@@ -400,16 +400,21 @@ export const COURSES: Course[] = [
     description: "Muitas confeiteiras tem o sonho de viver da confeitaria, mas começam da forma errada, o sucesso vai muito além das receitas.\n\nNo Doces de vitrine você entende que para crescer na confeitaria é preciso saber os pilares mais importantes, e não estamos falando apenas dos doces, é preciso aprender sobre vendas, divulgação, precificação, delivery e gestão financeira.\n\nÉ o passo a passo que usei para construir a Doces da Naty do zero, e que você terá acesso para aplicar na sua confeitaria.",
     category: "Cursos Completos",
     price: "R$ 197,00",
-    image: "https://lh3.googleusercontent.com/d/1Nqs6XbAUdLWSdf5pGG555B_EyqWB9fND",
+    image: "https://lh3.googleusercontent.com/d/1CQb_56xbmf6NCKTGXNq4wefwLoKa2S_4",
     linkCheckout: "https://pay.hotmart.com/J56829891U?checkoutMode=10&bid=1765483029875&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779996354693",
     detalhesLongos: [
-      "Desenvolvimento de mentalidade empreendedora e marketing estratégico na confeitaria",
-      "Pilares práticos de controle financeiro, fluxo de caixa e capital de giro",
-      "Como estruturar um delivery lucrativo com raio de entrega expandido",
-      "Estratégias de vendas corporativas e parcerias com estabelecimentos locais",
-      "Divulgação e atração constante de novos clientes através do Instagram"
+      "Comece pelo básico : Como começar na confeitaria com delivery e aumentar as vendas, produção prática em casa, conquista do público alvo",
+      "Para iniciantes: Utensílios necessários, tutorial sobre a panela mexedora",
+      "Base dos doces: Massas de chocolate, baunilha, pão de mel, bolo de cenoura, brownie e recheios para montagem dos doces",
+      "Doces que você vai aprender: Coxinha de morango, bombom de morango, chocolate quente, mini pudim, bolo de cenoura, bolo no pote, bolo gelado de coco, palha italiana de Nutella, palha crocantella, cone trufado, pão de mel, duo brigadeiro, torta de maracujá, bombom no pote, copos, biscoito amanteigado, cookie e docinhos tradicionais",
+      "Instagram vendedor: Um módulo especial te ensinando como deixar a página mais atrativa e organizada, dicas para fotos, vídeos e cenários",
+      "Precificação: Aprenda como construir sua ficha técnica de maneira organizada e precificar seus doces corretamente",
+      "Contabilidade para iniciantes: Entenda o básico para organizar suas entradas e saídas, MEI de fluxo",
+      "Técnicas de vendas e atendimento ao cliente: Postura, imagem, abordagem, fidelização, método AIDA, gatilhos mentais e funil de vendas",
+      "Vendas pelo WhatsApp: Como usar recursos do seu WhatsApp para vender todos os dias"
     ],
     galeria: [
+      "https://lh3.googleusercontent.com/d/1CQb_56xbmf6NCKTGXNq4wefwLoKa2S_4",
       "https://lh3.googleusercontent.com/d/13ggap4-kukp16g6F5vRciGy2QQV50GrC",
       "https://lh3.googleusercontent.com/d/1aMnMaw3IXbqRCJrJ5JyF9jHnTrVzkJyi",
       "https://lh3.googleusercontent.com/d/1gy1IHZt63DbOCRZba2-pOe7G1K6aYABI",
