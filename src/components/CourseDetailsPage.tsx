@@ -396,7 +396,7 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
                                 {title.trim()}:
                               </p>
                               {subtitle && (
-                                <p className="text-sm text-gray-500 font-medium leading-normal mt-1">
+                                <p className="text-sm text-gray-500 font-medium leading-normal mt-1 first-letter:uppercase">
                                   {subtitle}
                                 </p>
                               )}
