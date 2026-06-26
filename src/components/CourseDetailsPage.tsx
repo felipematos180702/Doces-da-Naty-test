@@ -368,14 +368,14 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
                 {course.title.toLowerCase().includes('aulão') || course.category.toLowerCase().includes('aulão') || course.category.toLowerCase().includes('aulõ') ? "Conteúdo do aulão :" : "Conteúdo do curso :"}
               </h3>
               
-              <div className="grid grid-cols-1 gap-3 sm:gap-4">
+              <div className="flex flex-col gap-3 sm:gap-4">
                 {(course.detalhesLongos || []).map((detail, index) => {
                   const isObs = detail.trim().toUpperCase().startsWith('OBS:');
                   const hasColon = detail.includes(':') && !isObs;
                   return (
                     <div 
                       key={index}
-                      className={`flex gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl sm:rounded-2xl hover:bg-brand-accent/30 transition-colors border border-transparent hover:border-brand-primary/10 items-start ${isObs ? 'sm:col-span-2 bg-brand-primary/5 border border-brand-primary/10 py-4' : ''}`}
+                      className={`flex gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl sm:rounded-2xl hover:bg-brand-accent/30 transition-colors border border-transparent hover:border-brand-primary/10 items-start w-full ${isObs ? 'bg-brand-primary/5 border border-brand-primary/10 py-4' : ''}`}
                     >
                       {isObs ? (
                         <span className="flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-brand-primary/15 text-brand-primary flex items-center justify-center font-bold text-xs sm:text-base mt-1">
