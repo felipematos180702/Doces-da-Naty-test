@@ -400,7 +400,7 @@ export const COURSES: Course[] = [
     description: "Muitas confeiteiras tem o sonho de viver da confeitaria, mas, começam da forma errada, o sucesso vai muito além das receitas.\n\nNo Doces de vitrine você entende que para crescer na confeitaria é preciso saber os pilares mais importantes, e não estamos falando apenas dos doces, é preciso aprender sobre vendas, divulgação, precificação, delivery e gestão financeira.\n\nÉ o passo a passo que usei para construir a Doces da Naty do zero, e que você terá acesso para aplicar na sua confeitaria.",
     category: "Cursos Completos",
     price: "R$ 197,00",
-    image: "https://lh3.googleusercontent.com/d/1CQb_56xbmf6NCKTGXNq4wefwLoKa2S_4",
+    image: "https://lh3.googleusercontent.com/d/1nlJSCbbRBouRcPCJ9AN4feGMljKcx7c_",
     linkCheckout: "https://pay.hotmart.com/J56829891U?checkoutMode=10&bid=1765483029875&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779996354693",
     detalhesLongos: [
       "Comece pelo básico : Como começar na confeitaria com delivery e aumentar as vendas, produção prática em casa, conquista do público alvo",
@@ -414,7 +414,7 @@ export const COURSES: Course[] = [
       "Vendas pelo WhatsApp: Como usar recursos do seu WhatsApp para vender todos os dias"
     ],
     galeria: [
-      "https://lh3.googleusercontent.com/d/1CQb_56xbmf6NCKTGXNq4wefwLoKa2S_4",
+      "https://lh3.googleusercontent.com/d/1nlJSCbbRBouRcPCJ9AN4feGMljKcx7c_",
       "https://lh3.googleusercontent.com/d/13ggap4-kukp16g6F5vRciGy2QQV50GrC",
       "https://lh3.googleusercontent.com/d/1aMnMaw3IXbqRCJrJ5JyF9jHnTrVzkJyi",
       "https://lh3.googleusercontent.com/d/1gy1IHZt63DbOCRZba2-pOe7G1K6aYABI",
