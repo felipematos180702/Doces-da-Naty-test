@@ -353,7 +353,7 @@ export const COURSES: Course[] = [
     image: "https://lh3.googleusercontent.com/d/1CD6UGcrJueU9FsnfOfDr2GcPFZO_YQon",
     linkCheckout: "https://pay.hotmart.com/L79353465U?checkoutMode=10&bid=1779996464064",
     detalhesLongos: [
-      "Teoria para entender tudo sobre temperagem, o erros e acertos na técnica",
+      "Teoria para entender tudo sobre temperagem, os erros e acertos na técnica",
       "Opções de chocolates, utensílios e os tipos de temperagem",
       "Temperagem na prática usando 4 métodos: adição, na pedra, sem desorganizar os cristais de manteiga cacau e técnica com mycryo",
       "Recheios base: creme de ninho, mousse de ninho, creme de pistache, creme de coco, creme Ferrero, cremes Kinder, brigadeiro cremoso, brigadeiro e palha italiana para usar nas decorações dos ovos",
@@ -465,7 +465,7 @@ export const COURSES: Course[] = [
   {
     id: "course-21",
     title: "Bolos do Zero",
-    description: "Bolo foi o meu maior vilão na confeitaria, e de tanto errar por não saber fazer os processos, eu criei o bolos do zero com o passo a passo para fazer seu bolo ficar perfeito.\n\nPara fazer bolos com segurança você precisa da masa certa, o recheio no ponto, a montagem padronizada, a decoração impecável e o sabor irresistível.\n\nAlém disso, eu te ensino como vender bolos diariamente através das fatias, que são o ponta pé para o cliente conhecer o sabor do seu bolo, é o que eu chamo de degustação paga.",
+    description: "Bolo foi o meu maior vilão na confeitaria, e de tanto errar por não saber fazer os processos, eu criei o bolos do zero com o passo a passo para fazer seu bolo ficar perfeito.\n\nPara fazer bolos com segurança, você precisa da massa estruturada, o recheio no ponto, a montagem padronizada, a decoração impecável e o sabor irresistível.\n\nAlém disso, eu te ensino como vender bolos diariamente através das fatias, é o que eu chamo de “degustação paga”.",
     category: "Cursos Completos",
     price: "R$ 297,00",
     image: "https://lh3.googleusercontent.com/d/1jGq9fqM0N0OKDcLdpAkY5cAZjmeeFzhe",
@@ -498,7 +498,7 @@ export const COURSES: Course[] = [
   {
     id: "course-22",
     title: "Combo Vitalício: Doces de Vitrine + Bolos do Zero",
-    description: "O combo completo para você dominar os bolos festivos e fatias, os doces de vitrine e delivery, e todas as bases importantes para ser uma confeiteira referência na sua cidade\n\nBolos do zero e Doces de vitrine já transformou a vida de milhares de alunas, e nesta oferta exclusiva, você terá acesso vitalício para assistir as aulas com calma, e aplicar todas as técnicas que eu uso na Doces da Naty para vender doces todos os dias, ter um delivery próprio e ser referência em bolos festivos.\n\nClique no botão abaixo e veja mais detalhes de cada um desses cursos, eu te explico em dois vídeos por que eles são completos e cruciais para você.",
+    description: "O combo completo para você dominar os bolos festivos e fatias, os doces de vitrine e delivery, e todas as bases importantes para ser uma confeiteira referência na sua cidade\n\nBolos do zero e Doces de vitrine já transformou a vida de milhares de alunas, e nesta oferta exclusiva, você terá acesso vitalício para assistir as aulas com calma, e aplicar todas as técnicas que eu uso na Doces da Naty para vender doces todos os dias e ser uma referência em bolos festivos.\n\nClique no botão abaixo e veja mais detalhes de cada um desses cursos, eu te explico em dois vídeos por que eles são completos e cruciais para você.",
     category: "Cursos Completos",
     price: "R$ 397,00",
     image: "https://lh3.googleusercontent.com/d/1nt0xdBpvYZ9NBgV1ZiTH3dMnfhZ8M4xb",

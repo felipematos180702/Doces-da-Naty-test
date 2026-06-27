@@ -450,21 +450,7 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
                   <h3 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-brand-secondary leading-snug">
                     O que as nossas alunas estão conquistando?
                   </h3>
-                  <p className="text-gray-600 text-xs sm:text-sm md:text-base mt-2 leading-relaxed">
-                    {isDocesDeVitrine ? (
-                      <>
-                        Mais do que apenas receitas passo a passo, o método <strong>Doces de Vitrine</strong> entrega um plano prático para faturar alto e dominar o mercado local. Toque nas mensagens abaixo para ler os depoimentos reais enviados por WhatsApp e Instagram:
-                      </>
-                    ) : isBolosDoZero ? (
-                      <>
-                        Veja com seus próprios olhos os resultados incríveis das alunas do método <strong>Bolos do Zero</strong>. Elas perderam o medo, aprenderam a estruturação perfeita e hoje faturam muito vendendo bolos inteiros e fatias:
-                      </>
-                    ) : (
-                      <>
-                        Veja os resultados brilhantes das alunas do método <strong>Páscoa Lucrativa</strong>. Elas dominaram a temperagem e montagem perfeitas de ovos de colher e bombons de sucesso, conquistando independência financeira na época mais lucrativa do ano:
-                      </>
-                    )}
-                  </p>
+
                 </div>
 
                 {/* Carousel of Testimonials Images */}
