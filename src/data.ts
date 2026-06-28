@@ -57,7 +57,7 @@ export const COURSES: Course[] = [
   {
     id: "course-3",
     title: "Bolo de Cenoura",
-    description: "Você nunca mais vai errar ao fazer um bolo de cenoura, essa é aquela receita para impressionar seu cliente\n\nBolo de cenoura todo mundo faz, mas o bolo de cenoura fofinho, saboroso, que não fica solado, e que tem uma cobertura de brigadeiro no ponto certo, poucos sabem fazer .\nEu te ensino minha receita que faz sucesso no meu cardápio desde 2018.",
+    description: "Você nunca mais vai errar ao fazer um bolo de cenoura, essa é aquela receita para impressionar seu cliente\n\nBolo de cenoura todo mundo faz, mas o bolo de cenoura fofinho, saboroso, que não fica solado, e que tem uma cobertura de brigadeiro no ponto certo, poucos sabem fazer.\nEu te ensino minha receita que faz sucesso no meu cardápio desde 2018.",
     category: "Aulões (acesso de 06 meses)",
     price: "R$ 97,00",
     image: "https://lh3.googleusercontent.com/d/1KDcy5hIty5Lq64qjdlTtAU1shsZlcn_h",
