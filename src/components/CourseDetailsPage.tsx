@@ -374,7 +374,7 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
                     href={course.linkCheckout}
                     target="_blank"
                     referrerPolicy="no-referrer"
-                    className="flex items-center justify-center gap-2 bg-brand-primary text-white w-full py-2.5 sm:py-3 rounded-xl font-bold text-xs sm:text-sm hover:bg-brand-primary/95 hover:scale-[1.01] active:scale-95 transition-all shadow-md shadow-brand-primary/10 cursor-pointer text-center font-serif uppercase tracking-wide"
+                    className="flex items-center justify-center gap-2 bg-brand-primary text-white w-full py-2.5 sm:py-3 rounded-xl font-bold text-xs sm:text-sm hover:bg-brand-primary/95 hover:scale-[1.01] active:scale-95 transition-all shadow-md shadow-brand-primary/10 cursor-pointer text-center"
                   >
                     GARANTIR MINHA VAGA AGORA
                   </a>
