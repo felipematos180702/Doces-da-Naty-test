@@ -248,30 +248,32 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
             )}
 
             {/* Dynamic Sticky Order Box (Below Gallery) - MOBILE ONLY */}
-            <div className="lg:hidden bg-[#FFFDF9] rounded-3xl p-4 sm:p-6 md:p-8 shadow-2xl border-2 border-brand-primary/20 relative overflow-hidden max-w-xs sm:max-w-md mx-auto w-full">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-brand-primary/5 rounded-full translate-x-12 -translate-y-12 blur-2xl pointer-events-none" />
-              
-              {/* Main checkout buttons - super responsive height and text targeting CRO touch area */}
-              <div className="space-y-2.5">
-                <a
-                  href={course.linkCheckout}
-                  target="_blank"
-                  referrerPolicy="no-referrer"
-                  className="flex items-center justify-center gap-2 bg-brand-primary text-white w-full py-2.5 sm:py-3 rounded-xl font-bold text-xs sm:text-sm hover:bg-brand-primary/95 hover:scale-[1.01] active:scale-95 transition-all shadow-md shadow-brand-primary/10 cursor-pointer"
-                >
-                  GARANTIR MINHA VAGA AGORA
-                </a>
+            {course.id !== 'course-22' && (
+              <div className="lg:hidden bg-[#FFFDF9] rounded-3xl p-4 sm:p-6 md:p-8 shadow-2xl border-2 border-brand-primary/20 relative overflow-hidden max-w-xs sm:max-w-md mx-auto w-full">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-brand-primary/5 rounded-full translate-x-12 -translate-y-12 blur-2xl pointer-events-none" />
+                
+                {/* Main checkout buttons - super responsive height and text targeting CRO touch area */}
+                <div className="space-y-2.5">
+                  <a
+                    href={course.linkCheckout}
+                    target="_blank"
+                    referrerPolicy="no-referrer"
+                    className="flex items-center justify-center gap-2 bg-brand-primary text-white w-full py-2.5 sm:py-3 rounded-xl font-bold text-xs sm:text-sm hover:bg-brand-primary/95 hover:scale-[1.01] active:scale-95 transition-all shadow-md shadow-brand-primary/10 cursor-pointer"
+                  >
+                    GARANTIR MINHA VAGA AGORA
+                  </a>
 
-                <a
-                  href="https://wa.me/553193476920?text=Tenho%20duvidas%20sobre%20os%20cursos%20de%20confeitaria"
-                  target="_blank"
-                  referrerPolicy="no-referrer"
-                  className="flex items-center justify-center gap-1.5 bg-emerald-500 text-white w-full py-2 rounded-xl font-bold text-[11px] sm:text-xs hover:bg-emerald-600 transition-colors cursor-pointer"
-                >
-                  Falar Conosco no WhatsApp
-                </a>
+                  <a
+                    href="https://wa.me/553193476920?text=Tenho%20duvidas%20sobre%20os%20cursos%20de%20confeitaria"
+                    target="_blank"
+                    referrerPolicy="no-referrer"
+                    className="flex items-center justify-center gap-1.5 bg-emerald-500 text-white w-full py-2 rounded-xl font-bold text-[11px] sm:text-xs hover:bg-emerald-600 transition-colors cursor-pointer"
+                  >
+                    Falar Conosco no WhatsApp
+                  </a>
+                </div>
               </div>
-            </div>
+            )}
 
           </div>
 
@@ -361,6 +363,34 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
               </div>
             </div>
 
+            {/* Repositioned Purchase Box for Combo Vitalício (rendered between Course Description and Content) */}
+            {course.id === 'course-22' && (
+              <div className="bg-[#FFFDF9] rounded-3xl p-4 sm:p-6 md:p-8 shadow-2xl border-2 border-brand-primary/20 relative overflow-hidden w-full">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-brand-primary/5 rounded-full translate-x-12 -translate-y-12 blur-2xl pointer-events-none" />
+                
+                {/* Main checkout buttons - super responsive height and text targeting CRO touch area */}
+                <div className="space-y-2.5">
+                  <a
+                    href={course.linkCheckout}
+                    target="_blank"
+                    referrerPolicy="no-referrer"
+                    className="flex items-center justify-center gap-2 bg-brand-primary text-white w-full py-2.5 sm:py-3 rounded-xl font-bold text-xs sm:text-sm hover:bg-brand-primary/95 hover:scale-[1.01] active:scale-95 transition-all shadow-md shadow-brand-primary/10 cursor-pointer text-center font-serif uppercase tracking-wide"
+                  >
+                    GARANTIR MINHA VAGA AGORA
+                  </a>
+
+                  <a
+                    href="https://wa.me/553193476920?text=Tenho%20duvidas%20sobre%20os%20cursos%20de%20confeitaria"
+                    target="_blank"
+                    referrerPolicy="no-referrer"
+                    className="flex items-center justify-center gap-1.5 bg-emerald-500 text-white w-full py-2 rounded-xl font-bold text-[11px] sm:text-xs hover:bg-emerald-600 transition-colors cursor-pointer text-center"
+                  >
+                    Falar Conosco no WhatsApp
+                  </a>
+                </div>
+              </div>
+            )}
+
             {/* Extensive Syllabus List */}
             <div className="bg-white rounded-3xl p-4 sm:p-6 md:p-8 shadow-xl shadow-brand-secondary/5 border border-brand-primary/5">
               <h3 className="font-serif text-xl sm:text-2xl font-bold text-brand-secondary mb-4 sm:mb-6 flex items-center gap-2">
@@ -415,30 +445,32 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
             </div>
 
             {/* Dynamic Sticky Order Box (DESKTOP ONLY) */}
-            <div className="hidden lg:block bg-[#FFFDF9] rounded-3xl p-4 sm:p-6 md:p-8 shadow-2xl border-2 border-brand-primary/20 relative overflow-hidden w-full">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-brand-primary/5 rounded-full translate-x-12 -translate-y-12 blur-2xl pointer-events-none" />
-              
-              {/* Main checkout buttons - super responsive height and text targeting CRO touch area */}
-              <div className="space-y-2.5">
-                <a
-                  href={course.linkCheckout}
-                  target="_blank"
-                  referrerPolicy="no-referrer"
-                  className="flex items-center justify-center gap-2 bg-brand-primary text-white w-full py-2.5 sm:py-3 rounded-xl font-bold text-xs sm:text-sm hover:bg-brand-primary/95 hover:scale-[1.01] active:scale-95 transition-all shadow-md shadow-brand-primary/10 cursor-pointer text-center"
-                >
-                  GARANTIR MINHA VAGA AGORA
-                </a>
+            {course.id !== 'course-22' && (
+              <div className="hidden lg:block bg-[#FFFDF9] rounded-3xl p-4 sm:p-6 md:p-8 shadow-2xl border-2 border-brand-primary/20 relative overflow-hidden w-full">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-brand-primary/5 rounded-full translate-x-12 -translate-y-12 blur-2xl pointer-events-none" />
+                
+                {/* Main checkout buttons - super responsive height and text targeting CRO touch area */}
+                <div className="space-y-2.5">
+                  <a
+                    href={course.linkCheckout}
+                    target="_blank"
+                    referrerPolicy="no-referrer"
+                    className="flex items-center justify-center gap-2 bg-brand-primary text-white w-full py-2.5 sm:py-3 rounded-xl font-bold text-xs sm:text-sm hover:bg-brand-primary/95 hover:scale-[1.01] active:scale-95 transition-all shadow-md shadow-brand-primary/10 cursor-pointer text-center animate-pulse"
+                  >
+                    GARANTIR MINHA VAGA AGORA
+                  </a>
 
-                <a
-                  href="https://wa.me/553193476920?text=Tenho%20duvidas%20sobre%20os%20cursos%20de%20confeitaria"
-                  target="_blank"
-                  referrerPolicy="no-referrer"
-                  className="flex items-center justify-center gap-1.5 bg-emerald-500 text-white w-full py-2 rounded-xl font-bold text-[11px] sm:text-xs hover:bg-emerald-600 transition-colors cursor-pointer text-center"
-                >
-                  Falar Conosco no WhatsApp
-                </a>
+                  <a
+                    href="https://wa.me/553193476920?text=Tenho%20duvidas%20sobre%20os%20cursos%20de%20confeitaria"
+                    target="_blank"
+                    referrerPolicy="no-referrer"
+                    className="flex items-center justify-center gap-1.5 bg-emerald-500 text-white w-full py-2 rounded-xl font-bold text-[11px] sm:text-xs hover:bg-emerald-600 transition-colors cursor-pointer text-center"
+                  >
+                    Falar Conosco no WhatsApp
+                  </a>
+                </div>
               </div>
-            </div>
+            )}
 
             {/* Depoimentos / Testimonials Section (Exclusiva para Doces de Vitrine, Bolos do Zero e Páscoa Lucrativa) */}
             {(isDocesDeVitrine || isBolosDoZero || isPascoa) && (
