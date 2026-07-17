@@ -182,7 +182,7 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
             {/* Interactive Thumbnail strip with beautiful horizontal layout */}
             {imageGallery.length > 1 && (
               <div className="space-y-2 sm:space-y-3 flex flex-col items-center w-full relative">
-                <p className="text-[10px] sm:text-xs font-bold text-brand-primary uppercase tracking-wider flex items-center justify-center gap-1.5 px-0.5 text-center">
+                <p className="text-[13px] font-bold text-brand-primary uppercase tracking-wider flex items-center justify-center gap-1.5 px-0.5 text-center">
                   <Sparkles size={12} className="fill-brand-primary/20" />
                   Galeria de Inspiração dos Doces (Toque para ver em detalhe)
                 </p>
