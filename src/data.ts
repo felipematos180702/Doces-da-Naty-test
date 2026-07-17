@@ -162,7 +162,7 @@ export const COURSES: Course[] = [
     title: "Precificação e Ficha Técnica (Express)",
     description: "Pedi a equipe financeira da Doces da Naty para criar um passo a passo que te ensine a precificar corretamente\n\nVocê trabalha duro na cozinha, mas chega no fim do mês e não vê a cor do dinheiro? O erro não está no seu talento, está na precificação. Este não é um curso teórico de matemática; é a ferramenta real de sobrevivência do seu negócio.\n\nPela primeira vez, a equipe financeira da Doces da Naty formatou o método exato e a planilha de fichas técnicas que a Naty usa diariamente para garantir a saúde e o crescimento da sua empresa. Aprenda a cobrar o preço justo, incluir seus custos invisíveis e ter a certeza de que cada doce vendido está, de fato, colocando dinheiro no seu bolso.",
     category: "Cursos Rápidos (Acesso de 6 meses)",
-    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=600&auto=format&fit=crop",
+    image: "https://lh3.googleusercontent.com/d/1PhwwLQHm3p4s_F2J4ucZysZtwpgnj7cw",
     linkCheckout: "https://pay.hotmart.com/S79801917C?off=6bwv0dtg&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779995718946&bid=1779995720529",
     detalhesLongos: [
       "Construção de ficha técnica, definição do mix de produtos",
@@ -171,9 +171,8 @@ export const COURSES: Course[] = [
       "Bônus Gestão financeira: Definição de pró-labore, separação de contas e reserva de emergência, custos fixos e variáveis, entradas e saídas, planilha fluxo de caixa e MEI"
     ],
     galeria: [
-      "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop"
+      "https://lh3.googleusercontent.com/d/1PhwwLQHm3p4s_F2J4ucZysZtwpgnj7cw",
+      "https://lh3.googleusercontent.com/d/1_wzyTRyK27TZuRvGLlaFVEox7bh8SOBq"
     ]
   },
   {
