@@ -48,6 +48,25 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
   const [activeImage, setActiveImage] = useState(() => course.image);
   const galleryRef = useRef<HTMLDivElement>(null);
   const testimonialsRef = useRef<HTMLDivElement>(null);
+
+  // Dynamically synchronize document title and meta description for SEO
+  useEffect(() => {
+    const defaultTitle = "Cursos Doces da Naty – Confeitaria Lucrativa e Prática";
+    const defaultDesc = "Aprenda receitas profissionais e técnicas validadas de confeitaria para faturar com delivery e encomendas. Mais de 5 mil alunas formadas pela Doces da Naty.";
+    
+    document.title = `${course.title} – Doces da Naty`;
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', course.description.slice(0, 160).replace(/\n+/g, ' '));
+    }
+    
+    return () => {
+      document.title = defaultTitle;
+      if (metaDesc) {
+        metaDesc.setAttribute('content', defaultDesc);
+      }
+    };
+  }, [course]);
   const [selectedTestimonial, setSelectedTestimonial] = useState<string | null>(null);
   const [isImageLightboxOpen, setIsImageLightboxOpen] = useState(false);
 
@@ -106,6 +125,127 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
           : 'Cursos completos (12 meses de acesso)')
     : course.category;
 
+  const renderOrderBox = (pulseBtn = false) => (
+    <div className="bg-[#FFFDF9] rounded-3xl p-5 sm:p-7 md:p-8 shadow-2xl border-2 border-brand-primary/20 relative overflow-hidden w-full">
+      <div className="absolute top-0 right-0 w-32 h-32 bg-brand-primary/5 rounded-full translate-x-12 -translate-y-12 blur-2xl pointer-events-none" />
+      
+      {/* Badge if present */}
+      {course.badge && (
+        <div className="flex justify-center mb-3">
+          {course.badge === 'Vagas Limitadas' ? (
+            <span className="inline-flex items-center gap-1.5 bg-amber-500 text-white px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider shadow-sm animate-pulse">
+              <Flame size={14} className="fill-white" />
+              {course.badge}
+            </span>
+          ) : course.badge === 'Mais vendidos' ? (
+            <span className="inline-flex items-center bg-brand-primary/10 text-brand-primary border border-brand-primary/20 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-xs">
+              Mais vendidos
+            </span>
+          ) : (
+            <span className="inline-flex items-center gap-1.5 bg-amber-500 text-white px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider shadow-sm">
+              <Sparkles size={14} className="fill-white" />
+              {course.badge}
+            </span>
+          )}
+        </div>
+      )}
+
+      {/* Comparativo de Preço para o Combo Vitalício (Ancoragem de Alto Impacto) */}
+      {course.id === 'course-22' && (
+        <div className="bg-gradient-to-br from-amber-50 via-rose-50/30 to-amber-50/60 border-2 border-amber-300 rounded-2xl p-4 sm:p-5 mb-5 text-left shadow-sm">
+          <div className="flex items-center justify-between mb-3 border-b border-amber-200 pb-2">
+            <span className="font-serif font-bold text-sm sm:text-base text-brand-secondary flex items-center gap-1.5">
+              <span>⚖️</span> Comparativo de Valores
+            </span>
+            <span className="bg-emerald-600 text-white text-[10px] sm:text-xs font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider shadow-sm">
+              Economia de R$ 497,00
+            </span>
+          </div>
+
+          <div className="space-y-2 text-xs sm:text-sm">
+            <div className="flex items-center justify-between py-1 border-b border-amber-200/50 text-gray-700">
+              <span className="font-medium text-brand-secondary">1. Curso Doces de Vitrine (1 ano)</span>
+              <span className="font-bold text-gray-600">R$ 997,00</span>
+            </div>
+
+            <div className="flex items-center justify-between py-1 border-b border-amber-200/50 text-gray-700">
+              <span className="font-medium text-brand-secondary">2. Curso Bolos do Zero (1 ano)</span>
+              <span className="font-bold text-gray-600">R$ 1.197,00</span>
+            </div>
+
+            <div className="flex items-center justify-between py-1.5 border-b border-amber-200/50 text-amber-950 font-semibold bg-amber-100/60 px-2 rounded-lg">
+              <span className="flex items-center gap-1">
+                <span>⭐</span> Acesso VITALÍCIO (Para Sempre)
+              </span>
+              <span className="text-emerald-700 font-bold">Incluso no Combo</span>
+            </div>
+
+            <div className="flex items-center justify-between pt-1 text-xs sm:text-sm text-gray-600">
+              <span className="font-medium">Total comprando separados:</span>
+              <span className="font-bold line-through text-red-500 text-sm sm:text-base">R$ 2.194,00</span>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Pricing Block: Ancoragem + Parcelado ALWAYS above à vista */}
+      {(course.installmentPrice || course.cashPrice) && (
+        <div className="text-center mb-4 sm:mb-5">
+          {course.id === 'course-22' && (
+            <p className="text-xs sm:text-sm font-bold text-brand-secondary mb-2 bg-brand-primary/5 py-1.5 px-3 rounded-xl border border-brand-primary/10 inline-block">
+              Adquira os dois com desconto exclusivo:
+            </p>
+          )}
+          {course.originalPrice && (
+            <p className="text-xs sm:text-sm font-semibold text-gray-400 line-through mb-1">
+              De {course.originalPrice}
+            </p>
+          )}
+          <p className="text-[11px] sm:text-xs font-bold text-brand-primary uppercase tracking-wider">
+            Por apenas
+          </p>
+          {course.installmentPrice && (
+            <p className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-brand-secondary tracking-tight mt-0.5">
+              {course.installmentPrice.replace(/\s*\*/g, '')}
+            </p>
+          )}
+          {course.cashPrice && (
+            <p className="text-sm sm:text-base font-bold text-gray-700 mt-1">
+              {course.cashPrice.replace(/\s*\*/g, '')}
+            </p>
+          )}
+        </div>
+      )}
+
+      {/* Main checkout buttons */}
+      <div className="space-y-2.5">
+        <a
+          href={course.linkCheckout}
+          target="_blank"
+          referrerPolicy="no-referrer"
+          className={`flex items-center justify-center gap-2 bg-brand-primary text-white w-full py-3 sm:py-3.5 rounded-xl font-bold text-xs sm:text-sm hover:bg-brand-primary/95 hover:scale-[1.01] active:scale-95 transition-all shadow-md shadow-brand-primary/10 cursor-pointer text-center ${pulseBtn ? 'animate-pulse' : ''}`}
+        >
+          GARANTIR MINHA VAGA AGORA
+        </a>
+
+        <a
+          href="https://wa.me/553193476920?text=Tenho%20duvidas%20sobre%20os%20cursos%20de%20confeitaria"
+          target="_blank"
+          referrerPolicy="no-referrer"
+          className="flex items-center justify-center gap-1.5 bg-emerald-500 text-white w-full py-2.5 rounded-xl font-bold text-[11px] sm:text-xs hover:bg-emerald-600 transition-colors cursor-pointer text-center"
+        >
+          Falar Conosco no WhatsApp
+        </a>
+      </div>
+
+      {/* Garantia incondicional de 7 dias */}
+      <div className="mt-4 pt-3.5 border-t border-brand-primary/10 flex items-center justify-center gap-2 text-gray-600 text-xs sm:text-sm font-medium">
+        <ShieldCheck size={18} className="text-emerald-600 flex-shrink-0" />
+        <span>Garantia incondicional de 7 dias</span>
+      </div>
+    </div>
+  );
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 15 }}
@@ -131,14 +271,35 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
 
         {/* Dynamic High-Converting Header */}
         <div className="mb-8 md:mb-10">
-          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-brand-secondary leading-tight">
-            {course.title}
-          </h1>
-          <div className="flex items-center gap-2 mt-3">
+          <div className="flex flex-wrap items-center gap-2 mb-3">
             <span className="bg-brand-primary/10 text-brand-primary px-3 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider">
               {displayCategoryText}
             </span>
+            {course.badge && (
+              course.badge === 'Vagas Limitadas' ? (
+                <span className="bg-amber-500 text-white px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider shadow-sm flex items-center gap-1.5 animate-pulse">
+                  <Flame size={14} className="fill-white" />
+                  {course.badge}
+                </span>
+              ) : course.badge === 'Mais vendidos' ? (
+                <span className="bg-amber-50 text-amber-900 border border-amber-300 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-xs">
+                  Mais vendidos
+                </span>
+              ) : (
+                <span className="bg-amber-500 text-white px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider shadow-sm flex items-center gap-1.5">
+                  <Sparkles size={14} className="fill-white" />
+                  {course.badge}
+                </span>
+              )
+            )}
+            <span className="inline-flex items-center gap-1 bg-emerald-50 text-emerald-700 border border-emerald-200/70 px-2.5 py-1 rounded-full text-xs font-semibold">
+              <ShieldCheck size={14} className="text-emerald-600" />
+              Garantia de 7 dias
+            </span>
           </div>
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-brand-secondary leading-tight">
+            {course.title}
+          </h1>
         </div>
 
         {/* Main Product Section Grid */}
@@ -249,29 +410,8 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
 
             {/* Dynamic Sticky Order Box (Below Gallery) - MOBILE ONLY */}
             {course.id !== 'course-22' && (
-              <div className="lg:hidden bg-[#FFFDF9] rounded-3xl p-4 sm:p-6 md:p-8 shadow-2xl border-2 border-brand-primary/20 relative overflow-hidden max-w-xs sm:max-w-md mx-auto w-full">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-brand-primary/5 rounded-full translate-x-12 -translate-y-12 blur-2xl pointer-events-none" />
-                
-                {/* Main checkout buttons - super responsive height and text targeting CRO touch area */}
-                <div className="space-y-2.5">
-                  <a
-                    href={course.linkCheckout}
-                    target="_blank"
-                    referrerPolicy="no-referrer"
-                    className="flex items-center justify-center gap-2 bg-brand-primary text-white w-full py-2.5 sm:py-3 rounded-xl font-bold text-xs sm:text-sm hover:bg-brand-primary/95 hover:scale-[1.01] active:scale-95 transition-all shadow-md shadow-brand-primary/10 cursor-pointer"
-                  >
-                    GARANTIR MINHA VAGA AGORA
-                  </a>
-
-                  <a
-                    href="https://wa.me/553193476920?text=Tenho%20duvidas%20sobre%20os%20cursos%20de%20confeitaria"
-                    target="_blank"
-                    referrerPolicy="no-referrer"
-                    className="flex items-center justify-center gap-1.5 bg-emerald-500 text-white w-full py-2 rounded-xl font-bold text-[11px] sm:text-xs hover:bg-emerald-600 transition-colors cursor-pointer"
-                  >
-                    Falar Conosco no WhatsApp
-                  </a>
-                </div>
+              <div className="lg:hidden max-w-xs sm:max-w-md mx-auto w-full">
+                {renderOrderBox(false)}
               </div>
             )}
 
@@ -351,45 +491,24 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
               })()}
 
               {/* Bento Trust Indicators */}
-              <div className="grid grid-cols-2 gap-3 sm:gap-4 pt-3 sm:pt-4 max-w-md">
-                <div className="bg-brand-cream/60 rounded-xl sm:rounded-2xl p-3 sm:p-4 text-center border border-brand-primary/5">
+              <div className="grid grid-cols-3 gap-2 sm:gap-3 pt-3 sm:pt-4 max-w-md">
+                <div className="bg-brand-cream/60 rounded-xl sm:rounded-2xl p-2.5 sm:p-3 text-center border border-brand-primary/5">
                   <p className="text-[10px] font-bold uppercase text-gray-400">Aulas Rápidas</p>
                   <p className="text-xs sm:text-sm font-bold text-brand-secondary mt-0.5 leading-tight">Assista quando quiser</p>
                 </div>
-                <div className="bg-brand-cream/60 rounded-xl sm:rounded-2xl p-3 sm:p-4 text-center border border-brand-primary/5">
+                <div className="bg-brand-cream/60 rounded-xl sm:rounded-2xl p-2.5 sm:p-3 text-center border border-brand-primary/5">
                   <p className="text-[10px] font-bold uppercase text-gray-400">Suporte</p>
-                  <p className="text-xs sm:text-sm font-bold text-brand-secondary mt-0.5 leading-tight">Dentro da plataforma de aula</p>
+                  <p className="text-xs sm:text-sm font-bold text-brand-secondary mt-0.5 leading-tight">Dentro da plataforma</p>
+                </div>
+                <div className="bg-emerald-50/80 rounded-xl sm:rounded-2xl p-2.5 sm:p-3 text-center border border-emerald-200/80">
+                  <p className="text-[10px] font-bold uppercase text-emerald-700">Garantia</p>
+                  <p className="text-xs sm:text-sm font-bold text-emerald-800 mt-0.5 leading-tight">7 dias incondicional</p>
                 </div>
               </div>
             </div>
 
             {/* Repositioned Purchase Box for Combo Vitalício (rendered between Course Description and Content) */}
-            {course.id === 'course-22' && (
-              <div className="bg-[#FFFDF9] rounded-3xl p-4 sm:p-6 md:p-8 shadow-2xl border-2 border-brand-primary/20 relative overflow-hidden w-full">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-brand-primary/5 rounded-full translate-x-12 -translate-y-12 blur-2xl pointer-events-none" />
-                
-                {/* Main checkout buttons - super responsive height and text targeting CRO touch area */}
-                <div className="space-y-2.5">
-                  <a
-                    href={course.linkCheckout}
-                    target="_blank"
-                    referrerPolicy="no-referrer"
-                    className="flex items-center justify-center gap-2 bg-brand-primary text-white w-full py-2.5 sm:py-3 rounded-xl font-bold text-xs sm:text-sm hover:bg-brand-primary/95 hover:scale-[1.01] active:scale-95 transition-all shadow-md shadow-brand-primary/10 cursor-pointer text-center"
-                  >
-                    GARANTIR MINHA VAGA AGORA
-                  </a>
-
-                  <a
-                    href="https://wa.me/553193476920?text=Tenho%20duvidas%20sobre%20os%20cursos%20de%20confeitaria"
-                    target="_blank"
-                    referrerPolicy="no-referrer"
-                    className="flex items-center justify-center gap-1.5 bg-emerald-500 text-white w-full py-2 rounded-xl font-bold text-[11px] sm:text-xs hover:bg-emerald-600 transition-colors cursor-pointer text-center"
-                  >
-                    Falar Conosco no WhatsApp
-                  </a>
-                </div>
-              </div>
-            )}
+            {course.id === 'course-22' && renderOrderBox(false)}
 
             {/* Extensive Syllabus List */}
             <div className="bg-white rounded-3xl p-4 sm:p-6 md:p-8 shadow-xl shadow-brand-secondary/5 border border-brand-primary/5">
@@ -446,29 +565,8 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
 
             {/* Dynamic Sticky Order Box (DESKTOP ONLY) */}
             {course.id !== 'course-22' && (
-              <div className="hidden lg:block bg-[#FFFDF9] rounded-3xl p-4 sm:p-6 md:p-8 shadow-2xl border-2 border-brand-primary/20 relative overflow-hidden w-full">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-brand-primary/5 rounded-full translate-x-12 -translate-y-12 blur-2xl pointer-events-none" />
-                
-                {/* Main checkout buttons - super responsive height and text targeting CRO touch area */}
-                <div className="space-y-2.5">
-                  <a
-                    href={course.linkCheckout}
-                    target="_blank"
-                    referrerPolicy="no-referrer"
-                    className="flex items-center justify-center gap-2 bg-brand-primary text-white w-full py-2.5 sm:py-3 rounded-xl font-bold text-xs sm:text-sm hover:bg-brand-primary/95 hover:scale-[1.01] active:scale-95 transition-all shadow-md shadow-brand-primary/10 cursor-pointer text-center animate-pulse"
-                  >
-                    GARANTIR MINHA VAGA AGORA
-                  </a>
-
-                  <a
-                    href="https://wa.me/553193476920?text=Tenho%20duvidas%20sobre%20os%20cursos%20de%20confeitaria"
-                    target="_blank"
-                    referrerPolicy="no-referrer"
-                    className="flex items-center justify-center gap-1.5 bg-emerald-500 text-white w-full py-2 rounded-xl font-bold text-[11px] sm:text-xs hover:bg-emerald-600 transition-colors cursor-pointer text-center"
-                  >
-                    Falar Conosco no WhatsApp
-                  </a>
-                </div>
+              <div className="hidden lg:block w-full">
+                {renderOrderBox(true)}
               </div>
             )}
 

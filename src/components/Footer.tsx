@@ -116,9 +116,12 @@ export default function Footer({ onNavigateToSection, onOpenPrivacy }: FooterPro
           </div>
         </div>
 
-        <div className="pt-12 border-t border-brand-cream/10 text-center text-brand-cream/40 text-sm">
+        <div className="pt-12 border-t border-brand-cream/10 text-center text-brand-cream/40 text-sm space-y-1.5">
+          <p className="font-medium text-brand-cream/70 text-xs sm:text-sm">
+            CURSOS DOCES DA NATY LTDA • CNPJ: 40.931.678/0001-02
+          </p>
           <p>© {new Date().getFullYear()} Doces da Naty. Todos os direitos reservados.</p>
-          <p className="mt-2">Desenvolvido com carinho para alunas extraordinárias.</p>
+          <p className="text-xs text-brand-cream/30">Desenvolvido com carinho para alunas extraordinárias.</p>
         </div>
       </div>
     </footer>

@@ -1,6 +1,6 @@
 {
   "name": "Cursos de Confeitaria da Naty",
-  "description": "Landing page de alta performance para os 21 cursos de confeitaria da Naty.",
+  "description": "Aprenda receitas profissionais e técnicas validadas de confeitaria para faturar com delivery e encomendas. Mais de 5 mil alunas formadas pela Doces da Naty.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
