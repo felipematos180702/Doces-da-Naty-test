@@ -6,10 +6,6 @@ export interface Course {
   description: string;
   category: Category;
   price?: string;
-  installmentPrice?: string;
-  cashPrice?: string;
-  originalPrice?: string;
-  badge?: string;
   image: string;
   linkCheckout: string;
   detalhesLongos: string[];
