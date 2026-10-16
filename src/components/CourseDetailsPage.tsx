@@ -353,6 +353,9 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
                   src={activeImage}
                   alt={course.title}
                   className={`absolute inset-0 w-full h-full object-cover ${course.id === 'course-20' ? 'object-[center_26%] sm:object-[center_20%]' : 'object-center'} transition-all duration-500 group-hover:scale-105 z-10`}
+                  onError={(e) => {
+                    (e.currentTarget as HTMLImageElement).src = "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80";
+                  }}
                 />
                 {/* Subtle overlay on hover with ZoomIn icon */}
                 <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-15 flex items-center justify-center pointer-events-none">
@@ -421,6 +424,9 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
                             className="w-full h-full object-cover select-none pointer-events-none"
                             loading="lazy"
                             referrerPolicy="no-referrer"
+                            onError={(e) => {
+                              (e.currentTarget as HTMLImageElement).src = "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80";
+                            }}
                           />
                         </button>
                       );
@@ -706,6 +712,9 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
                           className="w-full h-full object-cover rounded-lg sm:rounded-xl group-hover:scale-102 transition-transform duration-300"
                           loading="lazy"
                           referrerPolicy="no-referrer"
+                          onError={(e) => {
+                            (e.currentTarget as HTMLImageElement).src = "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80";
+                          }}
                         />
                         {/* Interactive Hover Overlay */}
                         <div className="absolute inset-0 bg-brand-secondary/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-2 rounded-lg sm:rounded-xl">
@@ -740,6 +749,9 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
                           alt="Depoimento Ampliado" 
                           className="max-w-full rounded-2xl object-contain shadow-sm border border-brand-primary/5"
                           referrerPolicy="no-referrer"
+                          onError={(e) => {
+                            (e.currentTarget as HTMLImageElement).src = "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80";
+                          }}
                         />
                       </div>
                       <p className="text-center font-bold text-xs text-brand-primary uppercase tracking-widest mt-3.5 mb-1">

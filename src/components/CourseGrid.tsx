@@ -201,6 +201,9 @@ export default function CourseGrid({
                       alt={course.title}
                       className="w-full h-full object-cover object-center rounded-xl sm:rounded-t-[12px] group-hover:scale-105 transition-transform duration-500 relative z-10"
                       loading="lazy"
+                      onError={(e) => {
+                        (e.currentTarget as HTMLImageElement).src = "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80";
+                      }}
                     />
                   {/* Subtle overlay hover effect */}
                   <div className="absolute inset-0 bg-brand-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20">
