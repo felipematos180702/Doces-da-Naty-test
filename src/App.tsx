@@ -21,6 +21,12 @@ export default function App() {
   const [lastViewedCourseId, setLastViewedCourseId] = useState<string | null>(null);
   const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
 
+  // Ensure document language is strictly set to pt-BR
+  useEffect(() => {
+    document.documentElement.lang = 'pt-BR';
+    document.documentElement.setAttribute('xml:lang', 'pt-BR');
+  }, []);
+
   // Synchronize dynamic routing with URL query parameters for browser back/forward buttons
   useEffect(() => {
     const handleUrlChange = () => {

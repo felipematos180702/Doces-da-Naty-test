@@ -17,14 +17,28 @@ import {
   ChevronLeft,
   ChevronRight,
   X,
-  ZoomIn
+  ZoomIn,
+  Play
 } from 'lucide-react';
 import { Course } from '../types';
 import { COURSES } from '../data';
+import Player from '@vimeo/player';
 
 interface CourseDetailsPageProps {
   courseId: string;
   onBack: () => void;
+}
+
+import VimeoCustomPlayer from './VimeoCustomPlayer';
+
+function ModalVimeoPlayer({ videoId, title }: { videoId: string; title: string }) {
+  return (
+    <VimeoCustomPlayer
+      videoId={videoId}
+      title={title}
+      initialPlayLabel="Assistir vídeo explicativo"
+    />
+  );
 }
 
 export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPageProps) {
@@ -48,8 +62,41 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
   const [activeImage, setActiveImage] = useState(() => course.image);
   const galleryRef = useRef<HTMLDivElement>(null);
   const testimonialsRef = useRef<HTMLDivElement>(null);
+
+  // Dynamically synchronize document title and meta description for SEO
+  useEffect(() => {
+    const defaultTitle = "Cursos Doces da Naty – Confeitaria Lucrativa e Prática";
+    const defaultDesc = "Aprenda receitas profissionais e técnicas validadas de confeitaria para faturar com delivery e encomendas. Mais de 5 mil alunas formadas pela Doces da Naty.";
+    
+    document.title = `${course.title} – Doces da Naty`;
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', course.description.slice(0, 160).replace(/\n+/g, ' '));
+    }
+    
+    return () => {
+      document.title = defaultTitle;
+      if (metaDesc) {
+        metaDesc.setAttribute('content', defaultDesc);
+      }
+    };
+  }, [course]);
   const [selectedTestimonial, setSelectedTestimonial] = useState<string | null>(null);
   const [isImageLightboxOpen, setIsImageLightboxOpen] = useState(false);
+  const [activeVideoModal, setActiveVideoModal] = useState<{ title: string; videoId: string } | null>(null);
+
+  // Close modals on Escape key press
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setActiveVideoModal(null);
+        setIsImageLightboxOpen(false);
+        setSelectedTestimonial(null);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   const isDocesDeVitrine = course.id === 'course-19';
   const isBolosDoZero = course.id === 'course-21';
@@ -106,6 +153,134 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
           : 'Cursos completos (12 meses de acesso)')
     : course.category;
 
+  const renderOrderBox = (pulseBtn = false) => (
+    <div className="bg-[#FFFDF9] rounded-3xl p-5 sm:p-7 md:p-8 shadow-2xl border-2 border-brand-primary/20 relative overflow-hidden w-full">
+      <div className="absolute top-0 right-0 w-32 h-32 bg-brand-primary/5 rounded-full translate-x-12 -translate-y-12 blur-2xl pointer-events-none" />
+      
+      {/* Badge if present */}
+      {course.badge && (
+        <div className="flex justify-center mb-3">
+          {course.badge === 'Vagas Limitadas' ? (
+            <span className="inline-flex items-center gap-1.5 bg-amber-500 text-white px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider shadow-sm animate-pulse">
+              <Flame size={14} className="fill-white" />
+              {course.badge}
+            </span>
+          ) : course.badge === 'Mais vendidos' ? (
+            <span className="inline-flex items-center bg-brand-primary/10 text-brand-primary border border-brand-primary/20 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-xs">
+              Mais vendidos
+            </span>
+          ) : (
+            <span className="inline-flex items-center gap-1.5 bg-amber-500 text-white px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider shadow-sm">
+              <Sparkles size={14} className="fill-white" />
+              {course.badge}
+            </span>
+          )}
+        </div>
+      )}
+
+      {/* Comparativo de Preço para o Combo Vitalício (Ancoragem de Alto Impacto) */}
+      {course.id === 'course-22' && (
+        <div className="bg-gradient-to-br from-amber-50 via-rose-50/30 to-amber-50/60 border-2 border-amber-300 rounded-2xl p-4 sm:p-5 mb-5 text-left shadow-sm">
+          <div className="flex items-center justify-between mb-3 border-b border-amber-200 pb-2">
+            <span className="font-serif font-bold text-sm sm:text-base text-brand-secondary flex items-center gap-1.5">
+              <span>⚖️</span> Comparativo de Valores
+            </span>
+            <span className="bg-emerald-600 text-white text-[10px] sm:text-xs font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider shadow-sm">
+              Economia de R$ 497,00
+            </span>
+          </div>
+
+          <div className="space-y-2 text-xs sm:text-sm">
+            <div className="flex items-center justify-between py-1 border-b border-amber-200/50 text-gray-700">
+              <span className="font-medium text-brand-secondary">1. Curso Doces de Vitrine (1 ano)</span>
+              <span className="font-bold text-gray-600">R$ 997,00</span>
+            </div>
+
+            <div className="flex items-center justify-between py-1 border-b border-amber-200/50 text-gray-700">
+              <span className="font-medium text-brand-secondary">2. Curso Bolos do Zero (1 ano)</span>
+              <span className="font-bold text-gray-600">R$ 1.197,00</span>
+            </div>
+
+            <div className="flex items-center justify-between py-1.5 border-b border-amber-200/50 text-amber-950 font-semibold bg-amber-100/60 px-2 rounded-lg">
+              <span className="flex items-center gap-1">
+                <span>⭐</span> Acesso VITALÍCIO (Para Sempre)
+              </span>
+              <span className="text-emerald-700 font-bold">Incluso no Combo</span>
+            </div>
+
+            <div className="flex items-center justify-between pt-1 text-xs sm:text-sm text-gray-600">
+              <span className="font-medium">Total comprando separados:</span>
+              <span className="font-bold line-through text-red-500 text-sm sm:text-base">R$ 2.194,00</span>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Pricing Block: À vista em destaque + informação de parcelamento em até 12x */}
+      {course.cashPrice && (() => {
+        const cleanPrice = course.cashPrice.replace(/^Ou\s+/i, '').replace(/\s*\*/g, '').trim();
+        const hasAVista = /à vista/i.test(cleanPrice);
+        const priceValue = cleanPrice.replace(/\s*à vista/i, '').trim();
+
+        return (
+          <div className="text-center mb-4 sm:mb-5">
+            {course.id === 'course-22' && (
+              <p className="text-xs sm:text-sm font-bold text-brand-secondary mb-2 bg-brand-primary/5 py-1.5 px-3 rounded-xl border border-brand-primary/10 inline-block">
+                Adquira os dois com desconto exclusivo:
+              </p>
+            )}
+            {course.originalPrice && (
+              <p className="text-xs sm:text-sm font-semibold text-gray-400 line-through mb-1">
+                De {course.originalPrice}
+              </p>
+            )}
+            <p className="text-[11px] sm:text-xs font-bold text-brand-primary uppercase tracking-wider">
+              Por apenas
+            </p>
+            <p className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-brand-secondary tracking-tight mt-0.5 inline-flex items-baseline justify-center">
+              <span>{priceValue}</span>
+              {hasAVista && (
+                <span className="text-xs sm:text-sm md:text-base font-semibold text-gray-600 ml-1.5 tracking-normal">
+                  à vista
+                </span>
+              )}
+            </p>
+            <p className="text-xs sm:text-sm font-semibold text-gray-600 mt-1">
+              ou parcelado em até 12x
+            </p>
+          </div>
+        );
+      })()}
+
+      {/* Main checkout buttons */}
+      <div className="space-y-2.5">
+        <a
+          href={course.linkCheckout}
+          target="_blank"
+          referrerPolicy="no-referrer"
+          className={`flex items-center justify-center gap-2 bg-brand-primary text-white w-full py-3 sm:py-3.5 rounded-xl font-bold text-xs sm:text-sm hover:bg-brand-primary/95 hover:scale-[1.01] active:scale-95 transition-all shadow-md shadow-brand-primary/10 cursor-pointer text-center ${pulseBtn ? 'animate-pulse' : ''}`}
+        >
+          GARANTIR MINHA VAGA AGORA
+        </a>
+
+        <a
+          href="https://wa.me/553193476920?text=Tenho%20duvidas%20sobre%20os%20cursos%20de%20confeitaria"
+          target="_blank"
+          referrerPolicy="no-referrer"
+          className="flex items-center justify-center gap-1.5 bg-emerald-500 text-white w-full py-2.5 rounded-xl font-bold text-[11px] sm:text-xs hover:bg-emerald-600 transition-colors cursor-pointer text-center"
+        >
+          Falar Conosco no WhatsApp
+        </a>
+      </div>
+
+      {/* Garantia incondicional de 7 dias */}
+      <div className="mt-4 pt-3.5 border-t border-brand-primary/10 flex items-center justify-center gap-2 text-gray-600 text-xs sm:text-sm font-medium">
+        <ShieldCheck size={18} className="text-emerald-600 flex-shrink-0" />
+        <span>Garantia incondicional de 7 dias</span>
+      </div>
+    </div>
+  );
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 15 }}
@@ -131,14 +306,35 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
 
         {/* Dynamic High-Converting Header */}
         <div className="mb-8 md:mb-10">
-          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-brand-secondary leading-tight">
-            {course.title}
-          </h1>
-          <div className="flex items-center gap-2 mt-3">
+          <div className="flex flex-wrap items-center gap-2 mb-3">
             <span className="bg-brand-primary/10 text-brand-primary px-3 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider">
               {displayCategoryText}
             </span>
+            {course.badge && (
+              course.badge === 'Vagas Limitadas' ? (
+                <span className="bg-amber-500 text-white px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider shadow-sm flex items-center gap-1.5 animate-pulse">
+                  <Flame size={14} className="fill-white" />
+                  {course.badge}
+                </span>
+              ) : course.badge === 'Mais vendidos' ? (
+                <span className="bg-amber-50 text-amber-900 border border-amber-300 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-xs">
+                  Mais vendidos
+                </span>
+              ) : (
+                <span className="bg-amber-500 text-white px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider shadow-sm flex items-center gap-1.5">
+                  <Sparkles size={14} className="fill-white" />
+                  {course.badge}
+                </span>
+              )
+            )}
+            <span className="inline-flex items-center gap-1 bg-emerald-50 text-emerald-700 border border-emerald-200/70 px-2.5 py-1 rounded-full text-xs font-semibold">
+              <ShieldCheck size={14} className="text-emerald-600" />
+              Garantia de 7 dias
+            </span>
           </div>
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-brand-secondary leading-tight">
+            {course.title}
+          </h1>
         </div>
 
         {/* Main Product Section Grid */}
@@ -249,29 +445,8 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
 
             {/* Dynamic Sticky Order Box (Below Gallery) - MOBILE ONLY */}
             {course.id !== 'course-22' && (
-              <div className="lg:hidden bg-[#FFFDF9] rounded-3xl p-4 sm:p-6 md:p-8 shadow-2xl border-2 border-brand-primary/20 relative overflow-hidden max-w-xs sm:max-w-md mx-auto w-full">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-brand-primary/5 rounded-full translate-x-12 -translate-y-12 blur-2xl pointer-events-none" />
-                
-                {/* Main checkout buttons - super responsive height and text targeting CRO touch area */}
-                <div className="space-y-2.5">
-                  <a
-                    href={course.linkCheckout}
-                    target="_blank"
-                    referrerPolicy="no-referrer"
-                    className="flex items-center justify-center gap-2 bg-brand-primary text-white w-full py-2.5 sm:py-3 rounded-xl font-bold text-xs sm:text-sm hover:bg-brand-primary/95 hover:scale-[1.01] active:scale-95 transition-all shadow-md shadow-brand-primary/10 cursor-pointer"
-                  >
-                    GARANTIR MINHA VAGA AGORA
-                  </a>
-
-                  <a
-                    href="https://wa.me/553193476920?text=Tenho%20duvidas%20sobre%20os%20cursos%20de%20confeitaria"
-                    target="_blank"
-                    referrerPolicy="no-referrer"
-                    className="flex items-center justify-center gap-1.5 bg-emerald-500 text-white w-full py-2 rounded-xl font-bold text-[11px] sm:text-xs hover:bg-emerald-600 transition-colors cursor-pointer"
-                  >
-                    Falar Conosco no WhatsApp
-                  </a>
-                </div>
+              <div className="lg:hidden max-w-xs sm:max-w-md mx-auto w-full">
+                {renderOrderBox(false)}
               </div>
             )}
 
@@ -310,6 +485,52 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
                         {visibleParagraphs.map((para, idx) => (
                           <p key={idx}>{para}</p>
                         ))}
+
+                        {course.id === 'course-22' && (
+                          <div className="pt-2 pb-1 flex flex-col sm:flex-row gap-3 w-full">
+                            <button
+                              type="button"
+                              onClick={() => setActiveVideoModal({
+                                title: "Como funciona o Doces de Vitrine",
+                                videoId: "1236248437"
+                              })}
+                              className="group flex-1 flex items-center gap-3.5 bg-gradient-to-r from-rose-50 to-pink-50/80 hover:from-rose-100 hover:to-pink-100 text-brand-secondary border-2 border-brand-primary/25 hover:border-brand-primary p-3.5 sm:p-4 rounded-2xl transition-all duration-200 shadow-sm hover:shadow-md cursor-pointer text-left active:scale-[0.98]"
+                            >
+                              <span className="w-10 h-10 rounded-xl bg-brand-primary text-white flex items-center justify-center shrink-0 shadow-md group-hover:scale-110 transition-transform">
+                                <Play size={18} className="fill-white translate-x-0.5" />
+                              </span>
+                              <div className="flex-1 min-w-0">
+                                <span className="block font-serif font-bold text-sm sm:text-base text-brand-secondary group-hover:text-brand-primary transition-colors leading-tight">
+                                  Como funciona o doces de vitrine
+                                </span>
+                                <span className="block text-xs text-brand-primary font-semibold mt-0.5">
+                                  Assistir vídeo explicativo &rarr;
+                                </span>
+                              </div>
+                            </button>
+
+                            <button
+                              type="button"
+                              onClick={() => setActiveVideoModal({
+                                title: "Como funciona o Bolos do Zero",
+                                videoId: "1236248500"
+                              })}
+                              className="group flex-1 flex items-center gap-3.5 bg-gradient-to-r from-amber-50 to-orange-50/70 hover:from-amber-100 hover:to-orange-100 text-brand-secondary border-2 border-amber-300 hover:border-amber-400 p-3.5 sm:p-4 rounded-2xl transition-all duration-200 shadow-sm hover:shadow-md cursor-pointer text-left active:scale-[0.98]"
+                            >
+                              <span className="w-10 h-10 rounded-xl bg-amber-500 text-white flex items-center justify-center shrink-0 shadow-md group-hover:scale-110 transition-transform">
+                                <Play size={18} className="fill-white translate-x-0.5" />
+                              </span>
+                              <div className="flex-1 min-w-0">
+                                <span className="block font-serif font-bold text-sm sm:text-base text-brand-secondary group-hover:text-amber-800 transition-colors leading-tight">
+                                  Como funciona o bolos do zero
+                                </span>
+                                <span className="block text-xs text-amber-700 font-semibold mt-0.5">
+                                  Assistir vídeo explicativo &rarr;
+                                </span>
+                              </div>
+                            </button>
+                          </div>
+                        )}
                       </div>
 
                       {whoIsItFor && (
@@ -351,45 +572,24 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
               })()}
 
               {/* Bento Trust Indicators */}
-              <div className="grid grid-cols-2 gap-3 sm:gap-4 pt-3 sm:pt-4 max-w-md">
-                <div className="bg-brand-cream/60 rounded-xl sm:rounded-2xl p-3 sm:p-4 text-center border border-brand-primary/5">
+              <div className="grid grid-cols-3 gap-2 sm:gap-3 pt-3 sm:pt-4 max-w-md">
+                <div className="bg-brand-cream/60 rounded-xl sm:rounded-2xl p-2.5 sm:p-3 text-center border border-brand-primary/5">
                   <p className="text-[10px] font-bold uppercase text-gray-400">Aulas Rápidas</p>
                   <p className="text-xs sm:text-sm font-bold text-brand-secondary mt-0.5 leading-tight">Assista quando quiser</p>
                 </div>
-                <div className="bg-brand-cream/60 rounded-xl sm:rounded-2xl p-3 sm:p-4 text-center border border-brand-primary/5">
+                <div className="bg-brand-cream/60 rounded-xl sm:rounded-2xl p-2.5 sm:p-3 text-center border border-brand-primary/5">
                   <p className="text-[10px] font-bold uppercase text-gray-400">Suporte</p>
-                  <p className="text-xs sm:text-sm font-bold text-brand-secondary mt-0.5 leading-tight">Dentro da plataforma de aula</p>
+                  <p className="text-xs sm:text-sm font-bold text-brand-secondary mt-0.5 leading-tight">Dentro da plataforma</p>
+                </div>
+                <div className="bg-emerald-50/80 rounded-xl sm:rounded-2xl p-2.5 sm:p-3 text-center border border-emerald-200/80">
+                  <p className="text-[10px] font-bold uppercase text-emerald-700">Garantia</p>
+                  <p className="text-xs sm:text-sm font-bold text-emerald-800 mt-0.5 leading-tight">7 dias incondicional</p>
                 </div>
               </div>
             </div>
 
             {/* Repositioned Purchase Box for Combo Vitalício (rendered between Course Description and Content) */}
-            {course.id === 'course-22' && (
-              <div className="bg-[#FFFDF9] rounded-3xl p-4 sm:p-6 md:p-8 shadow-2xl border-2 border-brand-primary/20 relative overflow-hidden w-full">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-brand-primary/5 rounded-full translate-x-12 -translate-y-12 blur-2xl pointer-events-none" />
-                
-                {/* Main checkout buttons - super responsive height and text targeting CRO touch area */}
-                <div className="space-y-2.5">
-                  <a
-                    href={course.linkCheckout}
-                    target="_blank"
-                    referrerPolicy="no-referrer"
-                    className="flex items-center justify-center gap-2 bg-brand-primary text-white w-full py-2.5 sm:py-3 rounded-xl font-bold text-xs sm:text-sm hover:bg-brand-primary/95 hover:scale-[1.01] active:scale-95 transition-all shadow-md shadow-brand-primary/10 cursor-pointer text-center"
-                  >
-                    GARANTIR MINHA VAGA AGORA
-                  </a>
-
-                  <a
-                    href="https://wa.me/553193476920?text=Tenho%20duvidas%20sobre%20os%20cursos%20de%20confeitaria"
-                    target="_blank"
-                    referrerPolicy="no-referrer"
-                    className="flex items-center justify-center gap-1.5 bg-emerald-500 text-white w-full py-2 rounded-xl font-bold text-[11px] sm:text-xs hover:bg-emerald-600 transition-colors cursor-pointer text-center"
-                  >
-                    Falar Conosco no WhatsApp
-                  </a>
-                </div>
-              </div>
-            )}
+            {course.id === 'course-22' && renderOrderBox(false)}
 
             {/* Extensive Syllabus List */}
             <div className="bg-white rounded-3xl p-4 sm:p-6 md:p-8 shadow-xl shadow-brand-secondary/5 border border-brand-primary/5">
@@ -446,29 +646,8 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
 
             {/* Dynamic Sticky Order Box (DESKTOP ONLY) */}
             {course.id !== 'course-22' && (
-              <div className="hidden lg:block bg-[#FFFDF9] rounded-3xl p-4 sm:p-6 md:p-8 shadow-2xl border-2 border-brand-primary/20 relative overflow-hidden w-full">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-brand-primary/5 rounded-full translate-x-12 -translate-y-12 blur-2xl pointer-events-none" />
-                
-                {/* Main checkout buttons - super responsive height and text targeting CRO touch area */}
-                <div className="space-y-2.5">
-                  <a
-                    href={course.linkCheckout}
-                    target="_blank"
-                    referrerPolicy="no-referrer"
-                    className="flex items-center justify-center gap-2 bg-brand-primary text-white w-full py-2.5 sm:py-3 rounded-xl font-bold text-xs sm:text-sm hover:bg-brand-primary/95 hover:scale-[1.01] active:scale-95 transition-all shadow-md shadow-brand-primary/10 cursor-pointer text-center animate-pulse"
-                  >
-                    GARANTIR MINHA VAGA AGORA
-                  </a>
-
-                  <a
-                    href="https://wa.me/553193476920?text=Tenho%20duvidas%20sobre%20os%20cursos%20de%20confeitaria"
-                    target="_blank"
-                    referrerPolicy="no-referrer"
-                    className="flex items-center justify-center gap-1.5 bg-emerald-500 text-white w-full py-2 rounded-xl font-bold text-[11px] sm:text-xs hover:bg-emerald-600 transition-colors cursor-pointer text-center"
-                  >
-                    Falar Conosco no WhatsApp
-                  </a>
-                </div>
+              <div className="hidden lg:block w-full">
+                {renderOrderBox(true)}
               </div>
             )}
 
@@ -603,6 +782,64 @@ export default function CourseDetailsPage({ courseId, onBack }: CourseDetailsPag
                 className="max-w-full max-h-full rounded-2xl md:rounded-3xl object-contain shadow-2xl select-none"
                 referrerPolicy="no-referrer"
               />
+            </div>
+          </div>
+        )}
+
+        {/* Video Presentation Modal Popup */}
+        {activeVideoModal && (
+          <div 
+            className="fixed inset-0 bg-black/85 backdrop-blur-md z-50 flex items-center justify-center p-3 sm:p-6"
+            onClick={() => setActiveVideoModal(null)}
+          >
+            <div 
+              className="relative w-full max-w-3xl bg-[#1a1415] rounded-2xl sm:rounded-3xl shadow-2xl border border-white/15 overflow-hidden flex flex-col animate-in fade-in zoom-in-95 duration-200"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Header */}
+              <div className="flex items-center justify-between px-4 py-3 sm:px-6 sm:py-4 border-b border-white/10 bg-black/40">
+                <div className="flex items-center gap-2.5 sm:gap-3">
+                  <span className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-brand-primary text-white flex items-center justify-center shrink-0 shadow-md">
+                    <Play size={16} className="fill-white translate-x-0.5" />
+                  </span>
+                  <div>
+                    <h3 className="font-serif font-bold text-sm sm:text-lg text-white leading-tight">
+                      {activeVideoModal.title}
+                    </h3>
+                    <p className="text-[11px] sm:text-xs text-rose-300 font-medium">
+                      Apresentação oficial do curso com a Naty
+                    </p>
+                  </div>
+                </div>
+
+                <button 
+                  onClick={() => setActiveVideoModal(null)}
+                  className="bg-white/10 hover:bg-white/20 hover:scale-105 active:scale-95 text-white w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-all cursor-pointer border border-white/10 shrink-0 ml-2"
+                  aria-label="Fechar vídeo"
+                >
+                  <X size={20} />
+                </button>
+              </div>
+
+              {/* Video Player Embed (Clean Vimeo VSL mode with click-to-pause) */}
+              <ModalVimeoPlayer
+                videoId={activeVideoModal.videoId}
+                title={activeVideoModal.title}
+              />
+
+              {/* Modal Footer */}
+              <div className="px-4 py-3 sm:px-6 sm:py-3.5 bg-black/60 flex items-center justify-between border-t border-white/10">
+                <span className="text-white/60 text-xs hidden sm:inline">
+                  Toque em Fechar ou pressione ESC para sair do vídeo
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setActiveVideoModal(null)}
+                  className="w-full sm:w-auto px-5 py-2 rounded-xl bg-brand-primary hover:bg-brand-primary/90 text-white font-bold text-xs sm:text-sm transition-all cursor-pointer text-center shadow-md ml-auto"
+                >
+                  Fechar Vídeo
+                </button>
+              </div>
             </div>
           </div>
         )}

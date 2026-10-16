@@ -1,5 +1,4 @@
 import { motion } from 'motion/react';
-import { MessageCircle } from 'lucide-react';
 
 interface HeaderProps {
   onNavigateHome?: () => void;
@@ -92,15 +91,6 @@ export default function Header({ onNavigateHome, onNavigateToSection }: HeaderPr
         </nav>
 
         <div className="flex items-center gap-4 relative z-10">
-          <a 
-            href="https://wa.me/553193476920" 
-            target="_blank"
-            referrerPolicy="no-referrer"
-            className="hidden sm:flex items-center gap-2 bg-brand-primary text-white px-5 py-2.5 rounded-full font-semibold hover:bg-brand-primary/90 transition-all shadow-lg shadow-brand-primary/20"
-          >
-            <MessageCircle size={18} />
-            Falar no WhatsApp
-          </a>
         </div>
       </div>
     </motion.header>

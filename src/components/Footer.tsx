@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Instagram, MessageCircle } from 'lucide-react';
+import { Instagram } from 'lucide-react';
 
 interface FooterProps {
   onNavigateToSection?: (sectionId: string) => void;
@@ -18,9 +18,6 @@ export default function Footer({ onNavigateToSection, onOpenPrivacy }: FooterPro
             <div className="flex gap-4">
               <a href="https://www.instagram.com/cursosdocesdanaty" className="w-12 h-12 rounded-full border border-brand-cream/20 flex items-center justify-center hover:bg-brand-primary hover:border-brand-primary transition-all">
                 <Instagram size={20} />
-              </a>
-              <a href="https://wa.me/553193476920?text=Ol%C3%A1%2C%20Naty!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20curso%3A" className="w-12 h-12 rounded-full border border-brand-cream/20 flex items-center justify-center hover:bg-brand-primary hover:border-brand-primary transition-all" title="WhatsApp" target="_blank" rel="noopener noreferrer">
-                <MessageCircle size={20} />
               </a>
             </div>
           </div>
@@ -116,9 +113,12 @@ export default function Footer({ onNavigateToSection, onOpenPrivacy }: FooterPro
           </div>
         </div>
 
-        <div className="pt-12 border-t border-brand-cream/10 text-center text-brand-cream/40 text-sm">
+        <div className="pt-12 border-t border-brand-cream/10 text-center text-brand-cream/40 text-sm space-y-1.5">
+          <p className="font-medium text-brand-cream/70 text-xs sm:text-sm">
+            CURSOS DOCES DA NATY LTDA • CNPJ: 40.931.678/0001-02
+          </p>
           <p>© {new Date().getFullYear()} Doces da Naty. Todos os direitos reservados.</p>
-          <p className="mt-2">Desenvolvido com carinho para alunas extraordinárias.</p>
+          <p className="text-xs text-brand-cream/30">Desenvolvido com carinho para alunas extraordinárias.</p>
         </div>
       </div>
     </footer>

@@ -37,8 +37,32 @@ export default function About() {
               Em 2017, decidi dar um passo corajoso: deixei 9 anos de estabilidade como supervisora de cobrança no regime CLT para mergulhar em um mundo onde eu não tinha nenhuma experiência, mas sobrava determinação. Comecei do zero, na cozinha do meu apartamento, e foi ali, entre erros e acertos, que conquistei meus primeiros clientes.
             </p>
             <p>
-              Foram 3 anos trabalhando em casa. Investi muito em conhecimento, errei receitas, joguei ingredientes fora, mas nunca desisti. Hoje, vejo minha marca crescer e encantar não só clientes, mas também alunos e colegas de profissão.
+              Foram 3 anos trabalhando em casa até dar o próximo grande passo: em 2021, abri as portas da loja física da Doces da Naty. Hoje, com a loja aberta e funcionando todos os dias com delivery e balcão, transformei essa vivência real de confeitaria em método prático de ensino.
             </p>
+            <p>
+              Esse caminho me permitiu alcançar marcas que me enchem de orgulho: já são mais de 5 mil alunas online espalhadas pelo mundo, dezenas de alunas formadas em turmas de cursos presenciais e milhares de seguidores que acompanham nossos doces e bastidores nas redes sociais diariamente.
+            </p>
+
+            {/* Destaques de Autoridade */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2 pb-2 text-center not-italic">
+              <div className="bg-white/90 p-3.5 rounded-2xl border border-brand-primary/15 shadow-sm">
+                <span className="block font-serif font-bold text-xl text-brand-primary">+ de 5 mil</span>
+                <span className="text-xs text-gray-600 font-medium leading-tight">Alunas online</span>
+              </div>
+              <div className="bg-white/90 p-3.5 rounded-2xl border border-brand-primary/15 shadow-sm">
+                <span className="block font-serif font-bold text-xl text-brand-primary">Desde 2021</span>
+                <span className="text-xs text-gray-600 font-medium leading-tight">Loja aberta</span>
+              </div>
+              <div className="bg-white/90 p-3.5 rounded-2xl border border-brand-primary/15 shadow-sm">
+                <span className="block font-serif font-bold text-xl text-brand-primary">Dezenas</span>
+                <span className="text-xs text-gray-600 font-medium leading-tight">De alunas no presencial</span>
+              </div>
+              <div className="bg-white/90 p-3.5 rounded-2xl border border-brand-primary/15 shadow-sm">
+                <span className="block font-serif font-bold text-xl text-brand-primary">Milhares</span>
+                <span className="text-xs text-gray-600 font-medium leading-tight">De seguidores</span>
+              </div>
+            </div>
+
             <p className="bg-brand-primary/5 p-5 md:p-6 rounded-2xl border-l-4 border-brand-primary italic">
               "Meu propósito hoje é claro: ajudar você, que está começando ou já atua na confeitaria, a ser reconhecida pelo seu trabalho e a conquistar a tão sonhada liberdade financeira."
             </p>
