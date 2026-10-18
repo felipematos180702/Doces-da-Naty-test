@@ -174,7 +174,7 @@ export const COURSES: Course[] = [
     badge: "Mais vendidos",
     originalPrice: "R$ 197,00",
     cashPrice: "R$ 89,00 à vista",
-    image: "https://lh3.googleusercontent.com/d/1zhJwD924djQYi7pH72XtTrTeBoiv3L3K",
+    image: "https://lh3.googleusercontent.com/d/1v0nKzHZ4hWK6fkvYd6kyZwSwi5iC_RUN",
     linkCheckout: "https://pay.hotmart.com/O101153893E?checkoutMode=10&hotfeature=51&_hi=eyJjaWQiOiIxNzc5OTk1NDk0OTQyMTM3NzQ2Nzk2MDM1MTgzMzYwIiwiYmlkIjoiMTc3OTk5NTQ5NDk0MjEzNzc0Njc5NjAzNTE4MzM2MCIsInNpZCI6ImY3YmJiNWU2N2Q3ZjQwOWM4ZjRiZmIxYjZiNzk2M2I1In0=.1779995967843&bid=1779995969088",
     detalhesLongos: [
       "Base do brigadeiro branco no ponto perfeito",
@@ -184,8 +184,8 @@ export const COURSES: Course[] = [
       "E-book recheio de maracujá para o bombom de morango"
     ],
     galeria: [
-      "https://lh3.googleusercontent.com/d/1zhJwD924djQYi7pH72XtTrTeBoiv3L3K",
       "https://lh3.googleusercontent.com/d/1v0nKzHZ4hWK6fkvYd6kyZwSwi5iC_RUN",
+      "https://lh3.googleusercontent.com/d/1zhJwD924djQYi7pH72XtTrTeBoiv3L3K",
       "https://lh3.googleusercontent.com/d/1glmBEpXZ0i0MEmwNjcdrZw0p2RE5bd9u",
       "https://lh3.googleusercontent.com/d/1KTPj2kRyBfgiDB0Z4fAIPECNUSAbi7mx",
       "https://lh3.googleusercontent.com/d/1P-slrE-7TDUDrzgk46cVzsKl6-XxwVGw"
