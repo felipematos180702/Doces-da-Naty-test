@@ -99,7 +99,6 @@ export default function App() {
 
   return (
     <div className="min-h-screen flex flex-col bg-brand-cream/20 w-full max-w-full overflow-x-hidden">
-      <Header onNavigateHome={handleNavigateHome} onNavigateToSection={handleNavigateToSection} />
       <main className="flex-grow w-full max-w-full overflow-x-hidden">
         {selectedCourseId ? (
           <CourseDetailsPage 

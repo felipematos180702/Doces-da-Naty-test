@@ -60,7 +60,7 @@ export default function CourseGrid({
   });
 
   return (
-    <section id="cursos" className="py-12 md:py-24 bg-white">
+    <section id="cursos" className="py-6 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-10 md:mb-16">
           <motion.h2 

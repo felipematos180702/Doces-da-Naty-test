@@ -97,7 +97,7 @@ export default function Hero() {
   }, [isPlaying]);
 
   return (
-    <section className="relative pt-24 pb-12 md:pt-32 md:pb-20 overflow-hidden">
+    <section className="relative pt-6 pb-6 md:pt-32 md:pb-20 overflow-hidden">
       <div className="max-w-5xl mx-auto px-4 relative z-10 text-center flex flex-col items-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

@@ -20,20 +20,15 @@ export default function Header({ onNavigateHome, onNavigateToSection }: HeaderPr
     <motion.header 
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-brand-cream/80 backdrop-blur-md border-b border-brand-primary/10"
+      className="hidden md:block fixed top-0 left-0 right-0 z-50 bg-brand-cream/80 backdrop-blur-md border-b border-brand-primary/10"
     >
       <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between relative">
         <button 
           onClick={handleLogoClick}
-          className="flex items-center cursor-pointer focus:outline-none select-none text-left h-full relative overflow-visible z-10"
+          className="flex items-center cursor-pointer focus:outline-none select-none text-left h-full relative z-10 font-serif text-xl sm:text-2xl font-bold text-brand-secondary"
           id="header-logo-btn"
         >
-          <img 
-            src="https://lh3.googleusercontent.com/d/15sZIRzIkTCQ_vansHhU7zJSJOdbghmcP" 
-            alt="Doces da Naty" 
-            className="h-[105px] sm:h-[115px] md:h-[135px] -my-6 sm:-my-7 md:-my-8 w-auto object-contain transition-all duration-300 select-none pointer-events-none"
-            referrerPolicy="no-referrer"
-          />
+          Doces da <span className="text-brand-primary ml-1">Naty</span>
         </button>
         
         <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-8 font-medium z-0">

@@ -36,7 +36,7 @@ export default function Testimonials() {
   const allPhotos = [...vitrinePhotos, ...bolosPhotos, ...pascoaPhotos];
 
   return (
-    <section id="depoimentos" className="py-24 bg-brand-cream/15 relative overflow-hidden">
+    <section id="depoimentos" className="py-10 md:py-24 bg-brand-cream/15 relative overflow-hidden">
       {/* Decorative background vectors */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-brand-primary/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-secondary/5 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl" />

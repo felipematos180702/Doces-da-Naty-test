@@ -8,17 +8,17 @@ interface FooterProps {
 
 export default function Footer({ onNavigateToSection, onOpenPrivacy }: FooterProps) {
   return (
-    <footer className="bg-brand-secondary text-brand-cream py-16">
+    <footer className="bg-brand-secondary text-brand-cream py-10 md:py-16">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
-          <div className="col-span-1 md:col-span-2">
-            <h3 className="font-serif text-3xl font-bold mb-6">
-              Doces da <span className="text-brand-primary">Naty</span>
-            </h3>
-            <div className="flex gap-4">
-              <a href="https://www.instagram.com/cursosdocesdanaty" className="w-12 h-12 rounded-full border border-brand-cream/20 flex items-center justify-center hover:bg-brand-primary hover:border-brand-primary transition-all">
-                <Instagram size={20} />
-              </a>
+        <div className="grid md:grid-cols-4 gap-4 md:gap-8 mb-4 md:mb-8">
+          <div className="col-span-1 md:col-span-2 flex flex-col items-center md:items-start text-center md:text-left">
+            <div className="mb-0">
+              <img 
+                src="https://lh3.googleusercontent.com/d/1g0FEjIt17kU6qlZvZ06Nj5Tqn2H6Vg2r" 
+                alt="Doces da Naty" 
+                className="h-40 sm:h-44 md:h-44 lg:h-52 w-auto object-contain select-none mx-auto md:mx-0"
+                referrerPolicy="no-referrer"
+              />
             </div>
           </div>
 
@@ -96,7 +96,7 @@ export default function Footer({ onNavigateToSection, onOpenPrivacy }: FooterPro
 
           <div>
             <h4 className="font-bold text-lg mb-6">Contato</h4>
-            <ul className="space-y-4 text-brand-cream/60">
+            <ul className="space-y-4 text-brand-cream/60 mb-6">
               <li className="flex items-center gap-2.5">
                 <Instagram size={20} className="text-brand-primary shrink-0" />
                 <a href="https://www.instagram.com/cursosdocesdanaty" target="_blank" rel="noopener noreferrer" className="hover:text-brand-primary transition-colors text-base leading-none">
@@ -110,6 +110,11 @@ export default function Footer({ onNavigateToSection, onOpenPrivacy }: FooterPro
                 </a>
               </li>
             </ul>
+            <div className="flex gap-4">
+              <a href="https://www.instagram.com/cursosdocesdanaty" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-brand-cream/20 flex items-center justify-center hover:bg-brand-primary hover:border-brand-primary transition-all">
+                <Instagram size={20} />
+              </a>
+            </div>
           </div>
         </div>
 
