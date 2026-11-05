@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/capturacombo",
+      "destination": "https://captura-combo-black-9g6.vercel.app"
+    },
+    {
+      "source": "/capturacombo/:path*",
+      "destination": "https://captura-combo-black-9g6.vercel.app/:path*"
+    }
+  ]
+}
