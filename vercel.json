@@ -7,6 +7,14 @@
     {
       "source": "/capturacombo/:path*",
       "destination": "https://captura-combo-black-9g6.vercel.app/:path*"
+    },
+    {
+      "source": "/cursosblack",
+      "destination": "https://hubdecursosblack.vercel.app"
+    },
+    {
+      "source": "/cursosblack/:path*",
+      "destination": "https://hubdecursosblack.vercel.app/:path*"
     }
   ]
 }
